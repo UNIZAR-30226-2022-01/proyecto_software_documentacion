@@ -1,0 +1,293 @@
+% Preamble del documento
+
+\documentclass[12pt, a4paper, titlepage]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Encoding e idioma Español, 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel} % Para poner cuadro en vez de tabla, etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paquetes 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks=true, urlcolor=cyan, citecolor=blue, linkcolor=blue, hidelinks]{hyperref} % /url{}, /ref{}...
+
+\usepackage{minted} % Código
+
+\usepackage[sorting=none, style=numeric]{biblatex} % aparece 1ro la 1ra citada
+\addbibresource{citas.bib}
+
+\usepackage{amsmath}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage[table]{xcolor} % Colores en tablas/texto/etc
+
+\usepackage{graphicx} % Imágenes
+
+\usepackage{tabularx} % Tablas más potentes
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{adjustbox} % Ajustar tablas al ancho de la página
+
+\usepackage{datetime} % Fechas
+\usepackage{svg} % para el svg del logo de la eina
+\usepackage{titlesec}
+\usepackage[section]{placeins}  % para floatbarrier en secciones, 
+                                % con [section] se ponen silenciosamente en cada seccion
+
+\usepackage{listliketab}                                
+\usepackage{fancyhdr} %pagestyles adicionales
+
+\usepackage{lmodern} % Fuente moderna, \code con negrita
+\usepackage{caption} % para poner labels en tabular sin convertirlos en tablas que flotan
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}} % no sé de donde ha salido esto
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+%\setlength{\parindent}{0pt} % para quitar indentación inicial en párrafos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Título para \maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Plantilla de trabajo}
+\author{autor1 \and autor2 \and autor3}
+
+% Macro para mostrar el mes y el año (https://texnique.fr/osqa/questions/1359/commandes-month-year)
+\def\monthyear{\ifcase\month\or
+  Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or
+  Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi
+  \space\number\year}
+
+\date{\monthyear}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estilos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{fancy} % con el nombre de la sección y página arriba
+%\fancyhf{}
+%\pagenumbering{arabic}
+%\rfoot{Page \thepage}
+\newcommand{\code}{\texttt} % para poner codigo en Monospace
+
+
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{\rightmark}
+\lhead{\leftmark}
+\rfoot{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Fin del preamble
+
+% Forza las opciones desde el principio del documento si no se aplican
+\AtBeginDocument{
+  \urlstyle{same}
+  \addtocontents{toc}{\small}
+  \addtocontents{lof}{\small}
+}
+% Cuerpo del documento
+\begin{document} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+% PORTADA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{1.7mm}
+
+\fontsize{28pt}{28pt}\selectfont
+\begin{center}
+Plan de gestión, análisis, diseño y memoria del proyecto
+\end{center}
+\fontsize{24pt}{24pt}\selectfont
+\vspace*{4mm}
+\begin{center}
+Grupo 01 - Grace Hopper
+\end{center}
+\vspace*{17.7mm}
+\baselineskip 36pt
+\begin{center}
+\fontsize{12pt}{12pt}\selectfont
+\center{\rm  Autores}
+
+\vspace*{3.65mm} 
+\fontsize{18pt}{18pt}\selectfont
+\center{García Vázquez, Samuel,  720873\\
+        Crespo Aznárez, Francisco José, 798066\\
+        Estevan Tomás, Emilio, 798516\\
+        Grima Terrén, Jorge 801324\\
+        Enguita Lahoz, Guillermo, 801618\\
+        González Pizarro, Laura,  805467\\
+        }
+\vspace*{25mm} 
+\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Organización de Github}}
+%\baselineskip 36pt
+%\fontsize{12pt}{12pt}\selectfont
+%\center{\rm  Profesores}
+%\vspace*{3.65mm}
+%\fontsize{14pt}{14pt}\selectfont
+%\center{Nombre profesor 1}
+\end{center}
+
+\setcounter{footnote}{0}
+%\vspace*{3.65mm}
+%\fontsize{12pt}{12pt}\selectfont
+%\begin{center}
+%\monthyear
+%\end{center}
+\vspace*{10.7mm}
+\begin{figure}[!h]
+  \centering
+	\includesvg[width=69.62mm]{eina}
+\end{figure}
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+%\pagenumbering{gobble}
+
+\end{titlepage}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+% CUERPO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\fontsize{12pt}{12pt}\selectfont
+
+\setcounter{tocdepth}{2}
+
+% Índice con links en negro y no en azul
+\begingroup
+\hypersetup{linkcolor=black}
+    \tableofcontents
+\endgroup
+
+\thispagestyle{empty}
+
+% Texto
+\clearpage
+\setcounter{page}{1}
+\section{Introducción}
+
+\section{Organización del proyecto}
+
+\section{Plan de gestión del proyecto}
+
+\subsection{Inicio del proyecto}
+
+\subsection{Control de configuraciones, construcción del software y aseguramiento de la calidad del producto}
+
+Se han establecido los siguientes procedimientos relativos a las tareas de construcción del software, gestión de incidencias, automatización,  calidad y despliegue del sistema por completo.
+
+\subsubsection{Convenciones y procedimientos para la construcción y control del software}
+
+\begin{itemize}
+    \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los frameworks a utilizar. De este modo, se seguirán las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
+    \begin{itemize}
+        \item Para Angular, se utilizará la guía de estilo oficial \cite{estiloangular} y la guía de estructura de proyectos propuesta por la documentación oficial \cite{estructuraangular}.
+        
+        \item Para React, se utilizará la
+        guía de estilo de airbnb \cite{estiloreact} y la estructura de proyectos propuesta por la documentación oficial \cite{estructurareact}.
+        
+        \item Para golang, se utilizará el estilo impuesto por la herramienta automática de formato de dicho lenguaje \cite{estilogolang} y la estructura de proyectos recomendada por la comunidad \cite{estructuragolang}, compatible con las herramientas de compilación del lenguaje.
+    \end{itemize}
+    
+    \item Los ficheros de documentación no interna serán nombrados con minúsculas y podrán contener guiones bajos, sin caracteres especiales. Si forman parte de la documentación del código o interfaces, su nombre empezará por \textbf{documentacion\_}, y si forman parte de guías de uso para los clientes, su nombre empezará por \textbf{guia\_}.
+    
+    \item Todo el código será subido a los repositorios de la organización de Github \footnote{\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Repositorio de la organización de Github}}}, donde todos los miembros tendrán permisos de acceso, modificación y administración de los mismos. Los repositorios serán los siguientes:
+    \begin{itemize}
+        \item Un repositorio para el backend del sistema \footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_backend}{\color{blue}{Repositorio del backend del sistema}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al servidor de API escrito en golang.
+        
+        \item Un repositorio para el frontend de React\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_react}{\color{blue}{Repositorio del frontend de React}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al frontend de React.
+        
+        \item Un repositorio para el frontend de Angular \footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_angular}{\color{blue}{Repositorio del frontend de Angular}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al frontend de Angular.
+        
+        \item Un repositorio para la documentación pública \footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion}{\color{blue}{Repositorio de documentación pública}}}, en el cual se localizarán todos los archivos de documentación interna o para los clientes finales y parciales, como archivos de \LaTeX.
+    \end{itemize}
+    
+    \item La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de Github del repositorio relacionado con ellas.
+    
+    \item Todas las tareas, funcionalidades a implementar o ampliar y errores a arreglar serán documentados en incidencias individuales con una descripción concisa, que formarán parte de hitos para entregas y versiones intermedias si aplica, y tendrán etiquetas asignadas acordemente.
+    
+    Las incidencias serán asignadas a quienes trabajen en ella para mantener un control de actividades y tiempo, y podrán ser cerradas y abiertas de nuevo libremente.
+    
+    \item Todos los commits a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. 
+    
+    Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción de los cambios realizados concisa.
+    
+    
+\end{itemize}
+
+\subsubsection{Convenciones y procedimientos para el despliegue del software}
+
+\begin{itemize}
+    \item Las herramientas necesarias para construir el software serán aquellas necesarias para desplegar los frontend de React y Angular y el backend de golang por separado, y Docker.
+    
+    En el repositorio del backend se proporcionarán scripts de automatización del despliegue del backend con cada uno de los frontends sobre contenedores de Docker. También será posible elegir si se desea construir el contenedor para ejecutar y obtener resultados de pruebas unitarias o ejecutar el sistema en sí.\\
+    
+    Dicho script de automatización se hará cargo de la compilación, obtención de dependencias y puesta en marcha y configuración de cualquier elemento adicional como la base de datos, con el objetivo de poder realizar pruebas localmente con una base común para todos los miembros del equipo.
+    
+    \item El despliegue en entornos de producción se realizará con contenedores de Docker en servidores cloud, con configuraciones como claves de acceso a la base de datos o rutas y puertos a utilizar a introducir manualmente como parte del despliegue del contenedor por motivos de seguridad.
+\end{itemize}
+
+\subsubsection{Convenciones y procedimientos para el control de la calidad del software}
+
+\begin{itemize}
+    \item Se seguirán buenas prácticas para la documentación del código, como las publicadas por Google \cite{documentaciongoogle}, para la documentación de la API pública y de funciones auxiliares críticas.
+    
+    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos frontends para mantener la consistencia y por tanto acordado entre ambas partes encargadas de ellos, y se seguirán los principios básicos de diseño de interfaces y usabilidad, como las heurísticas de Nielsen \cite{heuristicasnielsen}.
+    
+    \item El código de cada una de las partes del proyecto será revisado por ambos miembros encargados de él. Adicionalmente, se prepararán tests automáticos para aquellos aspectos que pudieran requerir demasiado tiempo para probarlos.
+    
+    \item Las entregas a los clientes serán probadas íntegramente por todos los miembros del equipo en conjunto, y se garantizará que no existen problemas en las funcionalidades implementadas hasta dicho momento.
+\end{itemize}
+
+El responsable del seguimiento de todos estos aspectos será Samuel García.
+
+
+
+\subsection{Calendario del proyecto, división del trabajo, coordinación, comunicaciones, monitorización y seguimiento}
+
+\section{Análisis y diseño del sistema}
+
+\subsection{Análisis de requisitos}
+
+\subsection{Diseño del sistema}
+
+
+%%%%%%%% Entrega 2 y final
+%\section{Memoria del proyecto}
+%\subsection{Inicio del proyecto}
+%\subsection{Ejecución y control del proyecto}
+%\subsection{Cierre del proyecto}
+%\section{Conclusiones}
+
+
+\clearpage
+\section{Anexos}
+%\subsection{Glosario}
+%\subsection{Actas de todas las reuniones realizadas}
+\subsection{Bibliografía}
+
+\printbibliography
+\end{document}
