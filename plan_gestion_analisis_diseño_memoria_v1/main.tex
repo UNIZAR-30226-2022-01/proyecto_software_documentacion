@@ -189,8 +189,58 @@ Grupo 01 - Grace Hopper
 \clearpage
 \setcounter{page}{1}
 \section{Introducción}
+A lo largo del documento vamos a presentar un proyecto que hemos denominado World Domination. Se trata de un juego de estrategia on-line basado en turnos e inspirado en Risk, en el que cada jugador lucha con el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios controlados por los mismos, así como con una baraja de cartas propia que serán canjeadas por más soldados. En cada turno, los jugadores tendrán que batallar con soldados bajo el dominio de otros jugadores, decidiendose los resultados mediante tiradas de dados.
+
+El juego proporcionará funcionalidades adicionales a los jugadores, que les permitirá disfrutar de una experiencia social en el entorno del juego, fomentando la competición entre ellos y una mayor participación en futuras partidas.
+
+El sistema debe ser capaz de gestionar las cuentas de los usuarios junto con las partidas que se desarrollen, así como la gestión de turnos y la inicialización y finalización de cada una de las partidas. Algunos de los objetivos fundamentales del sistema son: 
+
+\begin{itemize}
+\item Se permitirá a los usuarios registrarse e iniciar sesión con sus credenciales, que constan de un email y contraseña. El uso de una cuenta de usuario será necesario para jugar partidas.
+
+\item El sistema contará con un ranking global de los mejores jugadores y de sus respectivas puntuaciones de las partidas jugadas.
+
+\item Se permitirá a los usuarios personalizar elementos del juego en función de sus preferencias, como las fichas, su foto de perfil, o los dados usados durante las partidas.
+
+\item El sistema recompensará al usuario por haber jugado o ganado un número determinado de partidas con puntos canjeables en la tienda del juego. La tienda será el punto de compra de personalizaciones de los elementos del juego.
+
+\item Se permitirá gestioar una lista de amigos de cada usuario.
+
+\item El sistema permitirá crear partidas públicas y privadas, conforme a las siguientes reglas:
+\begin{itemize}
+    \item Las Partidas serán de 2 a 6 jugadores.
+    \item Se permitirá a cualquier usuario entrar a partidas públicas.
+    \item En el caso de partidas privadas, solo se permitirá la entrada con una contraseña, introducida al crearla.
+    \item Se encontrará disponible un chat en la partida.
+    \item Se restringirá al usuario a poder jugar solo una partida al mismo tiempo.
+\end{itemize}
+
+\item Las partidas se desarrollarán de forma asíncrona, permitiendo a los usuarios cuyo turno les corresponda responder en cualquier momento. Si el usuario se encuentra conectado, podrá ver una notificación en la pantalla. En caso de que el usuario no se encuentre conectado, se enviará un correo al mismo notificando que puede realizar la jugada.
+
+\item Habrá un mecanismo de expulsión de jugadores que no respondan o realicen jugadas en un tiempo determinado.
+
+\end{itemize}
+
+A lo largo de la realización del proyecto, será necesario realizar algunas entregas del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:\newline
+Una reunión para la evaluación de las funcionalidades clave ¿…?\newline
+Una reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales, en la semana del 16 al 20 de Mayo.\newline
+El sistema finál se entregará no más tarde del 1 de junio, con los cambios propuestos durante las reuniones intermedias.
+
+A continuación hablaremos sobre otros aspectos del proyecto, de la gestión, la organización, análisis de requisitos, así como del diseño del sistema.
 
 \section{Organización del proyecto}
+El equipo está formado por 6 integrantes: Samuel García, Guillermo Enguita, Laura Gonzalez, Francisco Crespo, Emilio Estevan y Jorge Grima.
+Hemos dividido el proyecto en tres bloques fundamentales:
+\begin{itemize}
+    \item Backend mediante \textbf{GoLang}.
+    \item Primera versión frontend mediante \textbf{React}.
+    \item Segunda versión frontend mediante \textbf{Angular}.
+\end{itemize}
+
+El trabajo del primer bloque será llevado a cabo por Samuel y Guillermo, el del segundo bloque por Francisco y Emilio, mientrás que el del tercer bloque será realizado por Laura y Jorge. 
+Aunque cada uno tenga un bloque asignado, en todo momento se ayudará a integrantes encargados del trabajo en otros bloques si fuera necesario.
+
+Además, el equipo decidió nombrar como director a Francisco Crespo, que será quién se encargue de llevar a cabo la organización principal del proyecto, así como de las entregas necesarias del trabajo.
 
 \section{Plan de gestión del proyecto}
 
