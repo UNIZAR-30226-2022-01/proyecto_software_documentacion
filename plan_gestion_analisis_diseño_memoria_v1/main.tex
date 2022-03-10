@@ -1,6 +1,6 @@
 % Preamble del documento
 
-\documentclass[12pt, a4paper, titlepage]{article}
+\documentclass[11pt, a4paper, titlepage]{article}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,8 +16,9 @@
 % Paquetes 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[colorlinks=true, urlcolor=cyan, citecolor=blue, linkcolor=blue, hidelinks]{hyperref} % /url{}, /ref{}...
-
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{minted} % Código
+\usepackage{setspace}
 
 \usepackage[sorting=none, style=numeric]{biblatex} % aparece 1ro la 1ra citada
 \addbibresource{citas.bib}
@@ -173,15 +174,16 @@ Grupo 01 - Grace Hopper
 % CUERPO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}
-\fontsize{12pt}{12pt}\selectfont
+\fontsize{11pt}{11pt}\selectfont
 
 \setcounter{tocdepth}{2}
 
 % Índice con links en negro y no en azul
-\begingroup
-\hypersetup{linkcolor=black}
+{
+    \hypersetup{linkcolor=black}
+    \doublespacing
     \tableofcontents
-\endgroup
+}
 
 \thispagestyle{empty}
 
@@ -189,9 +191,9 @@ Grupo 01 - Grace Hopper
 \clearpage
 \setcounter{page}{1}
 \section{Introducción}
-A lo largo del documento vamos a presentar un proyecto que hemos denominado World Domination. Se trata de un juego de estrategia on-line basado en turnos e inspirado en Risk, en el que cada jugador lucha con el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios controlados por los mismos, así como con una baraja de cartas propia que serán canjeadas por más soldados. En cada turno, los jugadores tendrán que batallar con soldados bajo el dominio de otros jugadores, decidiendose los resultados mediante tiradas de dados.
+A lo largo del documento vamos a presentar un proyecto que hemos denominado World Domination. Se trata de un juego de estrategia on-line basado en turnos e inspirado en Risk, en el que cada jugador lucha con el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios controlados por los mismos, así como con una baraja de cartas propia que serán canjeadas por más soldados. En cada turno, los jugadores tendrán que batallar con soldados bajo el dominio de otros jugadores, decidiendose los resultados mediante tiradas de dados. \newline
 
-El juego proporcionará funcionalidades adicionales a los jugadores, que les permitirá disfrutar de una experiencia social en el entorno del juego, fomentando la competición entre ellos y una mayor participación en futuras partidas.
+El juego proporcionará funcionalidades adicionales a los jugadores, que les permitirá disfrutar de una experiencia social en el entorno del juego, fomentando la competición entre ellos y una mayor participación en futuras partidas. \newline
 
 El sistema debe ser capaz de gestionar las cuentas de los usuarios junto con las partidas que se desarrollen, así como la gestión de turnos y la inicialización y finalización de cada una de las partidas. Algunos de los objetivos fundamentales del sistema son: 
 
@@ -230,15 +232,15 @@ A continuación hablaremos sobre otros aspectos del proyecto, de la gestión, la
 
 \section{Organización del proyecto}
 El equipo está formado por 6 integrantes: Samuel García, Guillermo Enguita, Laura Gonzalez, Francisco Crespo, Emilio Estevan y Jorge Grima.
-Hemos dividido el proyecto en tres bloques fundamentales:
+Hemos dividido el proyecto en tres bloques fundamentales:\newline
 \begin{itemize}
     \item Backend mediante \textbf{GoLang}.
     \item Primera versión frontend mediante \textbf{React}.
-    \item Segunda versión frontend mediante \textbf{Angular}.
+    \item Segunda versión frontend mediante \textbf{Angular}.\newline
 \end{itemize}
 
 El trabajo del primer bloque será llevado a cabo por Samuel y Guillermo, el del segundo bloque por Francisco y Emilio, mientrás que el del tercer bloque será realizado por Laura y Jorge. 
-Aunque cada uno tenga un bloque asignado, en todo momento se ayudará a integrantes encargados del trabajo en otros bloques si fuera necesario.
+Aunque cada uno tenga un bloque asignado, en todo momento se ayudará a integrantes encargados del trabajo en otros bloques si fuera necesario. \newline
 
 Además, el equipo decidió nombrar como director a Francisco Crespo, que será quién se encargue de llevar a cabo la organización principal del proyecto, así como de las entregas necesarias del trabajo.
 
@@ -250,16 +252,16 @@ A continuación, se describe cómo se llevaran a cabo distintas tareas a realiza
 
 \begin{itemize}
 
-\item En primer lugar, en referencia a formación común del equipo y, debido a que la completitud de la documentación necesaria para el proyecto va a ser realizada en \textbf{Latex}, todos los miembros del equipo han adquirido conocimientos básicos para la utilización y explotación de esta herramienta. Para lograr este objetivo, se han realizado dos tutoriales. El primero de ellos <<Learn LaTeX in 30 minutes>> \cite{latextutorial1} se puede encontrar en la página web de \textit{Overleaf}. A su vez, se han seguido los manuales de ayuda proporcionados por la página oficial de \textit{Latex} \cite{latextutorial2}. 
+\item En primer lugar, en referencia a formación común del equipo y, debido a que la completitud de la documentación necesaria para el proyecto va a ser realizada en \textbf{Latex}, todos los miembros del equipo han adquirido conocimientos básicos para la utilización y explotación de esta herramienta. Para lograr este objetivo, se han realizado dos tutoriales. El primero de ellos <<Learn LaTeX in 30 minutes>>\textsuperscript{\cite{latextutorial1} }se puede encontrar en la página web de \textit{Overleaf}. A su vez, se han seguido los manuales de ayuda proporcionados por la página oficial de \textit{Latex}\textsuperscript{\cite{latextutorial2}}. 
 
-\item Por otro lado, continuando en lo que respecta a la formación común, los integrantes del Grupo 1 asistieron a la práctica: \textit{Puesta en marcha de GitHub y fundamentos de Git} impartida por los profesores de la asignatura \textit{Proyecto Software}, la cual consistió en familiarizarse con la herramienta \textbf{Git} y su uso en conjunto con \textbf{GitHub}. A su vez, por medio del tutorial: \textit{Git, GitHub y Publicación Web} \cite{githubtutorial} se habían adquirido los conocimientos básicos de la respectiva tecnología.
+\item Por otro lado, continuando en lo que respecta a la formación común, los integrantes del Grupo 1 asistieron a la práctica: \textit{Puesta en marcha de GitHub y fundamentos de Git} impartida por los profesores de la asignatura \textit{Proyecto Software}, la cual consistió en familiarizarse con la herramienta \textbf{Git} y su uso en conjunto con \textbf{GitHub}. A su vez, por medio del tutorial: \textit{Git, GitHub y Publicación Web}\textsuperscript{\cite{githubtutorial}} se habían adquirido los conocimientos básicos de la respectiva tecnología.
 
 \item Los encargados del desarrollo del \textit{backend} harán uso de \textbf{GoLang} como lenguaje de programación. Se trata de un lenguaje bastante conocido debido a que fue utilizado durante las prácticas de la asignatura \textit{Sistemas Distribuidos}. De cara a fijar conocimientos y a aprender nuevas mecánicas, fue realizado el tutorial de la página web oficial de GoLang. \\
-Por otro lado, también realizaron una formación relacionada con las distintas \textbf{APIs web}, concretamente el tutorial \textit{Introducción a las APIs web} de MozillaDeveloper \cite{apisweb}.
+Por otro lado, también realizaron una formación relacionada con las distintas \textbf{APIs web}, concretamente el tutorial \textit{Introducción a las APIs web} de MozillaDeveloper\textsuperscript{\cite{apisweb}}.
 
-\item El equipo encargado del primer \textit{frontend}, aplicación web con \textbf{React}, necesita adquirir los conocimientos necesarios para trabajar con esta tecnología. Para ello, se realizará el tutorial oficial de \textbf{ReactJs}: \textit{Tutorial: Introducción a React} \cite{reactjs}, el cual consta de una duración estimada de 8 horas. A su vez, será realizado el tutorial de APIs web anteriormente mencionado \cite{apisweb}.
+\item El equipo encargado del primer \textit{frontend}, aplicación web con \textbf{React}, necesita adquirir los conocimientos necesarios para trabajar con esta tecnología. Para ello, se realizará el tutorial oficial de \textbf{ReactJs}: \textit{Tutorial: Introducción a React}\textsuperscript{\cite{reactjs}}, el cual consta de una duración estimada de 8 horas. A su vez, será realizado el tutorial de APIs web anteriormente mencionado\textsuperscript{\cite{apisweb}}.
 
-\item Por último, el equipo encargado de desarrollar el segundo \textit{frontend}, aplicación web con \textbf{Angular}. Debido a que no se ha trabajado con este framework es necesario realizar un tutorial para aprender a usar esta tecnología. De cara a lograr este objetivo, será realizado el tutorial \textit{Angular y TypeScript} \cite{angular} proporcionado por DesarrolloWeb, el cual tiene un tiempo estimado de realización próximo a las 7 horas.
+\item Por último, el equipo encargado de desarrollar el segundo \textit{frontend}, aplicación web con \textbf{Angular}. Debido a que no se ha trabajado con este framework es necesario realizar un tutorial para aprender a usar esta tecnología. De cara a lograr este objetivo, será realizado el tutorial \textit{Angular y TypeScript}\textsuperscript{\cite{angular}} proporcionado por DesarrolloWeb, el cual tiene un tiempo estimado de realización próximo a las 7 horas.
 
 \end{itemize}
 
@@ -272,25 +274,25 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 \begin{itemize}
     \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los frameworks a utilizar. De este modo, se seguirán las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
     \begin{itemize}
-        \item Para Angular, se utilizará la guía de estilo oficial \cite{estiloangular} y la guía de estructura de proyectos propuesta por la documentación oficial \cite{estructuraangular}.
+        \item Para Angular, se utilizará la guía de estilo oficial\textsuperscript{\cite{estiloangular}} y la guía de estructura de proyectos propuesta por la documentación oficial\textsuperscript{\cite{estructuraangular}}.
         
         \item Para React, se utilizará la
-        guía de estilo de airbnb \cite{estiloreact} y la estructura de proyectos propuesta por la documentación oficial \cite{estructurareact}.
+        guía de estilo de airbnb\textsuperscript{\cite{estiloreact}} y la estructura de proyectos propuesta por la documentación oficial\textsuperscript{\cite{estructurareact}}.
         
-        \item Para golang, se utilizará el estilo impuesto por la herramienta automática de formato de dicho lenguaje \cite{estilogolang} y la estructura de proyectos recomendada por la comunidad \cite{estructuragolang}, compatible con las herramientas de compilación del lenguaje.
+        \item Para golang, se utilizará el estilo impuesto por la herramienta automática de formato de dicho lenguaje\textsuperscript{\cite{estilogolang}} y la estructura de proyectos recomendada por la comunidad\textsuperscript{\cite{estructuragolang}}, compatible con las herramientas de compilación del lenguaje.
     \end{itemize}
     
     \item Los ficheros de documentación no interna serán nombrados con minúsculas y podrán contener guiones bajos, sin caracteres especiales. Si forman parte de la documentación del código o interfaces, su nombre empezará por \textbf{documentacion\_}, y si forman parte de guías de uso para los clientes, su nombre empezará por \textbf{guia\_}.
     
-    \item Todo el código será subido a los repositorios de la organización de Github \footnote{\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Repositorio de la organización de Github}}}, donde todos los miembros tendrán permisos de acceso, modificación y administración de los mismos. Los repositorios serán los siguientes:
+    \item Todo el código será subido a los repositorios de la organización de Github\footnote{\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Repositorio de la organización de Github}}}, donde todos los miembros tendrán permisos de acceso, modificación y administración de los mismos. Los repositorios serán los siguientes:
     \begin{itemize}
-        \item Un repositorio para el backend del sistema \footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_backend}{\color{blue}{Repositorio del backend del sistema}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al servidor de API escrito en golang.
+        \item Un repositorio para el backend del sistema\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_backend}{\color{blue}{Repositorio del backend del sistema}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al servidor de API escrito en golang.
         
         \item Un repositorio para el frontend de React\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_react}{\color{blue}{Repositorio del frontend de React}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al frontend de React.
         
-        \item Un repositorio para el frontend de Angular \footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_angular}{\color{blue}{Repositorio del frontend de Angular}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al frontend de Angular.
+        \item Un repositorio para el frontend de Angular\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_angular}{\color{blue}{Repositorio del frontend de Angular}}}, en el cual se localizará todo el código y ficheros para el despliegue relativo al frontend de Angular.
         
-        \item Un repositorio para la documentación pública \footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion}{\color{blue}{Repositorio de documentación pública}}}, en el cual se localizarán todos los archivos de documentación interna o para los clientes finales y parciales, como archivos de \LaTeX.
+        \item Un repositorio para la documentación pública\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion}{\color{blue}{Repositorio de documentación pública}}}, en el cual se localizarán todos los archivos de documentación interna o para los clientes finales y parciales, como archivos de \LaTeX.
     \end{itemize}
     
     \item La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de Github del repositorio relacionado con ellas.
@@ -309,9 +311,9 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 \subsubsection{Convenciones y procedimientos para el despliegue del software}
 
 \begin{itemize}
-    \item Las herramientas necesarias para construir el software serán aquellas necesarias para desplegar los frontend de React y Angular y el backend de golang por separado, y Docker.
+    \item Las herramientas necesarias para construir el software serán aquellas necesarias para desplegar los frontend de React y Angular y el backend de golang por separado, y Docker. \newline
     
-    En el repositorio del backend se proporcionarán scripts de automatización del despliegue del backend con cada uno de los frontends sobre contenedores de Docker. También será posible elegir si se desea construir el contenedor para ejecutar y obtener resultados de pruebas unitarias o ejecutar el sistema en sí.\\
+    En el repositorio del backend se proporcionarán scripts de automatización del despliegue del backend con cada uno de los frontends sobre contenedores de Docker. También será posible elegir si se desea construir el contenedor para ejecutar y obtener resultados de pruebas unitarias o ejecutar el sistema en sí. \newline
     
     Dicho script de automatización se hará cargo de la compilación, obtención de dependencias y puesta en marcha y configuración de cualquier elemento adicional como la base de datos, con el objetivo de poder realizar pruebas localmente con una base común para todos los miembros del equipo.
     
@@ -321,9 +323,9 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 \subsubsection{Convenciones y procedimientos para el control de la calidad del software}
 
 \begin{itemize}
-    \item Se seguirán buenas prácticas para la documentación del código, como las publicadas por Google \cite{documentaciongoogle}, para la documentación de la API pública y de funciones auxiliares críticas.
+    \item Se seguirán buenas prácticas para la documentación del código, como las publicadas por Google\textsuperscript{\cite{documentaciongoogle}}, para la documentación de la API pública y de funciones auxiliares críticas.
     
-    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos frontends para mantener la consistencia y por tanto acordado entre ambas partes encargadas de ellos, y se seguirán los principios básicos de diseño de interfaces y usabilidad, como las heurísticas de Nielsen \cite{heuristicasnielsen}.
+    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos frontends para mantener la consistencia y por tanto acordado entre ambas partes encargadas de ellos, y se seguirán los principios básicos de diseño de interfaces y usabilidad, como las heurísticas de Nielsen\textsuperscript{\cite{heuristicasnielsen}}.
     
     \item El código de cada una de las partes del proyecto será revisado por ambos miembros encargados de él. Adicionalmente, se prepararán tests automáticos para aquellos aspectos que pudieran requerir demasiado tiempo para probarlos.
     
@@ -372,7 +374,7 @@ El responsable del seguimiento de todos estos aspectos será Samuel García.
          RF-14 & El sistema ofrecerá un chat que permitirá a los jugadores de una partida comunicarse entre ellos.\\
          \hline
     \end{tabularx}
-    \caption{Requisitos funcionales de la aplicación}
+    \caption{Requisitos funcionales de la aplicación.}
     \label{tab:rf}
 \end{longtable}
 
@@ -390,7 +392,7 @@ El responsable del seguimiento de todos estos aspectos será Samuel García.
          RNF-6 & La interfaz ofrecida estará adaptada a formatos de pantalla horizontales, habituales en los navegadores web, y no ofrecerá capacidades adaptativas para su uso en dispositivos móviles.\\
          \hline
     \end{tabularx}
-    \caption{Requisitos no funcionales del sistema}
+    \caption{Requisitos no funcionales del sistema.}
     \label{tab:rnf}
 \end{table}
 \subsection{Diseño del sistema}
