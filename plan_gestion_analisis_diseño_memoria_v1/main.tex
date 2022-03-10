@@ -341,9 +341,9 @@ El responsable del seguimiento de todos estos aspectos será Samuel García.
 \section{Análisis y diseño del sistema}
 
 \subsection{Análisis de requisitos}
-\\ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados en la tabla \ref{tab:rf}, así mismo, la tabla \ref{tab:rnf} recoge los requisitos no funcionales. Ambos tipos de requisitos se encuentran claramente detallados e identificados, para facilitar su referencia en documentación futura.
-% La leyenda no cabe bien si está debajo de la tabla y la pone donde quiere
-\begin{longtable}
+Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados en la tabla \ref{tab:rf}, así mismo, la tabla \ref{tab:rnf} recoge los requisitos no funcionales. Ambos tipos de requisitos se encuentran claramente detallados e identificados, para facilitar su referencia en documentación futura.
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[h!]
     \centering
     \begin{tabularx}{\textwidth}{|l|X|}
     \hline
@@ -376,9 +376,9 @@ El responsable del seguimiento de todos estos aspectos será Samuel García.
     \end{tabularx}
     \caption{Requisitos funcionales de la aplicación.}
     \label{tab:rf}
-\end{longtable}
+\end{table}
 
-\begin{table}[hbt]
+\begin{table}[h!]
     \centering
     \begin{tabularx}{\textwidth}{|l|X|}
          \hline
@@ -407,10 +407,12 @@ El responsable del seguimiento de todos estos aspectos será Samuel García.
 
 
 \clearpage
-\section{Anexos}
+%\section{Anexos}
 %\subsection{Glosario}
 %\subsection{Actas de todas las reuniones realizadas}
-\subsection{Bibliografía}
 
+\newpage
+\section{Bibliografía}
 \printbibliography
+
 \end{document}
