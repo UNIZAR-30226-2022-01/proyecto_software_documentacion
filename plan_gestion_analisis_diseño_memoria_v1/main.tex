@@ -19,6 +19,7 @@
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{minted} % Código
 \usepackage{setspace}
+\usepackage{pdfpages}
 
 \usepackage[sorting=none, style=numeric]{biblatex} % aparece 1ro la 1ra citada
 \addbibresource{citas.bib}
@@ -110,57 +111,9 @@
 % PORTADA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
+
 \thispagestyle{empty}
-\vspace*{1.7mm}
-
-\fontsize{28pt}{28pt}\selectfont
-\begin{center}
-Plan de gestión, análisis, diseño y memoria del proyecto
-\end{center}
-\fontsize{24pt}{24pt}\selectfont
-\vspace*{4mm}
-\begin{center}
-Grupo 01 - Grace Hopper
-\end{center}
-\vspace*{17.7mm}
-\baselineskip 36pt
-\begin{center}
-\fontsize{12pt}{12pt}\selectfont
-\center{\rm  Autores}
-
-\vspace*{3.65mm} 
-\fontsize{18pt}{18pt}\selectfont
-\center{García Vázquez, Samuel,  720873\\
-        Crespo Aznárez, Francisco José, 798066\\
-        Estevan Tomás, Emilio, 798516\\
-        Grima Terrén, Jorge 801324\\
-        Enguita Lahoz, Guillermo, 801618\\
-        González Pizarro, Laura,  805467\\
-        }
-\vspace*{25mm} 
-\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Organización de Github}}
-%\baselineskip 36pt
-%\fontsize{12pt}{12pt}\selectfont
-%\center{\rm  Profesores}
-%\vspace*{3.65mm}
-%\fontsize{14pt}{14pt}\selectfont
-%\center{Nombre profesor 1}
-\end{center}
-
-\setcounter{footnote}{0}
-%\vspace*{3.65mm}
-%\fontsize{12pt}{12pt}\selectfont
-%\begin{center}
-%\monthyear
-%\end{center}
-\vspace*{10.7mm}
-\begin{figure}[!h]
-  \centering
-	\includesvg[width=69.62mm]{eina}
-\end{figure}
-
-\renewcommand{\thefootnote}{\arabic{footnote}}
-%\pagenumbering{gobble}
+\includepdf[linktodoc=true, link=true]{portadaMemoria.pdf}
 
 \end{titlepage}
 \newpage
