@@ -31,6 +31,7 @@
 \usepackage{graphicx} % Imágenes
 
 \usepackage{tabularx} % Tablas más potentes
+\usepackage{longtable} % Tablas muy largas
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{multicol}
@@ -271,7 +272,60 @@ El responsable del seguimiento de todos estos aspectos será Samuel García.
 \section{Análisis y diseño del sistema}
 
 \subsection{Análisis de requisitos}
+\\ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados en la tabla \ref{tab:rf}, así mismo, la tabla \ref{tab:rnf} recoge los requisitos no funcionales. Ambos tipos de requisitos se encuentran claramente detallados e identificados, para facilitar su referencia en documentación futura.
+% La leyenda no cabe bien si está debajo de la tabla y la pone donde quiere
+\begin{longtable}
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|}
+    \hline
+         Código & Descripción  \\
+         \hline
+         RF-1 & El sistema permitirá a los usuarios registrarse, utilizando un correo electrónico y estableciendo un nombre de usuario y una contraseña.\\
+         RF-2 & El sistema permitirá a los usuarios iniciar sesión, utilizando su correo electrónico y su contraseña.\\
+         RF-3 & El sistema permitirá a los usuarios iniciar sesión, utilizando su nombre de usuario y su contraseña.\\
+         RF-4 & El sistema proporcionará a los usuarios un juego de Risk.\\
+         RF-5 & El sistema ofrecerá a los usuarios un lobby que permitirá buscar partidas públicas en curso, destacando las partidas en las que participen amigos del usuario.\\
+         RF-6 & El sistema recompensará a los jugadores al ganar partidas, otorgándoles puntos canjeables.\\
+         RF-7 & El sistema ofrecerá una tienda a los usuarios en la que podrán utilizar los puntos descritos en el requisito RF-6 para comprar diferentes cosméticos que permitan la personalización. \\
+         RF-8 & El sistema permitirá a los usuarios personalizar elementos del juego.\\
+         RF-8.1 & El sistema permitirá a los usuarios modificar su foto de perfil y su biografía.\\
+         RF-8.2 & El sistema permitirá a los usuarios personalizar sus dados y fichas de juego, utilizando los cosméticos comprados en la tienda definida en el requisito RF-7.\\
+         RF-8.3 & Las personalizaciones realizadas serán visibles por todos los usuarios.\\
+         RF-9 & El sistema permitirá a los usuarios gestionar una lista de amigos.\\
+         RF-10 & El sistema permitirá a los usuarios consultar una clasificación global, la cuál mostrará a los mejores jugadores junto con sus respectivas puntuaciones.\\
+         RF-11 & El sistema permitirá a los usuarios consultar el perfil personal de otros jugadores.\\
+         RF-12 & El sistema permitirá a los usuarios crear una partida.\\
+         RF-12.1 & El sistema permitirá crear partidas públicas, a las que cualquier usuario se podrá unir.\\
+         RF-12.2 & El sistema permitirá crear partidas privadas, de forma que el usuario deberá definir una contraseña para el acceso a dicha partida.\\
+         RF-12.3 & El sistema permitirá al usuario establecer el número de jugadores de la partida (de 2 a 6 jugadores).\\
+         RF-13 & Las partidas se desarrollarán de forma asíncrona.\\
+         RF-13.1 & Cuando llegue el turno del jugador, el sistema le avisará mostrando una notificación en la pantalla si está conectado a la aplicación.\\
+         RF-13.2 & Si el usuario no está conectado, el sistema enviará el aviso a través de correo electrónico.\\
+         RF-13.3 & Si el usuario no realiza su jugada dentro de un tiempo determinado, el sistema lo expulsará de la partida.\\
+         RF-14 & El sistema ofrecerá un chat que permitirá a los jugadores de una partida comunicarse entre ellos.\\
+         \hline
+    \end{tabularx}
+    \caption{Requisitos funcionales de la aplicación}
+    \label{tab:rf}
+\end{longtable}
 
+\begin{table}[hbt]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|}
+         \hline
+         Código & Descripción \\
+         \hline
+         RNF-1 & El usuario necesitará acceso a Internet para poder utilizar la aplicación.\\
+         RNF-2 & La interfaz de la aplicación estará disponible en castellano.\\
+         RNF-3 & Los usuarios deberán registrarse para poder participar en las partidas.\\
+         RNF-4 & Un mismo usuario no podrá participar en varias partidas de forma simultánea. \\
+         RNF-5 & El usuario podrá continuar una partida en curso independientemente del dispositivo con el que se conecte y el cliente que utilice.\\
+         RNF-6 & La interfaz ofrecida estará adaptada a formatos de pantalla horizontales, habituales en los navegadores web, y no ofrecerá capacidades adaptativas para su uso en dispositivos móviles.\\
+         \hline
+    \end{tabularx}
+    \caption{Requisitos no funcionales del sistema}
+    \label{tab:rnf}
+\end{table}
 \subsection{Diseño del sistema}
 
 
