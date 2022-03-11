@@ -38,6 +38,7 @@
 \usepackage{booktabs}
 \usepackage{multicol}
 \usepackage{adjustbox} % Ajustar tablas al ancho de la página
+\usepackage{pdflscape}
 
 \usepackage{datetime} % Fechas
 \usepackage{svg} % para el svg del logo de la eina
@@ -144,7 +145,7 @@
 \clearpage
 \setcounter{page}{1}
 \section{Introducción}
-A lo largo del documento vamos a presentar un proyecto que hemos denominado\textit{ \textbf{World Domination}}. Se trata de un juego de estrategia \textit{on-line} por turnos e inspirado en \textit{Risk}, en el que cada jugador lucha contra el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios controlados por los mismos, así como con una baraja de cartas propia que serán canjeadas por más soldados. En cada turno, los jugadores tendrán que luchar con tropas bajo el dominio de los rivales, decidiéndose los resultados mediante tiradas de dados. \newline
+A lo largo del documento se va a presentar un proyecto que se ha denominado\textit{ \textbf{World Domination}}. Se trata de un juego de estrategia \textit{on-line} por turnos e inspirado en \textit{Risk}, en el que cada jugador lucha contra el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios controlados por los mismos, así como con una baraja de cartas propia que serán canjeadas por más soldados. En cada turno, los jugadores tendrán que luchar con tropas bajo el dominio de los rivales, decidiéndose los resultados mediante tiradas de dados. \newline
 
 El juego proporcionará funcionalidades adicionales, que les permitirá disfrutar de una experiencia social, fomentando la competición y una mayor participación en futuras partidas. \newline
 
@@ -176,11 +177,14 @@ El sistema debe ser capaz de gestionar las cuentas de los usuarios junto con las
 
 \end{itemize}
 
-A lo largo de la realización del proyecto, será necesario realizar algunas entregas del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:\newline
-Una reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales, en la semana del 16 al 20 de Mayo.\newline
-El sistema final se entregará no más tarde del 1 de junio, con los cambios propuestos durante las reuniones intermedias.
+A lo largo de la realización del proyecto, será necesario realizar algunas entregas del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:
 
-A continuación hablaremos sobre otros aspectos del proyecto, de la gestión, la organización, análisis de requisitos, así como del diseño del sistema.
+\begin{itemize}
+    \item Una reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales, en la semana del 16 al 20 de Mayo.
+    \item El sistema final se entregará no más tarde del 1 de junio, con los cambios propuestos durante las reuniones intermedias.
+\end{itemize}
+
+A continuación se hablará sobre otros aspectos del proyecto, de la gestión, la organización, análisis de requisitos, así como del diseño del sistema.
 
 \section{Organización del proyecto}
 El equipo está formado por 6 integrantes: Samuel García, Guillermo Enguita, Laura Gonzalez, Francisco Crespo, Emilio Estevan y Jorge Grima.
@@ -286,13 +290,20 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 
 El responsable del seguimiento de todos estos aspectos será Samuel García.
 
-
-
 \subsection{Calendario del proyecto, división del trabajo, coordinación, comunicaciones, monitorización y seguimiento}
 
-La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante un diagrama de Gantt, el cual podrá ser modificado en el futuro debido a posibles adelantos o retrasos en alguna de las tareas, y también por tareas imprevistas que pueden surgir durante la realización del proyecto.\\
+La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante un diagrama de Gantt, apreciable en la Figura 1, el cual podrá ser modificado en el futuro debido a posibles adelantos o retrasos en alguna de las tareas, y también por tareas imprevistas que pueden surgir durante la realización del proyecto.\\
 
-%imagen diagrama de gantt
+\begin{landscape}
+    \pagestyle{empty}
+    \begin{figure}[!p]
+    \centering
+    \includegraphics[scale=0.65]{diagramas/gant.PNG}
+    \caption{Diagrama de Gantt.}
+    \label{fig:my_label}
+\end{figure}
+\end{landscape}
+
 Se han establecido las siguiente divisiones de trabajo junto a las personas asignadas a cada parte:
 
 \begin{itemize}
@@ -306,7 +317,7 @@ Se han establecido las siguiente divisiones de trabajo junto a las personas asig
 
 La división de tareas diarias internas en cada uno de los equipos se consensuará entre sus miembros, y se preferirá en todo momento la programación por pares.\\
 
-Tanto el frontend como el backend poseerán un calendario de seguimiento propio en el cual se establecen los objetivos a realizar junto a sus fechas limite para ser completadas. 
+Tanto el frontend como el backend poseerán un calendario de seguimiento propio en el cual se establecen los objetivos a realizar junto a sus fechas limite para ser completadas. \\
 
 Ambos tienen en común dos fechas las son \textbf{8 de abril} debido a que esta es la es la entrega intermedia, en donde se le mostrará al cliente una primera versión funcional del proyecto
 y \textbf{30 de junio} porque esta es la fecha de la entrega del proyecto.\\
@@ -316,10 +327,10 @@ Cada dos semanas todos los miembros del equipo rellenarán un cuestionario indic
 Las métricas de rendimiento del equipo irán marcadas por el estado por cada una de las incidencias y tareas pendientes de cada uno de los repositorios. Si se diese el caso de que algún equipo quedase rezagado respecto al resto o sufriera algún imprevisto, éste deberá comentárselo al coordinador del equipo para que así se pueda tomar una decisión sobre cómo actuar al respecto. 
 
 \subsubsection{Calendario de seguimiento para el frontend}
-El calendario interno para el frontend va a ser el mismo para ambas implementaciones. La tabla \ref{table:frontend} muestra las tareas a realizar por este equipo.
+El calendario interno para el frontend va a ser el mismo para ambas implementaciones. La tabla \ref{table:frontend} muestra las tareas a realizar por este equipo. \newline
 
 
-%\begin{center}
+\renewcommand{\arraystretch}{1.3}
 \begin{table}[hbt!]
 \begin{adjustbox}{minipage=18cm, center}
 \begin{tabularx}{\textwidth}{|c|X|c| }
@@ -350,9 +361,12 @@ Entrega & Tarea & Fecha objetivo\\ \hline
 %\end{center}
 \FloatBarrier    
 
-\subsubsection{Calendario de seguimiento para el backend}
- La tabla \ref{table:backend} muestra las tareas de este equipo a realizar.
+\newpage
 
+\subsubsection{Calendario de seguimiento para el backend}
+ La tabla \ref{table:backend} muestra las tareas de este equipo a realizar. \newline
+
+\renewcommand{\arraystretch}{1.3}
 \begin{table}[hbt!]
 \begin{adjustbox}{minipage=18cm, center}
 \begin{tabularx}{\textwidth}{|c|X|c| }
@@ -443,6 +457,7 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
     \label{tab:rf}
 \end{table}
 
+\newpage
 \begin{table}[h!]
     \centering
     \begin{tabularx}{\textwidth}{|l|X|}
@@ -465,7 +480,62 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
     \caption{Requisitos no funcionales del sistema.}
     \label{tab:rnf}
 \end{table}
+
+\newpage
+
 \subsection{Diseño del sistema}
+
+El diseño y planificación de los elementos y lógica de un sistema es fundamental para su desarrollo. En consecuencia, se han desarrollado los correspondientes diagramas arquitecturales que reflejan los componentes de la aplicación, así como la interacción entre ellos. \newline
+
+En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura 2, el cual representa los componentes principales en ejecución, sus interfaces y conectores que les permiten interactuar. Concretamente, se puede apreciar los dos componentes cliente, uno para cada tecnología a utilizar, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (API). En siguiente lugar, se encuentra el servidor web, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diagramas/DC.png}
+    \caption{Salida para datos de entrenamiento.}
+\end{figure}
+
+
+Por otro lado, en la Figura 3 se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor web junto con los artefactos de comprenden la lógica interna del servidor y el sistema gestor de base de datos. Este nodo da soporte a los dos tipos de clientes posibles, uno con cada tecnología, los cuales implementan cierta lógica interna de la aplicación y se encargan de mostrar y gestionar la interfaz al usuario. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diagramas/DD.png}
+    \caption{Salida para datos de entrenamiento.}
+\end{figure}
+
+Dadas las características del tipo de aplicación web, se va a desarrollar una \textbf{arquitectura} cliente-servidor como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará HTTP.
+
+\subsubsection{Tecnologías elegidas}
+
+En cuanto a las \textbf{tecnologías elegidas}, cabe destacar el uso de HTML, CSS y JavaScript para la parte del frontend de la aplicación, en la que se distinguirá la utilización de dos librerías de creación de interfaces de usuario: React y Angular. Por ello, la aplicación divergirá en dos clientes ligeramente distintos para el usuario e internamente construidos de distinta forma, que se comunicarán con el servidor web central, el cual no distinguirá entre tipos de clientes, sino que se limitará a atender peticiones, gestionarlas y devolver la respuesta adecuada. \newline
+
+Por otro lado, la tecnología elegida para el servidor o backend es el lenguaje Golang, ya que es uno de los lenguajes más potentes y con más futuro en sistemas distribuidos, el cual ofrece infinidad de herramientas de gestión para un servidor de las características del sistema. Para la persistencia de datos del sistema, se recurrirá al gestor PostgreSQL, ya que cubre con garantías todas las necesidades de la aplicación. \newline
+
+
+Para el backend se ha valorado utilizar las siguientes librerías auxiliares para servir contenidos HTTP:
+
+\begin{itemize}
+    \item Frameworks de web: Se ha valorado utilizar frameworks web como Echo o Gin. Sin embargo, se ha considerado que  la documentación era escasa en todos los frameworks evaluados, y su uso forzaría a una dependencia en las mismas. 
+    
+    \item Por otro lado, se ha optado por utilizar una librería auxiliar a la librería estándar de HTTP de golang, Chi, que se caracteriza por ser solamente una ampliación a la librería estándar muy sencilla de utilizar, y que permite establecer diferentes middleware programables para diferentes URLs, algo que se va a necesitar.
+    
+    \item Librerías auxiliares de SQL: Se ha evaluado utilizar ORMs como Gorm, pero se ha considerado que el modelo de datos es lo suficientemente sencillo como para utilizar la librería SQL y consultas tradicionales.
+\end{itemize}
+
+\subsubsection{Aspectos a considerar}
+
+Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de Docker, preferiblemente en un sistema operativo Linux, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar SQL, es decir, un modelo relacional. El servidor ofrece una API Web de tipo REST, de forma que cada petición contenga toda la información necesaria para comprenderla, sin que exista un estado explícito a consensuar entre cliente y servidor. \newline
+
+Por último, se barajaron otras opciones a las comentadas anteriormente:
+
+\begin{itemize}
+    \item Utilizar otro lenguaje para el backend, como \textbf{Java}. Sin embargo, se decidió que era más apropiado el uso de golang, que es uno de los lenguajes para sistemas distribuidos más usados, ya que ofrece múltiples recursos para soportar distintos protocolos de comunicación, junto con aspectos de seguridad, así como simplicidad, compatibilidad y eficiencia en la gestión de peticiones de red dentro de su propia librería estándar. Además, el equipo está habituado al desarrollo de aplicaciones web con Golang, hecho que impulsa su utilización.
+    
+    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de  \textbf{PostgreSQL} ya que es uno de los gestores de código abierto más utilizados y que ofrece aspectos muy interesantes. También, el equipo está habituado al uso de este gestor en concreto.
+    
+    \item Existen muchas librerías para el desarrollo de interfaces web. Sin embargo, se decidió utilizar  \textbf{React} y \textbf{Angular} porque ofrecen una gran cantidad de recursos que permiten construir elementos complejos mediante instrucciones muy simples, así como el soporte y documentación que tienen dado su extendido uso en la actualidad.
+\end{itemize}
 
 
 %%%%%%%% Entrega 2 y final
