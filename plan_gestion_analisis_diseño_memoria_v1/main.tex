@@ -622,10 +622,72 @@ Por último, se barajaron otras opciones a las comentadas anteriormente:
 
 
 %%%%%%%% Entrega 2 y final
-%\section{Memoria del proyecto}
-%\subsection{Inicio del proyecto}
-%\subsection{Ejecución y control del proyecto}
-%\subsection{Cierre del proyecto}
+\section{Memoria del proyecto}
+introducción
+
+\subsection{Inicio del proyecto}
+
+\subsection{Ejecución y control del proyecto}
+
+\subsubsection{Frontend Angular}
+
+\subsubsection{Frontend React}
+
+\subsubsection{Backend}
+
+El proceso de ejecución y control del proyecto para el equipo de \textit{backend} se ha considerado satisfactorio.\\
+
+%% Repartición de tareas
+
+En términos de repartición de trabajo, el comienzo del proceso de desarrollo ha consistido en programación en pareja de los aspectos fundamentales del sistema, como la definición del modelo de datos, o la de módulos base, funciones críticas y estructuras a utilizar en el servidor.
+
+Una vez realizado esto, se han repartido tareas individuales equitativamente y puesto en común en reuniones más breves todas aquellas funcionalidades comunes a todas las tareas a realizar.
+
+%% Tecnologías / librerías elegidas
+%% Seguimiento de nombrado de ficheros y formato, etc
+%% Seguimiento de control de configuraciones
+%% seguimiento de asignación de tareas, issues, etc.
+%% control de calidad
+%%      tests realizados
+%%      control de calidad en commits
+%% despliegue
+
+Respecto al seguimiento de los procedimientos establecidos, se han seguido los siguientes aspectos con éxito:
+
+\begin{itemize}
+    \item Las tecnologías y librerías elegidas inicialmente han sido adecuadas para el desarrollo del sistema, y han facilitado en gran medida la implementación del mismo, gracias a la libería estándar de \textit{Go} y el framework \textit{Chi}.
+
+    \item El seguimiento de las reglas de formato y documentación de código se han seguido fácilmente debido a las herramientas proporcionadas por \textit{Go}, como \textit{godoc}.
+
+    \item Se ha realizado un seguimiento y asignación de las tareas a realizar mediante incidencias de \textit{Github},  listas de tareas en cada uno de ellos e hitos, tal y como se había acordado.
+
+    \item Se han realizado test automáticos para cada funcionalidad base implementada, que corresponde a un conjunto de llamadas a la \textit{API} relacionadas con un mismo aspecto del sistema, como la gestión de amigos o la implementación de una fase del juego.
+
+    Así mismo, se ha conseguido fácilmente que dichos test se comporten como un cliente del sistema gracias a la librería estándar de \textit{Go}.
+
+    \item Se ha vigilado en todo momento que los commits fueran correctos tal y como ha sido establecido, y que se completaran los test automáticos con éxito antes de subirlos.
+
+    \item Se ha conseguido automatizar un despliegue completo de cada uno de los \textit{frontend} y del servidor de la \textit{API} para facilitar las pruebas exploratorias y de comportamiento del sistema fuera de los test automáticos.
+\end{itemize}
+
+% discutir como se ha seguido el calendario
+
+Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.
+
+La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego aún.
+
+Por último, durante el desarrollo del sistema se han detectado los siguientes problemas respecto al control de versiones, construcción y despliegue del software:
+\begin{itemize}
+    \item Al realizar pruebas exploratorias de los \textit{frontend} con el despliegue automático de contenedores de \texit{Docker}, se han experimentado problemas no observados al realizar los test automáticos debido a que los servidores de \textit{frontend} y \textit{backend} se encontraban en dominios diferentes.
+
+    Esto ha requerido realizar cortas reuniones con ambos equipos e implementar un middleware de \textit{CORS} \footnote{\href{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}{\color{blue}{\textit{ Información sobre CORS por Mozilla.}}}}. Adicionalmente, esto ha provocado problemas inesperados con el tratamiento de \textit{cookies} que también ha requerido reuniones con ambos equipos.
+
+    \item El despliegue automático ha requerido ligeros cambios para que fuera posible su ejecución en equipos con \textit{macOS}.
+\end{itemize}
+
+
+
+\subsection{Cierre del proyecto}
 %\section{Conclusiones}
 
 
