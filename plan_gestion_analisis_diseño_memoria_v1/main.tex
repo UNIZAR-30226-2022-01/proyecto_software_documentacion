@@ -225,6 +225,7 @@ Por otro lado, también realizaron una formación relacionada con las distintas 
 
 \end{itemize}
 
+
 \subsection{Control de configuraciones, construcción del software y aseguramiento de la calidad del producto}
 
 Se han establecido los siguientes procedimientos relativos a las tareas de construcción del \textit{software}, gestión de incidencias, automatización, calidad y despliegue del sistema por completo.
@@ -235,47 +236,47 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
     \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los \textit{frameworks} a utilizar. De este modo, se seguirán las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
     \begin{itemize}
         \item Para \textbf{Angular}, se utilizará la guía de estilo oficial\cite{estiloangular} y la guía de estructura de proyectos propuesta por la documentación oficial\cite{estructuraangular}.
-        
+
         \item Para \textbf{React}, se utilizará la
         guía de estilo de \textit{airbnb}\cite{estiloreact} y la estructura de proyectos propuesta por la documentación oficial\cite{estructurareact}.
-        
+
         \item Para \textbf{Go}, se utilizará el estilo impuesto por la herramienta automática de formato de dicho lenguaje\cite{estilogolang} y la estructura de proyectos recomendada por la comunidad\cite{estructuragolang}, compatible con las herramientas de compilación del lenguaje.
     \end{itemize}
-    
+
     \item La documentación generada durante el desarrollo del proyecto se distinguirá entre \textbf{documentación interna}, dirigida a los desarrolladores, y \textbf{documentación pública}, dirigida a los clientes.\\
-    
+
     Los ficheros de documentación serán nombrados con minúsculas y podrán contener guiones bajos, sin caracteres especiales. Si forman parte de la documentación del código o interfaces, su nombre empezará por \textbf{documentacion\_}, y si forman parte de guías de uso para los clientes, su nombre empezará por \textbf{guia\_}.
-    
+
     \item Todo el código será subido a los repositorios de la organización de \textit{Github}\footnote{\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Repositorio de la organización de \textit{Github}}}}, donde todos los miembros tendrán permisos de acceso, modificación y administración de los mismos. Los repositorios serán los siguientes:
     \begin{itemize}
         \item Un repositorio para el \textit{backend} del sistema (\textbf{API})\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_backend}{\color{blue}{Repositorio del \textit{backend} del sistema}}}.
-        
+
         \item Un repositorio para el \textit{frontend} de \textbf{React}\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_react}{\color{blue}{Repositorio del frontend de \textit{React}}}}.
-        
+
         \item Un repositorio para el \textit{frontend} de \textbf{Angular}\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_frontend_angular}{\color{blue}{Repositorio del frontend de \textit{Angular}}}}.
-        
+
         \item Un repositorio para la documentación\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion}{\color{blue}{Repositorio de documentación}}}, en el cual se localizarán todos los archivos de documentación interna y de cara al usuario, ya estén terminados como archivos .pdf o en construcción, como archivos de \LaTeX.
     \end{itemize}
-    
-    
-    
-    
+
+
+
+
 \end{itemize}
 
 \subsubsection{Convenciones y procedimientos para el despliegue del software}
 
 \begin{itemize}
     \item Las herramientas necesarias para construir el \textit{software} serán aquellas necesarias para compilar los \textit{frontend} de \textbf{React} y \textbf{Angular} y el \textit{backend} de \textbf{Go} por separado, junto a \textbf{Docker} y \textbf{Docker-compose}. \newline
-    
+
     Con el objetivo de tener una base de pruebas y desarrollo uniforme, en el repositorio de backend se porporcionarán los siguientes scripts de automatización:
     \begin{itemize}
         \item Dos grupos de scripts de automatización de despliegue de los frontend \textbf{React} y \textbf{Angular} por separado, que crean un contenedor de Docker con el servidor web sirviendo uno de los frontend.
-        
+
         \item Un grupo de scripts de automatización del \textbf{backend}, que ponen en marcha un par de contenedores ligados mediante \textit{docker-compose} para el servidor de \textit{API} y la base de datos respectivamente.
     \end{itemize}
-    
+
     Los contenedores de \textit{frontend} serán capaces de comunicarse con los de \textit{backend} mediante ligado de puertos en la máquina host. Durante el desarrollo del sistema, ambos grupos de contenedores se comunicarán en la propia máquina del desarrollador, y para el despliegue se adaptarán tanto las direcciones a utilizar en el código como los puertos en los archivos de despliegue de \textit{Docker}.
-    
+
     Los \textit{scripts} de automatización se harán cargo de la compilación, obtención de dependencias y puesta en marcha y configuración de cualquier elemento adicional como la base de datos, haciendo posible desplegar un entorno de pruebas común.
 
     \item El despliegue en entornos de producción se realizará con contenedores de \textbf{Docker} en la infraestructura en la nube de \textbf{Google Cloud}, de tal forma que cada equipo en la nube corresponderá al despliegue en contenedores de cada uno de los \textit{frontend} y del \textit{backend}. Por motivos de seguridad, las claves de acceso a la base de datos o rutas y puertos a utilizar serán establecidas por el cliente e introducidas en los contenedores mediante un fichero de variables de entorno.
@@ -285,31 +286,30 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 
 \begin{itemize}
     \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textbf{Google}\cite{documentaciongoogle} para la documentación de la \textit{API} pública, de funciones exportadas de un módulo a otro y de funciones auxiliares que requieran una explicación detallada más allá de la proporcionada por comentarios en el código.
-    
+
     \item El diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, por lo que ambos equipos deberán llegar a un acuerdo al respecto. Además, se seguirán los principios básicos de diseño de interfaces y usabilidad, como las heurísticas de Nielsen\cite{heuristicasnielsen}.
-    
+
     \item El código de cada una de las partes del proyecto deberá ser revisado por ambos miembros encargados de él, tanto de forma manual como automática, tras implementar nuevas funcionalidades. Para  ello, se establece la siguiente estrategia:
     \begin{itemize}
         \item El \textit{backend} proporcionará un conjunto de pruebas automáticas sobre cada uno de los elementos de la \textit{API}, ya que el lenguaje elegido, \textit{Go}, proporciona de forma nativa herramientas de test automático y la posibilidad de hacer de cliente de la \textit{API} sin necesitar de intermediario al \textit{frontend}.
-        
+
         La adición de una nueva funcionalidad a la \textit{API} deberá garantizar que tanto su prueba automática como el resto de ellas no muestran ningún tipo de error.
-        
+
         \item El \textit{frontend} realizará pruebas exploratorias a la hora de implementar funcionalidades que involucren llamar a la \textit{API}, teniendo la garantía de que ha pasado las pruebas automáticas previamente.
         \end{itemize}
-    
-    
-    \item Las entregas a los clientes serán probadas íntegramente por todos los miembros del equipo en conjunto para garantizar que no existen problemas en las funcionalidades implementadas hasta dicho momento. 
-    
+
+
+    \item Las entregas a los clientes serán probadas íntegramente por todos los miembros del equipo en conjunto para garantizar que no existen problemas en las funcionalidades implementadas hasta dicho momento.
+
     La estrategia de pruebas previas a la entrega será la siguiente:
     \begin{itemize}
         \item Se acordará, mediante una reunión de al menos un integrante de cada par de miembros de cada equipo, un guión de prueba exploratorias común para ambos \textit{frontend}, que abarque todas las funcionalidades del juego implementadas hasta el momento por ambos.
-        
+
         \item Cada uno de los miembros de cada \textit{frontend} realizará dichas pruebas siguiendo el guión sobre su \textit{frontend}, mientras que cada miembro del equipo de \textit{backend} las realizará sobre uno de ellos respectivamente, comprobando que las interacciones desde el lado del \textit{backend} son correctas.
-        
+
         Una vez realizadas las pruebas, los resultados se comunicarán al responsable de estos aspectos, que coordinará la corrección de los errores observados y repetirá el proceso de prueba si es necesario.
     \end{itemize}
 \end{itemize}
-
 
 \subsection{Calendario del proyecto, división del trabajo, coordinación, comunicaciones, monitorización y seguimiento}
 
@@ -317,17 +317,17 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% De control de configuraciones y fotware, a incluir en comunicaciones: 
+% De control de configuraciones y software, a incluir en comunicaciones:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \item La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de \textbf{GitHub} del repositorio relacionado con ellas. Debido a que no permite crear incidencias que abarquen múltiples repositorios, cada uno de ellos tendrá las incidencias globales que afecten a varios de ellos replicadas, con las tareas que les corresponda a cada uno.
-    
+
     \item Todas las tareas, funcionalidades a implementar o ampliar y errores a arreglar serán documentados en incidencias individuales con una descripción concisa. Estas formarán parte de hitos para entregas y versiones intermedias si aplica. Las incidencias se clasificarán utilizando etiquetas. De la misma forma que con las incidencias, los hitos globales estarán replicados en cada repositorio con las tareas e incidencias que correspondan a él.
-    
+
     Las incidencias serán asignadas a quienes trabajen en ella para mantener un control de actividades y tiempo, y podrán ser cerradas y abiertas de nuevo libremente.
-    
-    \item Todos los \textit{commits} a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción de los cambios realizados concisa. 
-    
+
+    \item Todos los \textit{commits} a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción de los cambios realizados concisa.
+
     Por ello, se han establecido los siguientes objetivos a comprobar cada vez que se realiza un commit:
     \begin{itemize}
         \item Se comprobará que el código compila tras implementar dicho commit, y que todos los test automáticos implementados hasta el momento siguen siendo correctos.
@@ -449,63 +449,96 @@ La responsable del seguimiento de todos estos aspectos será Laura González.
 
 \subsection{Análisis de requisitos}
 Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados en la tabla \ref{tab:rf}. La tabla \ref{tab:rnf} recoge los requisitos no funcionales. Ambos tipos de requisitos se encuentran claramente detallados e identificados, para facilitar su referencia en documentación futura.
-\renewcommand{\arraystretch}{1.3}
-\begin{table}[h!]
+\renewcommand{\arraystretch}{1.3}\\
+\begin{longtable}[h!]{| p{.10\textwidth} | p{.90\textwidth} |} 
+    \caption{Requisitos funcionales de la aplicación.}
+    \label{tab:rf}
     \centering
-    \begin{tabularx}{\textwidth}{|l|X|}
-    \hline
+        \hline
          Código & Descripción  \\
          \hline
          RF-1 & El sistema permitirá a los usuarios registrarse, utilizando un correo electrónico y estableciendo un nombre de usuario y una contraseña.\\
          \hline
-         RF-2 & El sistema permitirá a los usuarios iniciar sesión, utilizando su correo electrónico y su contraseña.\\
+         RF-2 & El sistema permitirá a los usuarios iniciar sesión, utilizando su nombre de usuario y su contraseña.\\
          \hline
-         RF-3 & El sistema permitirá a los usuarios iniciar sesión, utilizando su nombre de usuario y su contraseña.\\
+         RF-3 & El sistema proporcionará a los usuarios un juego de \textit{Risk}.\\
          \hline
-         RF-4 & El sistema proporcionará a los usuarios un juego de \textit{Risk}.\\
+         RF-3.1 & Al comenzar la partida, se distribuirá un número de ejércitos a cada jugador y por turnos los irán colocando en el mapa.\\
          \hline
-         RF-5 & El sistema ofrecerá a los usuarios un menú que permitirá buscar partidas públicas en curso, destacando las partidas en las que participen sus amigos.\\
+         RF-3.2 & Opcionalmente, la disposición inicial de las tropas mencionada en el \textbf{RF-3.1}  se podrá hacer de forma aleatoria.\\
          \hline
-         RF-6 & El sistema recompensará a los jugadores al ganar partidas, otorgándoles puntos canjeables.\\
+         RF-3.3 & Cada turno de juego dispondrá de las siguiente fases: Refuerzo, Ataque y Fortificación. \\
          \hline
-         RF-7 & El sistema ofrecerá una tienda a los usuarios en la que podrán utilizar los puntos descritos en el requisito \textbf{RF-6} para comprar diferentes cosméticos que permitan la personalización. \\
+         RF-3.4 & Al empezar el turno del jugador, se le otorgará un número de ejércitos en función del número de territorios y continentes que ocupe.\\
          \hline
-         RF-8 & El sistema permitirá a los usuarios personalizar elementos del juego.\\
+         RF-3.5 & Durante la fase de refuerzo, el jugador deberá colocar todas sus tropas distribuyéndolas como desee entre los territorios que domine.\\
          \hline
-         RF-8.1 & El sistema permitirá a los usuarios modificar su foto de perfil y su biografía.\\
+         RF-3.6 & El jugador podrá cambiar un conjunto de 3 cartas para recibir ejércitos durante la fase de refuerzo.\\
          \hline
-         RF-8.2 & El sistema permitirá a los usuarios personalizar sus dados y fichas de juego, utilizando los cosméticos comprados en la tienda definida en el requisito \textbf{RF-7}.\\
+         RF-3.7 & El jugador recibirá una carta al final del turno, si durante dicho turno ha conquistado algún territorio.\\
          \hline
-         RF-8.3 & Las personalizaciones realizadas serán visibles por todos los usuarios.\\
+         RF-3.8 & Las cartas pueden ser de 4 tipos: infantería, caballería, artillería y comodines.
+         Además, cada carta tendrá un territorio asignado (excepto los comodines).\\
          \hline
-         RF-9 & El sistema permitirá a los usuarios gestionar una lista de amigos.\\
+         RF-3.9 & Para que un cambio de cartas sea válido, se deberán cambiar 3 cartas del mismo tipo, dos del mismo tipo junto a un comodín o una carta de cada tipo. \\
          \hline
-         RF-10 & El sistema permitirá a los usuarios consultar una clasificación global, la cuál mostrará a los mejores jugadores junto con sus respectivas puntuaciones.\\
+         RF-3.10 & El número de ejércitos recibidos por cada cambio dependerá del número de cambios realizados. El primer cambio otorgará 4 ejércitos y los cambios consecutivos darán 2 ejércitos más que el anterior. El sexto cambio dará un total de 15 ejércitos, y a partir de éste el número de ejércitos se incrementará en 5 por cada cambio. \\
          \hline
-         RF-11 & El sistema permitirá a los usuarios consultar el perfil personal de otros jugadores.\\
+         RF-3.11 & El jugador estará obligado a cambiar cartas siempre que tenga 5 o más cartas en su mano. \\
          \hline
-         RF-12 & El sistema permitirá a los usuarios crear una partida.\\
+         RF-3.12 & El jugador recibirá 2 ejércitos extra si alguna de las cartas que cambia corresponde a un territorio que ocupe. Esos 2 ejércitos se añadirán a dicho territorio. En caso de que esto ocurra con más de una carta. \\
          \hline
-         RF-12.1 & El sistema permitirá crear partidas públicas, a las que cualquier usuario se podrá unir.\\
+         RF-3.13 & En caso de que se de la situación mencionada en el \textbf{RF-3.12} con más de una carta del cambio, el jugador podrá elegir a cual de los territorios se asignan las tropas adicionales. \\
          \hline
-         RF-12.2 & El sistema permitirá crear partidas privadas, de forma que el usuario deberá definir una contraseña para el acceso a dicha partida.\\
+         RF-3.14 & Durante la fase de ataque el jugador podrá atacar territorios adyacentes los suyos, siempre y cuando tenga por lo menos dos ejércitos en la región desde la que ataca.\\
          \hline
-         RF-12.3 & El sistema permitirá al usuario establecer el número de jugadores de la partida (de 2 a 6 jugadores).\\
+         RF-3.15 & Al atacar, tanto atacante como defensor lanzarán los dados. El atacante podrá lanzar entre 1 y 3 dados, necesitando por lo menos un ejército más que el número de dados. Por otro lado, el defensor lanzará 2 dados si su territorio tiene 2 o más ejércitos y 1 dado en caso contrario.\\
          \hline
-         RF-13 & Las partidas se desarrollarán de forma asíncrona.\\
+         RF-3.16 & En caso de que el dado más alto lanzado por el atacante sea de valor mayor que el del defensor, el territorio defensor perderá un ejército. Si el valor fuera igual o menor, el territorio atacante perderá un ejército. Si ambos han lanzado dos o más dados, se realizará el mismo proceso con el segundo dado más alto de cada uno.\\
          \hline
-         RF-13.1 & Cuando llegue el turno del jugador, el sistema le avisará mostrando una notificación en la pantalla si está conectado a la aplicación.\\
+         RF-3.17 & Si tras un ataque, el territorio defensor queda sin ejércitos, el atacante deberá mover a dicha región tantas tropas como dados haya tirado durante el último ataque menos el número de ejércitos que haya perdido en el ataque. \\
          \hline
-         RF-13.2 & Si el usuario no está conectado, el sistema enviará el aviso a través de correo electrónico.\\
+         RF-3.18 & Al final del turno, el jugador tendrá la posibilidad de fortificar un territorio, moviendo tropas de un territorio a otro. Para ello, ambos territorios deberán pertenecer al jugador y estar conectados por un camino de regiones ocupadas por él. Cabe destacar que no se podrá dejar ningún territorio sin tropas.\\
          \hline
-         RF-13.3 & Si el usuario no realiza su jugada dentro de un tiempo determinado, el sistema lo expulsará de la partida.\\
+         RF-4 & El sistema ofrecerá a los usuarios un menú que permitirá buscar partidas públicas en curso, destacando las partidas en las que participen sus amigos.\\
          \hline
-         RF-14 & El sistema ofrecerá un \textit{chat} que permitirá a los jugadores de una partida comunicarse entre ellos.\\
+         RF-5 & El sistema recompensará a los jugadores al ganar partidas, otorgándoles puntos canjeables.\\
          \hline
-    \end{tabularx}
-    \caption{Requisitos funcionales de la aplicación.}
-    \label{tab:rf}
-\end{table}
+         RF-6 & El sistema ofrecerá una tienda a los usuarios en la que podrán utilizar los puntos descritos en el requisito \textbf{RF-5} para comprar diferentes cosméticos que permitan la personalización. \\
+         \hline
+         RF-7 & El sistema permitirá a los usuarios personalizar elementos del juego.\\
+         \hline
+         RF-7.1 & El sistema permitirá a los usuarios modificar su foto de perfil y su biografía.\\
+         \hline
+         RF-7.2 & El sistema permitirá a los usuarios personalizar sus dados y fichas de juego, utilizando los cosméticos comprados en la tienda definida en el requisito \textbf{RF-6}.\\
+         \hline
+         RF-7.3 & Las personalizaciones realizadas serán visibles por todos los usuarios.\\
+         \hline
+         RF-8 & El sistema permitirá a los usuarios gestionar una lista de amigos.\\
+         \hline
+         RF-9 & El sistema permitirá a los usuarios consultar una clasificación global, la cuál mostrará a los mejores jugadores junto con sus respectivas puntuaciones.\\
+         \hline
+         RF-10 & El sistema permitirá a los usuarios consultar el perfil personal de otros jugadores.\\
+         \hline
+         RF-11 & El sistema permitirá a los usuarios crear una partida.\\
+         \hline
+         RF-11.1 & El sistema permitirá crear partidas públicas, a las que cualquier usuario se podrá unir.\\
+         \hline
+         RF-11.2 & El sistema permitirá crear partidas privadas, de forma que el usuario deberá definir una contraseña para el acceso a dicha partida.\\
+         \hline
+         RF-11.3 & El sistema permitirá al usuario establecer el número de jugadores de la partida (de 2 a 6 jugadores).\\
+         \hline
+         RF-12 & Las partidas se desarrollarán de forma asíncrona.\\
+         \hline
+         RF-12.1 & Cuando llegue el turno del jugador, el sistema le avisará mostrando una notificación en la pantalla si está conectado a la aplicación.\\
+         \hline
+         RF-12.2 & Si el usuario no está conectado, el sistema enviará el aviso a través de correo electrónico.\\
+         \hline
+         RF-12.3 & Si el usuario no realiza su jugada dentro de un tiempo determinado, el sistema lo expulsará de la partida.\\
+         \hline
+         RF-13 & El sistema ofrecerá un \textit{chat} que permitirá a los jugadores de una partida comunicarse entre ellos.\\
+         \hline
+\end{longtable}
 
 \newpage
 \begin{table}[h!]
@@ -589,72 +622,10 @@ Por último, se barajaron otras opciones a las comentadas anteriormente:
 
 
 %%%%%%%% Entrega 2 y final
-\section{Memoria del proyecto}
-introducción
-
-\subsection{Inicio del proyecto}
-
-\subsection{Ejecución y control del proyecto}
-
-\subsubsection{Frontend Angular}
-
-\subsubsection{Frontend React}
-
-\subsubsection{Backend}
-
-El proceso de ejecución y control del proyecto para el equipo de \textit{backend} se ha considerado satisfactorio.\\
-
-%% Repartición de tareas
-
-En términos de repartición de trabajo, el comienzo del proceso de desarrollo ha consistido en programación en pareja de los aspectos fundamentales del sistema, como la definición del modelo de datos, o la de módulos base, funciones críticas y estructuras a utilizar en el servidor. 
-
-Una vez realizado esto, se han repartido tareas individuales equitativamente y puesto en común en reuniones más breves todas aquellas funcionalidades comunes a todas las tareas a realizar.
-
-%% Tecnologías / librerías elegidas
-%% Seguimiento de nombrado de ficheros y formato, etc
-%% Seguimiento de control de configuraciones
-%% seguimiento de asignación de tareas, issues, etc.
-%% control de calidad
-%%      tests realizados
-%%      control de calidad en commits
-%% despliegue     
-
-Respecto al seguimiento de los procedimientos establecidos, se han seguido los siguientes aspectos con éxito:
-
-\begin{itemize}
-    \item Las tecnologías y librerías elegidas inicialmente han sido adecuadas para el desarrollo del sistema, y han facilitado en gran medida la implementación del mismo, gracias a la libería estándar de \textit{Go} y el framework \textit{Chi}.
-
-    \item El seguimiento de las reglas de formato y documentación de código se han seguido fácilmente debido a las herramientas proporcionadas por \textit{Go}, como \textit{godoc}.
-
-    \item Se ha realizado un seguimiento y asignación de las tareas a realizar mediante incidencias de \textit{Github},  listas de tareas en cada uno de ellos e hitos, tal y como se había acordado.
-    
-    \item Se han realizado test automáticos para cada funcionalidad base implementada, que corresponde a un conjunto de llamadas a la \textit{API} relacionadas con un mismo aspecto del sistema, como la gestión de amigos o la implementación de una fase del juego.
-    
-    Así mismo, se ha conseguido fácilmente que dichos test se comporten como un cliente del sistema gracias a la librería estándar de \textit{Go}.
-    
-    \item Se ha vigilado en todo momento que los commits fueran correctos tal y como ha sido establecido, y que se completaran los test automáticos con éxito antes de subirlos.
-    
-    \item Se ha conseguido automatizar un despliegue completo de cada uno de los \textit{frontend} y del servidor de la \textit{API} para facilitar las pruebas exploratorias y de comportamiento del sistema fuera de los test automáticos.
-\end{itemize}
-
-% discutir como se ha seguido el calendario
-
-Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.
-
-La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego aún.
-
-Por último, durante el desarrollo del sistema se han detectado los siguientes problemas respecto al control de versiones, construcción y despliegue del software:
-\begin{itemize}
-    \item Al realizar pruebas exploratorias de los \textit{frontend} con el despliegue automático de contenedores de \texit{Docker}, se han experimentado problemas no observados al realizar los test automáticos debido a que los servidores de \textit{frontend} y \textit{backend} se encontraban en dominios diferentes. 
-    
-    Esto ha requerido realizar cortas reuniones con ambos equipos e implementar un middleware de \textit{CORS} \footnote{\href{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}{\color{blue}{\textit{ Información sobre CORS por Mozilla.}}}}. Adicionalmente, esto ha provocado problemas inesperados con el tratamiento de \textit{cookies} que también ha requerido reuniones con ambos equipos.
-    
-    \item El despliegue automático ha requerido ligeros cambios para que fuera posible su ejecución en equipos con \textit{macOS}.
-\end{itemize}
-
-
-
-\subsection{Cierre del proyecto}
+%\section{Memoria del proyecto}
+%\subsection{Inicio del proyecto}
+%\subsection{Ejecución y control del proyecto}
+%\subsection{Cierre del proyecto}
 %\section{Conclusiones}
 
 
