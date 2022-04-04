@@ -621,11 +621,14 @@ Por último, se barajaron otras opciones a las comentadas anteriormente:
 \end{itemize}
 
 
-%%%%%%%% Entrega 2 y final
+% Entrega 2 y final
 \section{Memoria del proyecto}
 introducción
 
 \subsection{Inicio del proyecto}
+% Apartado backend
+Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Hemos utilizado \textit{Go} recientemente para las prácticas de la asignatura \textit{Sistemas Distribuidos} y \texit{PostgreSQL} como gestor de bases de datos en \textit{Sistemas de la Información}.
+
 
 \subsection{Ejecución y control del proyecto}
 
@@ -657,7 +660,7 @@ Respecto al seguimiento de los procedimientos establecidos, se han seguido los s
 \begin{itemize}
     \item Las tecnologías y librerías elegidas inicialmente han sido adecuadas para el desarrollo del sistema, y han facilitado en gran medida la implementación del mismo, gracias a la libería estándar de \textit{Go} y el framework \textit{Chi}.
 
-    \item El seguimiento de las reglas de formato y documentación de código se han seguido fácilmente debido a las herramientas proporcionadas por \textit{Go}, como \textit{godoc}.
+    \item El seguimiento de las reglas de formato y documentación de código se han seguido fácilmente debido a las herramientas proporcionadas por \textit{Go}, como \textit{godoc} o \textit{gofmt}.
 
     \item Se ha realizado un seguimiento y asignación de las tareas a realizar mediante incidencias de \textit{Github},  listas de tareas en cada uno de ellos e hitos, tal y como se había acordado.
 
@@ -674,7 +677,7 @@ Respecto al seguimiento de los procedimientos establecidos, se han seguido los s
 
 Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.
 
-La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego aún.
+La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego.
 
 Por último, durante el desarrollo del sistema se han detectado los siguientes problemas respecto al control de versiones, construcción y despliegue del software:
 \begin{itemize}
@@ -684,10 +687,34 @@ Por último, durante el desarrollo del sistema se han detectado los siguientes p
 
     \item El despliegue automático ha requerido ligeros cambios para que fuera posible su ejecución en equipos con \textit{macOS}.
 \end{itemize}
-
-
+% TODO hablar de pruebas
 
 \subsection{Cierre del proyecto}
+% Apartado Backend
+En general, el tiempo utilizado para la realización de las distintas tareas del \textit{backend} se ajusta razonablemente a la estimación inicial.
+Aún así, a la hora de realizar el proyecto hemos podido comprobar que las tareas elegidas para las estimaciones eran demasiado generales.\\
+
+Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente el diseño de la máquina de estados, la implementación del mapa, las diferentes fases de juego, ...\\
+Creemos que estas divisiones se podrían haber realizado al inicio del proyecto, analizando más exhaustivamente el funcionamiento del juego para permitir estimaciones más precisas. \\
+
+Mencionamos también que aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\  
+
+Destacamos que si el desarrollo del \textit{backend} sigue progresando al ritmo actual, se acabará su implementación antes de lo planeado en el calendario. De esta forma, los encargados del \textit{backend} podrán ayudar en la implementación de los \textit{frontend}, encargándose además de modificar y corregir el backend cuando sea necesario. \\
+
+% Lecciones aprendidas
+Una de las principales lecciones que hemos aprendido durante el desarrollo del backend, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Al estar acostumbrados a proyectos más pequeños, tendemos a escribir código sin pensar en su organización dentro del componente, lo que genera ficheros muy largos y difíciles de leer.\\
+
+
+Debido a esto, ha sido necesarios realizar varias refactorizaciones del código, lo cuál nos ha servido para familiarizarnos con las diferentes herramientas de refactorización del \textit{IDE} utilizado, \textit{GoLand} en nuestro caso. Hemos mejorado nuestros hábitos de programación, dividiendo el código de un mismo componente en diferentes ficheros más sencillos.\\
+
+% Omitir repeticion del CORS
+El tamaño del proyecto ha fomentado también realizar \textit{commits} más concisos y frecuentes.
+Además, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado al servir los clientes web y la API desde dominios diferentes. \\
+
+% Esfuerzos realizados
+Para esta entrega Guillermo invirtió un total de 34 horas, encargándose de implementar la fase de refuerzo, las funciones de creación y configuración de partidas, la implementación de la baraja y otras funciones sociales. Por otro lado, Samuel se encargó de desarrollar la fase inicial del juego, la gestión de las listas de amigos, la configuración del \textit{CORS}, el despliegue de la aplicación, la generación automática de documentación con la herramienta \textit{godoc}, el sistema de búsqueda de partidas y las notificaciones. En total, invirtió 35 horas. \\
+
+Como hemos mencionado antes, diferentes tareas fundamentales para el desarrollo del proyecto se realizaron en pareja. Entre ellas podemos destacar la definición del diagrama de estados del juego, la implementación del mapa y el grafo de regiones utilizados , la caché de partidas y el sistema de gestión de sesiones, entre otros. Cabe destacar también que cada uno de los integrantes nos encargamos de realizar programas de prueba para cada uno de los módulos que implementamos.
 %\section{Conclusiones}
 
 
