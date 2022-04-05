@@ -249,9 +249,14 @@ Por último, el equipo encargado de desarrollar el segundo \textit{frontend}, im
 
 \subsection{Control de configuraciones, construcción del software y aseguramiento de la calidad del producto}
 
-Se han establecido los siguientes procedimientos relativos a las tareas de construcción del \textit{software}, gestión de incidencias, automatización, calidad y despliegue del sistema por completo.
+Con el objetivo de tener una base de desarrollo, pruebas y objetivos de calidad comunes a todos los integrantes del grupo, se ha establecido una serie de normas a seguir durante el desarrollo del sistema. 
+
+
+%Todas estas normas son relativas a las tareas de construcción del \textit{software}, gestión de incidencias, automatización, calidad y despliegue del sistema por completo.
 
 \subsubsection{Convenciones y procedimientos para la construcción y control del software}
+
+Se han establecido las siguientes prácticas para mantener una configuración de proyectos y ficheros similar entre cada uno de los equipos del proyecto, bajo una serie de repositorios en \textit{Github}.
 
 \begin{itemize}
     \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los \textit{frameworks} a utilizar. De este modo, se seguirán las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
@@ -286,6 +291,8 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 
 \subsubsection{Convenciones y procedimientos para el despliegue del software}
 
+Con el objetivo de proveer un despliegue homogéneo del proyecto, tanto para las pruebas durante el desarrollo como para las entregas al cliente, se han establecido los siguientes puntos.
+
 \begin{itemize}
     \item Las herramientas necesarias para construir el \textit{software} serán aquellas necesarias para compilar los \textit{frontend} de \textbf{React} y \textbf{Angular} y el \textit{backend} de \textbf{Go} por separado, junto a \textbf{Docker} y \textbf{Docker-compose}. \newline
 
@@ -305,6 +312,8 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 
 \subsubsection{Convenciones y procedimientos para el control de la calidad del software}
 
+Debido a que se van a utilizar diferentes lenguajes de programación y \textit{frameworks} en cada una de las partes del proyecto, como en los dos \textit{frontend} y el \textit{backend}, se han establecido una serie de prácticas comunes a seguir, así como una estrategia de pruebas manuales y automáticas, para garantizar y poder medir y controlar la calidad del software.
+
 \begin{itemize}
     \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textbf{Google}\cite{documentaciongoogle} para la documentación de la \textit{API} pública, de funciones exportadas de un módulo a otro y de funciones auxiliares que requieran una explicación detallada más allá de la proporcionada por comentarios en el código.
 
@@ -316,7 +325,7 @@ Se han establecido los siguientes procedimientos relativos a las tareas de const
 
         La adición de una nueva funcionalidad a la \textit{API} deberá garantizar que tanto su prueba automática como el resto de ellas no muestran ningún tipo de error.
 
-        \item El \textit{frontend} realizará pruebas exploratorias a la hora de implementar funcionalidades que involucren llamar a la \textit{API}, teniendo la garantía de que ha pasado las pruebas automáticas previamente.
+        \item Cada uno de los equipos de \textit{frontend} realizará pruebas exploratorias a la hora de implementar funcionalidades que involucren llamar a la \textit{API}, teniendo la garantía de que ha pasado las pruebas automáticas previamente. De esta forma, garantizará que dichas funcionalidades no presentan errores a la hora de añadirlas.
         \end{itemize}
 
 
