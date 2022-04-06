@@ -350,13 +350,13 @@ Debido a que se van a utilizar diferentes lenguajes de programación y \textit{f
 % De control de configuraciones y software, a incluir en comunicaciones:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\item La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de \textbf{GitHub} del repositorio relacionado con ellas. Debido a que no permite crear incidencias que abarquen múltiples repositorios, cada uno de ellos tendrá las incidencias globales que afecten a varios de ellos replicadas, con las tareas que les corresponda a cada uno.
+La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de \textbf{GitHub} del repositorio relacionado con ellas. Debido a que no permite crear incidencias que abarquen múltiples repositorios, cada uno de ellos tendrá las incidencias globales que afecten a varios de ellos replicadas, con las tareas que les corresponda a cada uno. \\
 
-    \item Todas las tareas, funcionalidades a implementar o ampliar y errores a arreglar serán documentados en incidencias individuales con una descripción concisa. Estas formarán parte de hitos para entregas y versiones intermedias si aplica. Las incidencias se clasificarán utilizando etiquetas. De la misma forma que con las incidencias, los hitos globales estarán replicados en cada repositorio con las tareas e incidencias que correspondan a él.
+    Todas las tareas, funcionalidades a implementar o ampliar y errores a arreglar serán documentados en incidencias individuales con una descripción concisa. Estas formarán parte de hitos para entregas y versiones intermedias si aplica. Las incidencias se clasificarán utilizando etiquetas. De la misma forma que con las incidencias, los hitos globales estarán replicados en cada repositorio con las tareas e incidencias que correspondan a él. \\
 
-    Las incidencias serán asignadas a quienes trabajen en ella para mantener un control de actividades y tiempo, y podrán ser cerradas y abiertas de nuevo libremente.
+    Las incidencias serán asignadas a quienes trabajen en ella para mantener un control de actividades y tiempo, y podrán ser cerradas y abiertas de nuevo libremente. \\
 
-    \item Todos los \textit{commits} a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción de los cambios realizados concisa.
+     Todos los \textit{commits} a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción de los cambios realizados concisa. \\
 
     Por ello, se han establecido los siguientes objetivos a comprobar cada vez que se realiza un commit:
     \begin{itemize}
@@ -711,8 +711,8 @@ Respecto al seguimiento de los procedimientos y herramientas establecidas en un 
             \item \textit{React-router-dom}, de cara a navegar entre las distintas pantallas. \footnote{\href{https://v5.reactrouter.com/web/guides/quick-start}{\color{blue}{\textit{ Página oficial react-router-dom.}}}}
             \item \textit{SweetAlert2}, librería de pantallas auxiliares.
             \footnote{\href{https://sweetalert2.github.io}{\color{blue}{\textit{ Página oficial SweetAlert2.}}}}
-            \item \textit{Universal Cookies}, gestión, creación y explotación de cookies web.
-            \footnote{\href{https://www.npmjs.com/package/universal-cookie}{\color{blue}{\textit{ Página oficial universal-cookies.}}}}
+            \item \textit{Query String}, parser de URL.
+            \footnote{\href{https://www.npmjs.com/package/query-string}{\color{blue}{\textit{ Página oficial query-string.}}}}
         \end{itemize}
 \end{itemize}
 
@@ -775,31 +775,45 @@ Por último, durante el desarrollo del sistema se han detectado los siguientes p
 % TODO hablar de pruebas
 
 \subsection{Cierre del proyecto}
-% Apartado Backend
-En general, el tiempo utilizado para la realización de las distintas tareas del \textit{backend} se ajusta razonablemente a la estimación inicial.
+
+El proyecto, al dividirse en tres partes bien diferenciadas, cuenta con tres velocidades distintas. Pese a eso, hemos conseguido en gran medida una gran compenetración entre todos los equipos y hemos logrado en gran medida, hasta la fecha, los objetivos iniciales establecidos. A continuación, se pondrá énfasis en el análisis de los resultados obtenidos en contraposición con las estimaciones iniciales. \\
+
+El tiempo utilizado para la realización de las distintas tareas del \textbf{Backend} se ajusta razonablemente a la estimación inicial.
 Aún así, a la hora de realizar el proyecto hemos podido comprobar que las tareas elegidas para las estimaciones eran demasiado generales.\\
 
-Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente el diseño de la máquina de estados, la implementación del mapa, las diferentes fases de juego, ...\\
+Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente el diseño de la máquina de estados, la implementación del mapa, las diferentes fases de juego...\\
 Creemos que estas divisiones se podrían haber realizado al inicio del proyecto, analizando más exhaustivamente el funcionamiento del juego para permitir estimaciones más precisas. \\
 
 Mencionamos también que aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\  
 
 Destacamos que si el desarrollo del \textit{backend} sigue progresando al ritmo actual, se acabará su implementación antes de lo planeado en el calendario. De esta forma, los encargados del \textit{backend} podrán ayudar en la implementación de los \textit{frontend}, encargándose además de modificar y corregir el backend cuando sea necesario. \\
 
-% Lecciones aprendidas
-Una de las principales lecciones que hemos aprendido durante el desarrollo del backend, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Al estar acostumbrados a proyectos más pequeños, tendemos a escribir código sin pensar en su organización dentro del componente, lo que genera ficheros muy largos y difíciles de leer.\\
+Por otro lado, el frontend desarrollado en \textbf{React} pese a haber subestimado esfuerzos que se tenían que dedicar en ciertas partes del sistema, como puede ser el mapa, hemos conseguido mantener y conseguir mayoritariamente los objetivos iniciales y creemos que se conseguirán conseguir los objetivos finales en el plazo establecido. \\
 
+Cabe destacar que las pequeñas divergencias entre las estimaciones iniciales y el coste y esfuerzos reales se deben, en gran medida, a la falta de experiencia en la realización de proyectos de tal envergadura. Es por eso, que se quiere recalcar la experiencia que hemos adquirido de cara a establecer estimaciones iniciales con mayor eficacia en futuros proyectos. \\
+
+% Lecciones aprendidas
+Una de las principales lecciones que hemos aprendido durante el desarrollo del \textit{backend}, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Al estar acostumbrados a proyectos más pequeños, tendemos a escribir código sin pensar en su organización dentro del componente, lo que genera ficheros muy largos y difíciles de leer.\\
 
 Debido a esto, ha sido necesarios realizar varias refactorizaciones del código, lo cuál nos ha servido para familiarizarnos con las diferentes herramientas de refactorización del \textit{IDE} utilizado, \textit{GoLand} en nuestro caso. Hemos mejorado nuestros hábitos de programación, dividiendo el código de un mismo componente en diferentes ficheros más sencillos.\\
+
+En cambio, en el desarrollo del \textit{frontend} cabe destacar el avance y aprendizaje obtenido en el desarrollo y creación de interfaces, \textit{UX design}.
 
 % Omitir repeticion del CORS
 El tamaño del proyecto ha fomentado también realizar \textit{commits} más concisos y frecuentes.
 Además, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado al servir los clientes web y la API desde dominios diferentes. \\
 
 % Esfuerzos realizados
-Para esta entrega Guillermo invirtió un total de 34 horas, encargándose de implementar la fase de refuerzo, las funciones de creación y configuración de partidas, la implementación de la baraja y otras funciones sociales. Por otro lado, Samuel se encargó de desarrollar la fase inicial del juego, la gestión de las listas de amigos, la configuración del \textit{CORS}, el despliegue de la aplicación, la generación automática de documentación con la herramienta \textit{godoc}, el sistema de búsqueda de partidas y las notificaciones. En total, invirtió 35 horas. \\
+Los esfuerzos realizados por los integrantes del equipo han sido los siguientes:
 
-Como hemos mencionado antes, diferentes tareas fundamentales para el desarrollo del proyecto se realizaron en pareja. Entre ellas podemos destacar la definición del diagrama de estados del juego, la implementación del mapa y el grafo de regiones utilizados , la caché de partidas y el sistema de gestión de sesiones, entre otros. Cabe destacar también que cada uno de los integrantes nos encargamos de realizar programas de prueba para cada uno de los módulos que implementamos.
+\begin{itemize}
+    \item En primer lugar, \textbf{Guillermo} invirtió un total de 34 horas, encargándose de implementar la fase de refuerzo, las funciones de creación y configuración de partidas, la implementación de la baraja y otras funciones sociales.
+    \item \textbf{Samuel} se encargó de desarrollar la fase inicial del juego, la gestión de las listas de amigos, la configuración del \textit{CORS}, el despliegue de la aplicación, la generación automática de documentación con la herramienta \textit{godoc}, el sistema de búsqueda de partidas y las notificaciones. En total, invirtió 35 horas.
+    \item \textbf{Fran} desarrolló junto con el resto del grupo de \textit{frontend} el diseño del mapa de juego. Además, la implementación de diversas pantallas como \textit{Registro Usuario, Inicio Sesión y Crear Partida}, entre otras. También, realizó dinámica adicional del mapa como ciertos botones, un mapa informativo o pantallas de avisos. En conjunto dedicó un estimado de 37 horas.
+    %% Continuar aqui el resto
+\end{itemize}
+
+Como hemos mencionado antes, diferentes tareas fundamentales para el desarrollo del proyecto se realizaron en pareja. Entre ellas podemos destacar la definición del diagrama de estados del juego, la implementación y diseño del mapa, el grafo de regiones utilizados, el sistema de gestión de sesiones y el diseño de diversas pantallas, entre otros.
 %\section{Conclusiones}
 
 
