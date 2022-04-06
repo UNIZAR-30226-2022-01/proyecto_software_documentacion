@@ -24,6 +24,8 @@
 \usepackage[sorting=none, style=numeric]{biblatex} % aparece 1ro la 1ra citada
 \addbibresource{citas.bib}
 
+\usepackage[smartEllipses]{markdown}
+
 \usepackage{amsmath}
 
 \usepackage[utf8]{inputenc} 
@@ -145,52 +147,36 @@
 \clearpage
 \setcounter{page}{1}
 \section{Introducción}
-A lo largo del documento se va a presentar un proyecto que se ha denominado\textit{ \textbf{World Domination}}. Se trata de un juego de estrategia \textit{on-line} por turnos e inspirado en \textit{Risk}, en el que cada jugador lucha contra el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios controlados por los mismos, así como con una baraja de cartas propia que serán canjeadas por más soldados. En cada turno, los jugadores tendrán que luchar contra tropas bajo el dominio de los rivales, decidiéndose los resultados mediante tiradas de dados. \newline
+A lo largo del documento se va a presentar un proyecto que se ha denominado\textit{ \textbf{World Domination}}. Se trata de un juego de estrategia \textit{on-line} por turnos inspirado en \textit{Risk}, en el que cada jugador lucha contra el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios, así como con una baraja de cartas propia que podrán canjear por más soldados. En cada turno, los jugadores tendrán que luchar contra tropas bajo el dominio de los rivales, decidiéndose los resultados mediante tiradas de dados. \newline
+%El sistema será capaz de gestionar las cuentas de los usuarios junto con las partidas que se desarrollen, así como la gestión de turnos y la inicialización y finalización de cada una de las partidas. 
 
-El juego proporcionará funcionalidades adicionales, que permitirán disfrutar de una experiencia social, fomentando la competición y una mayor participación en futuras partidas. \newline
+%Algunos de los objetivos fundamentales del sistema son: 
 
-El sistema debe ser capaz de gestionar las cuentas de los usuarios junto con las partidas que se desarrollen, así como la gestión de turnos y la inicialización y finalización de cada una de las partidas. Algunos de los objetivos fundamentales del sistema son: 
+%que constan de un \textit{email} y contraseña,%
+Así mismo, el juego permitirá a los usuarios registrarse e iniciar sesión con sus credenciales, y el uso de una cuenta de usuario será necesario para jugar partidas. Gracias a que se almacenan cuentas de usuario, el sistema contará con una clasificación global de los mejores jugadores y de sus respectivas puntuaciones de las partidas jugadas. Por otro lado, el juego proporcionará funcionalidades adicionales que permitirán disfrutar de una experiencia social, fomentando la competición y una mayor participación en futuras partidas. %Cada usuario podrá gestionar una lista de amigos.\\
 
-\begin{itemize}
-\item Se permitirá a los usuarios registrarse e iniciar sesión con sus credenciales, que constan de un \textit{email} y contraseña. El uso de una cuenta de usuario será necesario para jugar partidas.
+Adicionalmente, los usuarios podrán personalizar elementos del juego en función de sus preferencias, como las fichas, su foto de perfil, o los dados usados durante las partidas, mediante puntos canjeables en la tienda del juego, que el sistema recompensará por haber jugado o ganado partidas.
 
-\item El sistema contará con una clasificación global de los mejores jugadores y de sus respectivas puntuaciones de las partidas jugadas.
+Por otro lado, el juego permitirá crear partidas públicas y privadas, con contraseña, de 2 a 6 jugadores. Esto permitirá crear partidas entre grupos de amigos, o unirse a partidas públicas y conocer nuevos usuarios.\\
 
-\item Se permitirá a los usuarios personalizar elementos del juego en función de sus preferencias, como las fichas, su foto de perfil, o los dados usados durante las partidas.
+%Las partidas se desarrollarán de forma asíncrona, permitiendo a los usuarios responder en cualquier momento. Si el usuario se encuentra conectado, podrá ver una notificación en la pantalla. En el caso contrario, se enviará un correo al mismo notificando que puede realizar la jugada. Habrá un mecanismo de expulsión de jugadores que no respondan o realicen jugadas en un tiempo determinado. \\
 
-\item El sistema recompensará al usuario por haber jugado o ganado un número determinado de partidas con puntos canjeables en la tienda del juego. La tienda será el punto de compra de personalizaciones de los elementos del juego.
+A lo largo de la realización del proyecto, se realizarán entregas parciales del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:
 
-\item Se permitirá gestionar una lista de amigos de cada usuario.
+En primer lugar, se realizará una reunión para la evaluación parcial del sistema, con el objetivo de refinar requisitos y mostrar el progreso del desarrollo. Esto se realizará en la semana del 4 al 8 de Abril.
 
-\item El sistema permitirá crear partidas públicas y privadas, conforme a las siguientes reglas:
-\begin{itemize}
-    \item Las partidas serán de 2 a 6 jugadores.
-    \item Se permitirá a cualquier usuario entrar a partidas públicas.
-    \item En el caso de partidas privadas, solo se permitirá la entrada con una contraseña, introducida al crearla.
-    \item Se encontrará disponible un \textit{chat} en la partida.
-    \item Se restringirá al usuario a poder jugar solo una partida al mismo tiempo.
-\end{itemize}
+En segundo lugar, se realizará reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales. Esto se realizará en la semana del 16 al 20 de Mayo.
 
-\item Las partidas se desarrollarán de forma asíncrona, permitiendo a los usuarios responder en cualquier momento. Si el usuario se encuentra conectado, podrá ver una notificación en la pantalla. En el caso contrario, se enviará un correo al mismo notificando que puede realizar la jugada.
+El sistema final se entregará no más tarde del 1 de junio, con los cambios propuestos durante las reuniones intermedias. \\
 
-\item Habrá un mecanismo de expulsión de jugadores que no respondan o realicen jugadas en un tiempo determinado.
-
-\end{itemize}
-
-A lo largo de la realización del proyecto, será necesario realizar algunas entregas del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:
-
-\begin{itemize}
-    \item Una reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales, en la semana del 16 al 20 de Mayo.
-    \item El sistema final se entregará no más tarde del 1 de junio, con los cambios propuestos durante las reuniones intermedias.
-\end{itemize}
-
-A continuación se hablará sobre otros aspectos del proyecto, de la gestión, la organización, análisis de requisitos, así como del diseño del sistema.
+A continuación se detallará la organización del proyecto, los equipos creados y sus objetivos, las tecnologías utilizadas,  y el calendario del proyecto con la división de las tareas asignadas a cada uno.
+Además, realizaremos un análisis y diseño del sistema, y una revisión del transcurso del proyecto, desde el inicio hasta el cierre del mismo. \newpage
 
 \section{Organización del proyecto}
 El equipo está formado por 6 integrantes: Samuel García, Guillermo Enguita, Laura Gonzalez, Francisco Crespo, Emilio Estevan y Jorge Grima.
 Hemos dividido el proyecto en tres bloques fundamentales:\newline
 \begin{itemize}
-    \item \textit{Backend} implementado con \textbf{Go} y desarrollo de la API.
+    \item \textit{Backend} implementado con \textbf{Go} y desarrollo de la API, base de datos con \textit{PostgreSQL} y despliegue mediante \textit{Docker}.
     \item Primera versión del \textit{frontend} implementada con \textbf{React}.
     \item Segunda versión del \textit{frontend} implementada con \textbf{Angular}.\newline
 \end{itemize}
@@ -198,15 +184,14 @@ Hemos dividido el proyecto en tres bloques fundamentales:\newline
 El trabajo del primer bloque será llevado a cabo por Samuel y Guillermo, el del segundo bloque por Francisco y Emilio, mientras que el del tercer bloque será realizado por Laura y Jorge. 
 Aunque cada uno tenga un bloque asignado, en todo momento se ayudará a integrantes encargados del trabajo en otros bloques si fuera necesario. \newline
 
-El equipo decidió nombrar como director a Francisco Crespo, encargado de llevar a cabo la organización principal del proyecto, así como de las entregas necesarias del trabajo.\newline
+El equipo decidió nombrar como director a Francisco Crespo, será el portavoz y el encargado de tomar las decisiones más controvertidas, así como de realizar las entregas necesarias del trabajo.\newline
 
-%%%%%%%%% De 3.2
 El responsable del control de configuraciones, construcción del software y aseguramiento de la calidad del producto será Samuel García.
 
 
 \section{Plan de gestión del proyecto}
 
-A continuación, se describe cómo se llevaran a cabo distintas tareas a realizar durante el proyecto: plan inicial de trabajo, división del trabajo a realizar o control de creación de software, entre otros.
+A continuación, se describe cómo se llevaran a cabo distintas tareas a realizar en el proyecto: plan inicial de trabajo, división del trabajo a realizar o control de creación de software, entre otros.
 
 \subsection{Inicio del proyecto}
 
@@ -214,19 +199,19 @@ Diversas tecnologías y lenguajes de programación utilizados en este proyecto e
 
 \begin{itemize}
 
-\item Debido a que toda la documentación necesaria para el proyecto va a ser realizada en \textbf{Latex}, todos los miembros del equipo han adquirido conocimientos básicos para la utilización y explotación de esta herramienta. Para lograr este objetivo, se han realizado dos tutoriales. El primero de ellos <<Learn LaTeX in 30 minutes>>\cite{latextutorial1} se puede encontrar en la página web de \textit{Overleaf}. A su vez, se han seguido los manuales de ayuda proporcionados por la página oficial de \textit{Latex}\cite{latextutorial2}. 
+\item Debido a que toda la documentación necesaria para el proyecto va a ser realizada en \textbf{Latex}, todos los miembros del equipo deberán adquirir conocimientos básicos para la utilización y explotación de esta herramienta. Para lograr este objetivo, realizaremos dos tutoriales. El primero de ellos <<Learn LaTeX in 30 minutes>>\cite{latextutorial1} se puede encontrar en la página web de \textit{Overleaf}. A su vez, seguiremos los manuales de ayuda proporcionados por la página oficial de \textit{Latex}\cite{latextutorial2}. 
 
 \item Continuando lo anterior, los integrantes del Grupo 1 asistieron a la práctica: \textit{Puesta en marcha de GitHub y fundamentos de Git} impartida por los profesores de la asignatura \textit{Proyecto Software}, la cual consistió en familiarizarse con la herramienta \textbf{Git} y su uso en conjunto con \textbf{GitHub}. A su vez, por medio del tutorial: \textit{Git, GitHub y Publicación Web}\cite{githubtutorial} se habían adquirido los conocimientos básicos de la misma.
 
 \end{itemize}
 
-Los grupos encargados de cada bloque del sistema realizaron formación específica. En primer lugar, los encargados del desarrollo del \textbf{backend} backend del sistema:
+Los grupos encargados de cada bloque del sistema realizaron formación específica. En primer lugar, los encargados del desarrollo del \textbf{backend} del sistema:
 
 \begin{itemize}
 
-\item Harán uso de \textbf{Go} como lenguaje de programación. Se trata de un lenguaje en el que se contaban con unos conocimientos básicos, debido a que ha sido utilizado durante las prácticas de la asignatura \textit{Sistemas Distribuidos}. De cara a fijar conocimientos y a aprender nuevas mecánicas, han realizado el tutorial de la página web oficial de \textbf{Go}. 
+\item Harán uso de \textbf{Go} como lenguaje de programación, al tener experiencia previa gracias a las prácticas de la asignatura de \textit{Sistemas Distribuidos}. De cara a fijar conocimientos y a aprender nuevas mecánicas, realizarán el tutorial de la página web oficial de \textbf{Go}. 
 
-\item A su vez, realizaron una formación relacionada con las distintas \textbf{API web}, concretamente el tutorial \textit{Introducción a las API web} de MozillaDeveloper\cite{apisweb}.
+\item A su vez, harán una formación relacionada con las distintas \textbf{API web}, concretamente el tutorial \textit{Introducción a las API web} de MozillaDeveloper\cite{apisweb}.
 
 \end{itemize}
 
@@ -234,7 +219,7 @@ Por otro lado, el equipo encargado del primer \textit{frontend}, implementado co
 
 \begin{itemize}
 
-\item  Este grupo realizó el tutorial oficial de \textbf{ReactJs}: \textit{Tutorial: Introducción a React}\cite{reactjs}, que tiene una duración estimada de 8 horas. También, realizarán el tutorial de API web anteriormente mencionado\cite{apisweb}.
+\item  Este grupo realizará el tutorial oficial de \textbf{ReactJs}: \textit{Tutorial: Introducción a React}\cite{reactjs}, que tiene una duración estimada de 8 horas. También harán el tutorial de API web anteriormente mencionado\cite{apisweb}.
 
 \end{itemize}
 
@@ -242,7 +227,7 @@ Por último, el equipo encargado de desarrollar el segundo \textit{frontend}, im
 
 \begin{itemize}
 
-\item Han realizado el tutorial \textit{Angular y TypeScript}\cite{angular} proporcionado por \textit{DesarrolloWeb}, el cual tiene un tiempo estimado de realización próximo a las 7 horas, debido a que no se ha trabajado con este \textit{framework}
+\item Realizará el tutorial \textit{Angular y TypeScript}\cite{angular} proporcionado por \textit{DesarrolloWeb}, el cual tiene un tiempo estimado de realización próximo a las 7 horas.
 
 \end{itemize}
 
@@ -259,19 +244,15 @@ Con el objetivo de tener una base de desarrollo, pruebas y objetivos de calidad 
 Se han establecido las siguientes prácticas para mantener una configuración de proyectos y ficheros similar entre cada uno de los equipos del proyecto, bajo una serie de repositorios en \textit{Github}.
 
 \begin{itemize}
-    \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los \textit{frameworks} a utilizar. De este modo, se seguirán las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
+    \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los \textit{frameworks} a utilizar. De este modo, seguiremos las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
     \begin{itemize}
-        \item Para \textbf{Angular}, se utilizará la guía de estilo oficial\cite{estiloangular} y la guía de estructura de proyectos propuesta por la documentación oficial\cite{estructuraangular}.
+        \item Para \textbf{Angular}, utilizaremos la guía de estilo oficial\cite{estiloangular} y la guía de estructura de proyectos propuesta por la documentación oficial\cite{estructuraangular}.
 
-        \item Para \textbf{React}, se utilizará la
+        \item Para \textbf{React}, usaremos la
         guía de estilo de \textit{airbnb}\cite{estiloreact} y la estructura de proyectos propuesta por la documentación oficial\cite{estructurareact}.
 
-        \item Para \textbf{Go}, se utilizará el estilo impuesto por la herramienta automática de formato de dicho lenguaje\cite{estilogolang} y la estructura de proyectos recomendada por la comunidad\cite{estructuragolang}, compatible con las herramientas de compilación del lenguaje.
+        \item Para \textbf{Go}, seguiremos el estilo impuesto por la herramienta automática de formato de dicho lenguaje\cite{estilogolang} y la estructura de proyectos recomendada por la comunidad\cite{estructuragolang}.
     \end{itemize}
-
-    \item La documentación generada durante el desarrollo del proyecto se distinguirá entre \textbf{documentación interna}, dirigida a los desarrolladores, y \textbf{documentación pública}, dirigida a los clientes.\\
-
-    Los ficheros de documentación serán nombrados con minúsculas y podrán contener guiones bajos, sin caracteres especiales. Si forman parte de la documentación del código o interfaces, su nombre empezará por \textbf{documentacion\_}, y si forman parte de guías de uso para los clientes, su nombre empezará por \textbf{guia\_}.
 
     \item Todo el código será subido a los repositorios de la organización de \textit{Github}\footnote{\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Repositorio de la organización de \textit{Github}}}}, donde todos los miembros tendrán permisos de acceso, modificación y administración de los mismos. Los repositorios serán los siguientes:
     \begin{itemize}
@@ -283,8 +264,6 @@ Se han establecido las siguientes prácticas para mantener una configuración de
 
         \item Un repositorio para la documentación\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion}{\color{blue}{Repositorio de documentación}}}, en el cual se localizarán todos los archivos de documentación interna y de cara al usuario, ya estén terminados como archivos .pdf o en construcción, como archivos de \LaTeX.
     \end{itemize}
-
-
 
 
 \end{itemize}
@@ -312,20 +291,19 @@ Con el objetivo de proveer un despliegue homogéneo del proyecto, tanto para las
 
 \subsubsection{Convenciones y procedimientos para el control de la calidad del software}
 
-Debido a que se van a utilizar diferentes lenguajes de programación y \textit{frameworks} en cada una de las partes del proyecto, como en los dos \textit{frontend} y el \textit{backend}, se han establecido una serie de prácticas comunes a seguir, así como una estrategia de pruebas manuales y automáticas, para garantizar y poder medir y controlar la calidad del software.
+Debido a que se van a utilizar diferentes lenguajes de programación y \textit{frameworks} en cada una de las partes del proyecto, se han establecido una serie de prácticas comunes a seguir. También se ha planteado una estrategia de pruebas manuales y automáticas, para poder medir y controlar la calidad del software.
 
 \begin{itemize}
-    \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textbf{Google}\cite{documentaciongoogle} para la documentación de la \textit{API} pública, de funciones exportadas de un módulo a otro y de funciones auxiliares que requieran una explicación detallada más allá de la proporcionada por comentarios en el código.
+    \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textbf{Google}\cite{documentaciongoogle} para la documentación de la \textit{API} pública.
 
-    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, por lo que ambos equipos deberán llegar a un acuerdo al respecto. Además, se seguirán los principios básicos de diseño de interfaces y usabilidad, como las heurísticas de Nielsen\cite{heuristicasnielsen}.
-
-    \item El código de cada una de las partes del proyecto deberá ser revisado por ambos miembros encargados de él, tanto de forma manual como automática, tras implementar nuevas funcionalidades. Para  ello, se establece la siguiente estrategia:
+    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, por lo que ambos equipos deberán llegar a un acuerdo al respecto. 
+    \item Tras añadir una nueva funcionalidad el encargado de su implementación comprobará su corrección, realizando pruebas manuales y automáticas. Para ello, seguiremos la siguiente estrategia:
     \begin{itemize}
-        \item El \textit{backend} proporcionará un conjunto de pruebas automáticas sobre cada uno de los elementos de la \textit{API}, ya que el lenguaje elegido, \textit{Go}, proporciona de forma nativa herramientas de test automático y la posibilidad de hacer de cliente de la \textit{API} sin necesitar de intermediario al \textit{frontend}.
+        \item El \textit{backend} proporcionará un conjunto de pruebas automáticas sobre cada uno de los elementos de la \textit{API}, utilizando las herramientas de \textit{testing} de \textit{Go}. 
 
-        La adición de una nueva funcionalidad a la \textit{API} deberá garantizar que tanto su prueba automática como el resto de ellas no muestran ningún tipo de error.
+        Tras añadir una nueva funcionalidad a la \textit{API}, garantizaremos que se pasen todas las pruebas automáticas antes de persistir los cambios.
 
-        \item Cada uno de los equipos de \textit{frontend} realizará pruebas exploratorias a la hora de implementar funcionalidades que involucren llamar a la \textit{API}, teniendo la garantía de que ha pasado las pruebas automáticas previamente. De esta forma, garantizará que dichas funcionalidades no presentan errores a la hora de añadirlas.
+        \item Cada uno de los equipos de \textit{frontend} realizará pruebas exploratorias a la hora de implementar funcionalidades que involucren a la \textit{API}, teniendo la garantía de que ha pasado las pruebas automáticas previamente.
         \end{itemize}
 
 
@@ -333,13 +311,14 @@ Debido a que se van a utilizar diferentes lenguajes de programación y \textit{f
 
     La estrategia de pruebas previas a la entrega será la siguiente:
     \begin{itemize}
-        \item Se acordará, mediante una reunión de al menos un integrante de cada par de miembros de cada equipo, un guión de prueba exploratorias común para ambos \textit{frontend}, que abarque todas las funcionalidades del juego implementadas hasta el momento por ambos.
+        \item Se acordará, mediante una reunión (en la que participarán al menos un miembro de cada equipo) un guión de prueba exploratorias común para ambos \textit{frontend}. Este abarcará todas las funcionalidades del juego implementadas hasta el momento por ambos.
 
-        \item Cada uno de los miembros de cada \textit{frontend} realizará dichas pruebas siguiendo el guión sobre su \textit{frontend}, mientras que cada miembro del equipo de \textit{backend} las realizará sobre uno de ellos respectivamente, comprobando que las interacciones desde el lado del \textit{backend} son correctas.
+        \item Cada uno de los miembros de cada \textit{frontend} realizará dichas pruebas siguiendo el guión sobre su aplicación. Por otro lado, un miembro del equipo de \textit{backend} seguirá el guión sobre el \textit{frontend} \textit{React} y otro sobre \textit{Angular}, comprobando que las interacciones con la \textit{API} son correctas.
 
         Una vez realizadas las pruebas, los resultados se comunicarán al responsable de estos aspectos, que coordinará la corrección de los errores observados y repetirá el proceso de prueba si es necesario.
     \end{itemize}
 \end{itemize}
+
 
 \subsection{Calendario del proyecto, división del trabajo, coordinación, comunicaciones, monitorización y seguimiento}
 
@@ -350,20 +329,23 @@ Debido a que se van a utilizar diferentes lenguajes de programación y \textit{f
 % De control de configuraciones y software, a incluir en comunicaciones:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de \textbf{GitHub} del repositorio relacionado con ellas. Debido a que no permite crear incidencias que abarquen múltiples repositorios, cada uno de ellos tendrá las incidencias globales que afecten a varios de ellos replicadas, con las tareas que les corresponda a cada uno. \\
+\subsubsection{Coordinación entre equipos}
+Con el objetivo de favorecer la coordinación entre los equipos y la visibilidad y monitorización de las tareas realizadas, se han establecido las siguientes normas:\\
 
-    Todas las tareas, funcionalidades a implementar o ampliar y errores a arreglar serán documentados en incidencias individuales con una descripción concisa. Estas formarán parte de hitos para entregas y versiones intermedias si aplica. Las incidencias se clasificarán utilizando etiquetas. De la misma forma que con las incidencias, los hitos globales estarán replicados en cada repositorio con las tareas e incidencias que correspondan a él. \\
+La gestión de incidencias y tareas pendientes se realizará mediante el gestor de incidencias de \textbf{GitHub} del repositorio relacionado con ellas. Debido a que no permite crear incidencias que abarquen múltiples repositorios, cada uno de ellos tendrá las incidencias globales que afecten a varios de ellos replicadas. \\
 
-    Las incidencias serán asignadas a quienes trabajen en ella para mantener un control de actividades y tiempo, y podrán ser cerradas y abiertas de nuevo libremente. \\
+Todas las tareas, funcionalidades a implementar o ampliar y errores a arreglar serán documentados en incidencias individuales con una descripción concisa. Estas formarán parte de hitos para entregas y versiones intermedias si aplica. Las incidencias se clasificarán utilizando etiquetas. De la misma forma que con las incidencias, los hitos globales estarán replicados en cada repositorio con las tareas e incidencias correspondientes. \\
 
-     Todos los \textit{commits} a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción de los cambios realizados concisa. \\
+Las incidencias serán asignadas a quienes trabajen en ella para mantener un control de actividades y tiempo, y podrán ser cerradas y abiertas de nuevo libremente. \\
 
-    Por ello, se han establecido los siguientes objetivos a comprobar cada vez que se realiza un commit:
-    \begin{itemize}
-        \item Se comprobará que el código compila tras implementar dicho commit, y que todos los test automáticos implementados hasta el momento siguen siendo correctos.
-        \item El ámbito del commit no deberá abarcar más allá del grupo de tareas de una incidencia en concreto a no ser que no sea posible evitarlo. Esto ayuda a evitar realizar un número excesivo de cambios.
-        \item Los commits no deberá exceder de 500 nuevas líneas siempre que sea posible, excluyendo la subida de ficheros o implementaciones de funciones inherentemente largas, como los test automáticos.
-    \end{itemize}
+Todos los \textit{commits} a realizar no requerirán aprobación, pero deberán ser probados para que no causen problemas de compilación, y deberían ser tan funcionalmente completos como sea posible. Además, no deberán abarcar un número excesivo de cambios en el código para favorecer que se puedan deshacer si es necesario, y deberán tener una descripción concisa de las modificaciones realizadas. \\
+
+Por ello, se han establecido los siguientes objetivos a comprobar cada vez que se realiza un \textit{commit}:
+\begin{itemize}
+    \item Se comprobará que el código compila tras implementar dicho \textit{commit}, y que todos los test automáticos implementados hasta el momento siguen siendo correctos.
+    \item El ámbito del \textit{commit} no deberá abarcar más allá del grupo de tareas de una incidencia en concreto a no ser que no sea posible evitarlo. Esto ayuda a evitar realizar un número excesivo de cambios.
+    \item Los \textit{commits} no deberán exceder de 500 nuevas líneas siempre que sea posible, excluyendo la subida de ficheros o implementaciones de funciones inherentemente largas, como los test automáticos.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -372,8 +354,8 @@ La gestión de incidencias y tareas pendientes se realizará mediante el gestor 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante un diagrama de \textit{Gantt}, apreciable en la Figura 1, el cual podrá ser modificado en el futuro debido a posibles adelantos o retrasos en alguna de las tareas, y también por tareas imprevistas que pueden surgir durante la realización del proyecto.\\
+\subsubsection{Seguimiento de objetivos}
+La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante un diagrama de \textit{Gantt}, apreciable en la Figura \ref{fig:gantt}, el cual podrá ser modificado en el futuro debido a posibles adelantos o retrasos en alguna de las tareas, y también por tareas imprevistas que pueden surgir durante la realización del proyecto.\\
 
 \begin{landscape}
     \pagestyle{empty}
@@ -381,20 +363,9 @@ La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante
     \centering
     \includegraphics[scale=0.6]{diagramas/gant.PNG}
     \caption{Diagrama de Gantt.}
-    \label{fig:my_label}
+    \label{fig:gantt}
 \end{figure}
 \end{landscape}
-
-Se han establecido las siguiente divisiones de trabajo junto a las personas asignadas a cada parte:
-
-\begin{itemize}
-    \item \textbf{Backend}: Guillermo Enguita y Samuel García
-    \item \textbf{Frontend}
-    \begin{itemize} 
-        \item \textbf{Angular}: Laura González y Jorge Grima
-        \item \textbf{React}: Fran Crespo y Emilio Estevan
-    \end{itemize}
-\end{itemize}
 
 La división de tareas diarias internas en cada uno de los equipos se consensuará entre sus miembros, y se preferirá en todo momento la programación por pares.\\
 
@@ -512,13 +483,13 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
          \hline
          RF-3.9 & Para que un cambio de cartas sea válido, se deberán cambiar 3 cartas del mismo tipo, dos del mismo tipo junto a un comodín o una carta de cada tipo. \\
          \hline
-         RF-3.10 & El número de ejércitos recibidos por cada cambio dependerá del número de cambios realizados. El primer cambio otorgará 4 ejércitos y los cambios consecutivos darán 2 ejércitos más que el anterior. El sexto cambio dará un total de 15 ejércitos, y a partir de éste el número de ejércitos se incrementará en 5 por cada cambio. \\
+         RF-3.10 & El número de ejércitos recibidos por cada cambio dependerá del número de cambios realizados. El primer cambio otorgará 4 y los cambios consecutivos darán 2 más que el anterior. El sexto cambio dará un total de 15 ejércitos, y a partir de este el número de ejércitos se incrementará en 5 por cada cambio. \\
          \hline
          RF-3.11 & El jugador estará obligado a cambiar cartas siempre que tenga 5 o más cartas en su mano. \\
          \hline
-         RF-3.12 & El jugador recibirá 2 ejércitos extra si alguna de las cartas que cambia corresponde a un territorio que ocupe. Esos 2 ejércitos se añadirán a dicho territorio. En caso de que esto ocurra con más de una carta. \\
+         RF-3.12 & El jugador recibirá 2 ejércitos extra si alguna de las cartas que cambia corresponde a un territorio que ocupe. Esos 2 ejércitos se añadirán a dicho territorio. \\
          \hline
-         RF-3.13 & En caso de que se de la situación mencionada en el \textbf{RF-3.12} con más de una carta del cambio, el jugador podrá elegir a cual de los territorios se asignan las tropas adicionales. \\
+         RF-3.13 & En caso de que se de la situación mencionada en el \textbf{RF-3.12} con más de una carta del cambio, se añadirán 2 ejércitos a cada territorio afectado. \\
          \hline
          RF-3.14 & Durante la fase de ataque el jugador podrá atacar territorios adyacentes los suyos, siempre y cuando tenga por lo menos dos ejércitos en la región desde la que ataca.\\
          \hline
@@ -526,7 +497,7 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
          \hline
          RF-3.16 & En caso de que el dado más alto lanzado por el atacante sea de valor mayor que el del defensor, el territorio defensor perderá un ejército. Si el valor fuera igual o menor, el territorio atacante perderá un ejército. Si ambos han lanzado dos o más dados, se realizará el mismo proceso con el segundo dado más alto de cada uno.\\
          \hline
-         RF-3.17 & Si tras un ataque, el territorio defensor queda sin ejércitos, el atacante deberá mover a dicha región tantas tropas como dados haya tirado durante el último ataque menos el número de ejércitos que haya perdido en el ataque. \\
+         RF-3.17 & Si tras un ataque, el territorio defensor queda sin ejércitos, el atacante deberá mover a dicha región tantas tropas como dados haya tirado durante el último ataque, menos el número de ejércitos que haya perdido en el ataque. \\
          \hline
          RF-3.18 & Al final del turno, el jugador tendrá la posibilidad de fortificar un territorio, moviendo tropas de un territorio a otro. Para ello, ambos territorios deberán pertenecer al jugador y estar conectados por un camino de regiones ocupadas por él. Cabe destacar que no se podrá dejar ningún territorio sin tropas.\\
          \hline
@@ -598,11 +569,14 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
 
 \subsection{Diseño del sistema}
 
-El diseño y planificación de los elementos y lógica de un sistema es fundamental para su desarrollo. En consecuencia, se han desarrollado los correspondientes diagramas arquitecturales que reflejan los componentes de la aplicación, así como la interacción entre ellos. \newline
+El diseño y planificación de los elementos y lógica de un sistema es fundamental para su desarrollo. En consecuencia, hemos desarrollado los correspondientes diagramas arquitecturales que reflejan los componentes de la aplicación, así como la interacción entre ellos. \newline
 
-En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura \ref{ref:componentes}, el cual representa los componentes principales en ejecución, sus interfaces y conectores que les permiten interactuar. Concretamente, se puede apreciar los dos componentes cliente, uno para cada tecnología a utilizar, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema.
+% TODO referenciar figura del diagrama de paquetes
+En primer lugar, se ha modelado el \textbf{diagrama de paquetes}, observable en la Figura \ref{ref:paquetes}, cuyo contenido refleja la organización de los distintos módulos del sistema, así como las dependencias entre ellos. \\
 
-\begin{figure}[h!]
+En siguiente lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura \ref{ref:componentes}, en el cual se puede apreciar los dos componentes cliente, uno para cada tecnología. Estos implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web} para la \textit{API}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará \textit{HTTP}. \\
+
+\begin{figure}[!h]
     \centering
     \includegraphics[width=1\linewidth]{diagramas/DC.png}
     \caption{Diagrama de componentes.}
@@ -610,86 +584,90 @@ En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable 
 \end{figure}
 
 
-Por otro lado, en la Figura \ref{ref:despliegue} se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor \textit{web} junto con los artefactos de comprenden la lógica interna del servidor y el sistema gestor de base de datos. Este nodo da soporte a los dos tipos de clientes posibles, uno con cada tecnología, los cuales implementan cierta lógica interna de la aplicación y se encargan de mostrar y gestionar la interfaz al usuario. 
+Por otro lado, en la Figura \ref{ref:despliegue} se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor web de la \textit{API}, el cual contiene un entorno de ejecución para el contenedor de \textit{Docker}, que ejecuta el código del servidor, y otro entorno con el contenedor para el SGBD \textit{PostgreSQL}. Por otro lado, se encuentran los servidores de \textit{React} y \textit{Angular}, cada uno con su entorno de ejecución con un contenedor de \textit{Docker}, que proporcionan el cliente web correspondiente. Por último, se encuentra la máquina del usuario, la cual contiene el entorno de ejecución (navegador web), junto con los artefactos necesarios para ejecutar el cliente correspondiente. \\
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=1\linewidth]{diagramas/DD.png}
     \caption{Diagrama de despliegue.}
     \label{ref:despliegue}
 \end{figure}
 
-Dadas las características del tipo de aplicación \textit{web}, se va a desarrollar una \textbf{arquitectura} cliente-servidor como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará \textbf{HTTP}.
+\FloatBarrier
 
-En la figura \ref{ref:relacional} aparece el modelo relacional utilizado para la base de datos de la aplicación. Este constará de 5 tablas:
+Dadas las características del tipo de aplicación \textit{web}, se va a desarrollar una \textbf{arquitectura cliente-servidor en 3 niveles} como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente, que será procesada por la lógica desarrollada en el cliente. \\
+
+En la Figura \ref{ref:relacional} aparece el modelo relacional utilizado para la base de datos de la aplicación. Este constará de 5 tablas:
 \begin{itemize}
     \item Tabla \textit{Usuario}, en la que se almacenará la información de los distintos usuarios.
-    \item Tabla \textit{Partida}, en la que se almacenará la información de las partidas en curso.
+    \item Tabla \textit{Partida}, que recogerá la información de las partidas en curso.
     \item Tabla \textit{ItemTienda}, en la que se almacenarán los diferentes elementos de personalización que se podrán comprar a través de la tienda.
-    \item Tabla \textit{EsAmigo}, en la que se almacenarán las relaciones y solicitudes de amistad entre usuarios.
-    \item Tabla \textit{Participa}, en la que se guardarán los usuarios que participan en cada partida.
-    \item Tabla \textit{TieneItems}, en la que se almacenarán los elemenos de personalización que posee cada usuario.
+    \item Tabla \textit{EsAmigo}, en la que se guardarán las relaciones y solicitudes de amistad entre usuarios.
+    \item Tabla \textit{Participa}, en la que se recogerán los usuarios que participan en cada partida.
+    \item Tabla \textit{TieneItems}, en la que se almacenarán los elementos de personalización que posee cada usuario.
 \end{itemize}
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=1\linewidth]{diagramas/relacional.pdf}
     \caption{Esquema relacional de la base de datos.}
     \label{ref:relacional}
 \end{figure}
 
+Desde el punto de vista de las interfaces del sistema, se ha realizado un diseño completo de la API a consumir por ambos \textit{frontend}. El diagrama de la API, junto a la descripción de los diferentes aspectos implementados, está disponible en el repositorio de documentación\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion/documentacion_API.md}{\color{blue}{Documentación de la API.}}}.
+
+Adicionalmente, todas las funciones públicas del \textit{backend} se han documentado y se encuentran disponibles en la página oficial de documentación de paquetes de Go \footnote{\href{https://pkg.go.dev/github.com/UNIZAR-30226-2022-01/proyecto_software_backend}{\color{blue}{Documentación pública del \textit{backend}.}}}. De esta forma, se permite a ambos equipos de \textit{frontend} acceder a la documentación detallada de cada \textit{endpoint} de la API, que cuenta con ejemplos de respuestas y datos devueltos\footnote{\href{https://pkg.go.dev/github.com/UNIZAR-30226-2022-01/proyecto_software_backend/handlers}{\color{blue}{Documentación de cada \textit{endpoint} del \textit{backend}.}}}.
+
 \subsubsection{Tecnologías elegidas}
 
-En cuanto a las \textbf{tecnologías elegidas}, cabe destacar el uso de \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript} para la parte del frontend de la aplicación, en la que se distinguirá la utilización de dos librerías de creación de interfaces de usuario: \textbf{React} y \textbf{Angular}. Por ello, la aplicación divergirá en dos clientes ligeramente distintos para el usuario e internamente construidos de distinta forma, que se comunicarán con el servidor web central, el cual no distinguirá entre tipos de clientes, sino que se limitará a atender peticiones, gestionarlas y devolver la respuesta adecuada. \newline
+En cuanto a las \textbf{tecnologías elegidas}, cabe destacar el uso de \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript} para la parte del frontend de la aplicación, en la que se distinguirá la utilización de dos frameworks de creación de interfaces de usuario: \textbf{React} y \textbf{Angular}. Por ello, la aplicación divergirá en dos clientes ligeramente distintos para el usuario e internamente construidos de distinta forma, que se comunicarán con el servidor web central, el cual no distinguirá entre tipos de clientes, sino que se limitará a atender peticiones, gestionarlas y devolver la respuesta adecuada. \newline
 
-Por otro lado, la tecnología elegida para el servidor o backend es el lenguaje \textbf{Go}, ya que es uno de los lenguajes más potentes y con más futuro en sistemas distribuidos, el cual ofrece infinidad de herramientas de gestión para un servidor de las características del sistema. Para la persistencia de datos del sistema, se recurrirá al gestor \textbf{PostgreSQL}, ya que cubre con garantías todas las necesidades de la aplicación. \newline
+Por otro lado, la tecnología elegida para el servidor o \textbf{backend} es el lenguaje \textbf{Go}, ya que ofrece una gran variedad de herramientas de gestión para un servidor de las características del sistema. Para la persistencia de datos del sistema, se recurrirá al \textit{SGBD} \textbf{PostgreSQL}, ya que cubre con garantías todas las necesidades de la aplicación. \newline
 
-
-Para el backend se ha valorado utilizar las siguientes librerías auxiliares para servir contenidos \textbf{HTTP}:
+Para el \textit{backend} se ha valorado utilizar las siguientes librerías auxiliares para servir contenidos \textbf{HTTP}:
 
 \begin{itemize}
     \item \textit{Frameworks de web}: Se ha valorado utilizar frameworks web como \textbf{Echo} o \textbf{Gin}. Sin embargo, se ha considerado que  la documentación era escasa en todos los \textit{frameworks} evaluados, y su uso forzaría a una dependencia en las mismas. 
     
-    \item Por otro lado, se ha optado por utilizar una librería auxiliar a la librería estándar de \textbf{HTTP} de \textbf{Go}, \textbf{Chi}, que se caracteriza por ser solamente una ampliación a la librería estándar muy sencilla de utilizar, y que permite establecer diferentes \textit{middleware} programables para diferentes \textit{URLs}, algo que se va a necesitar.
+    \item Por otro lado, se ha optado por utilizar una librería auxiliar a la librería estándar de \textbf{HTTP} de \textbf{Go}, \textbf{Chi}, que se caracteriza por ser una ampliación a la librería estándar muy sencilla de utilizar, y que permite establecer diferentes \textit{middleware} programables para diferentes \textit{URLs}.
     
     \item Librerías auxiliares de \textbf{SQL}: Se ha evaluado utilizar \textbf{ORMs} como \textbf{Gorm}, pero se ha considerado que el modelo de datos es lo suficientemente sencillo como para utilizar la librería \textbf{SQL} y consultas tradicionales.
 \end{itemize}
 
 \subsubsection{Aspectos a considerar}
 
-Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de \textbf{Docker}, preferiblemente en un sistema operativo \textbf{Linux}, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar \textbf{SQL}, es decir, un modelo relacional. El servidor ofrece una \textit{API Web} de tipo \textbf{REST}, de forma que cada petición contenga toda la información necesaria para comprenderla, sin que exista un estado explícito a consensuar entre cliente y servidor. \newline
+Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de \textbf{Docker}, preferiblemente en un sistema operativo \textbf{Linux}, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar \textbf{SQL}, es decir, un esquema relacional. El servidor ofrece una \textit{API Web} de tipo \textbf{REST}, junto con el uso de \textbf{cookies} para mantener el estado de las sesiones de usuario. \\ 
 
 Por último, se barajaron otras opciones a las comentadas anteriormente:
 
 \begin{itemize}
-    \item Utilizar otro lenguaje para el \textit{backend}, como \textbf{Java}. Sin embargo, se decidió que era más apropiado el uso de \textbf{Go}, que es uno de los lenguajes para sistemas distribuidos más usados, ya que ofrece múltiples recursos para soportar distintos protocolos de comunicación, junto con aspectos de seguridad, así como simplicidad, compatibilidad y eficiencia en la gestión de peticiones de red dentro de su propia librería estándar. Además, el equipo está habituado al desarrollo de aplicaciones web con \textbf{Go}, hecho que impulsa su utilización.
+    \item Utilizar otro lenguaje para el \textit{backend}, como \textbf{Java}, \textbf{JavaScript} o \textbf{Python}. Sin embargo, se decidió que era más apropiado el uso de \textbf{Go}, ya el equipo está habituado al desarrollo de aplicaciones web con este lenguaje y cubre con garantías las necesidades tecnológicas requeridas.
     
-    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de  \textbf{PostgreSQL} ya que es uno de los gestores de código abierto más utilizados y que ofrece aspectos muy interesantes. También, el equipo está habituado al uso de este gestor en concreto.
+    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir, y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de \textbf{PostgreSQL}. El equipo está habituado con el uso de este gestor, además de tratarse de uno de los \textit{SGBD} de código abierto más utilizados y con aspectos muy interesantes. 
     
-    \item Existen muchas librerías para el desarrollo de interfaces \textit{web}. Sin embargo, se decidió utilizar  \textbf{React} y \textbf{Angular} porque ofrecen una gran cantidad de recursos que permiten construir elementos complejos mediante instrucciones muy simples, así como el soporte y documentación que tienen dado su extendido uso en la actualidad.
+    \item Existen muchos \textit{framework} para el desarrollo de \textit{frontend web}. Sin embargo, se decidió utilizar \textbf{React} y \textbf{Angular} porque ofrecen una gran cantidad de recursos que permiten construir interfaces de usuario y toda la lógica asociada a la aplicación. Además, los miembros del equipo mostraban interés para el aprendizaje sobre estas tecnologías tan extendidas en la actualidad.
 \end{itemize}
-
 
 % Entrega 2 y final
 \section{Memoria del proyecto}
-introducción
+
+A continuación se va a describir el inicio y desarrollo del proyecto, desde el punto de vista de cambios realizados respecto a la planificación inicial y de problemas observados durante la implementación del sistema.
 
 \subsection{Inicio del proyecto}
 %Apartado react
-En relación al equipo del frontend de \textbf{React} se realizo de forma correcta el plan establecido. Realizaron el tutorial correspondiente y, posteriormente, realizaron un proyecto de prueba de cara a probar y poner en práctica las competencias adquiridas. También, investigaron y probaron diversos paquetes o librerías adicionales de \textit{React}, como aprender a realizar las conexiones con la API y gestionar cookies. \\
-Cabe resaltar que \textbf{se cumplieron los objetivos} deseados de acuerdo a la planificación inicial. \\
+En relación al equipo del frontend de \textbf{React}, hemos seguido de forma correcta el plan establecido. Hemos seguido los tutoriales correspondientes y, posteriormente, realizamos un proyecto de prueba de cara a probar y poner en práctica las competencias adquiridas. También hemos investigado y probado diversos paquetes o librerías adicionales de \textit{React}, y aprendido a realizar las conexiones con la API y gestionar cookies. \\
+Cabe resaltar que \textbf{se han cumplido los objetivos} deseados de acuerdo a la planificación inicial. \\
 
 % Apartado backend
-Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Aún así ambos consultaron tutoriales y documentación de \textbf{React} y \textbf{Angular} para poder ayudar en el desarrollo del \textit{frontend}.
+Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Aún así ambos consultaron tutoriales y documentación de \textbf{React} y \textbf{Angular} para poder ayudar en el desarrollo del \textit{frontend}, además de los tutoriales sobre diseño de \textit{API} y uso de \LaTeX.
 
 \subsection{Ejecución y control del proyecto}
-
 \subsubsection{Frontend Angular}
 
 \subsubsection{Frontend React}
 
 %% Repartición de tareas
 
-El trabajo desarollado por el equipo de \textit{React} ha contado con una muy buena comunicación y coordinación por parte de sus integrantes debido, en gran medida, a haber trabajado juntos en múltiples ocasiones. Esta situación ha propiciado que el entorno de trabajo haya sido cordial y dinámico. \\
+El trabajo desarrollado por el equipo de \textit{React} ha contado con una muy buena comunicación y coordinación por parte de sus integrantes debido, en gran medida, a haber trabajado juntos en múltiples ocasiones. Esta situación ha propiciado que el entorno de trabajo haya sido cordial y dinámico. \\
 
 La coordinación y el modelo de trabajo han seguido las siguientes indicaciones:
 
@@ -704,23 +682,24 @@ Como se ha mencionado anteriormente, el \textbf{control de trabajo} de la pareja
 Respecto al seguimiento de los procedimientos y herramientas establecidas en un inicio, cabe destacar:
 
 \begin{itemize}
-    \item La tecnología elegida inicialmente ha sido adecuada para el desarrollo del sistema, y ha facilitado en gran medida la implementación del mismo debido, en gran medida, a la gran cantidad de información y tutoriales que se puede encontrar por la web relacionada con \textit{React}.
+    \item La tecnología elegida inicialmente ha sido adecuada para el desarrollo del sistema, y ha facilitado en gran medida la implementación del mismo debido a la gran cantidad de información y tutoriales que se puede encontrar por la \textit{web} relacionada con \textit{React}.
 
-    \item Cabe destacar que se han añadido o modificado múltiples librerias y paquetes con respecto a los establecidos al inicio del proyecto. Esto se ha debido a que se han ido descubriendo progresivamente ciertos paquetes que, en un principio, no se contaba con utilizar. Los más destacables son:
+    \item Cabe destacar que se han añadido o modificado múltiples librerías y paquetes con respecto a los establecidos al inicio del proyecto. Esto se ha debido a que se han ido descubriendo progresivamente ciertos paquetes que, en un principio, no se contaba con utilizar. Los más destacables son:
         \begin{itemize}
-            \item \textit{React-router-dom}, de cara a navegar entre las distintas pantallas. \footnote{\href{https://v5.reactrouter.com/web/guides/quick-start}{\color{blue}{\textit{ Página oficial react-router-dom.}}}}
+            \item \textit{React-router-dom}, de cara a navegar entre las distintas pantallas. \footnote{\href{https://v5.reactrouter.com/web/guides/quick-start}{\color{blue}{\textit{Página oficial react-router-dom.}}}}
             \item \textit{SweetAlert2}, librería de pantallas auxiliares.
-            \footnote{\href{https://sweetalert2.github.io}{\color{blue}{\textit{ Página oficial SweetAlert2.}}}}
+            \footnote{\href{https://sweetalert2.github.io}{\color{blue}{\textit{Página oficial SweetAlert2.}}}}
             \item \textit{Query String}, parser de URL.
             \footnote{\href{https://www.npmjs.com/package/query-string}{\color{blue}{\textit{ Página oficial query-string.}}}}
         \end{itemize}
 \end{itemize}
 
-Por otro lado, con respecto al \textbf{calendario de tareas} fijado al inicio, no se han cumplido todos los objetivos planeados en un inicio. El motivo reside  en que se ha optado por realizar variaciones y priorizar ciertas tareas.
+Por otro lado, con respecto al \textbf{calendario de tareas} fijado al inicio, no se han cumplido todos los objetivos planeados en un inicio. El motivo reside en que se ha optado por realizar variaciones y priorizar ciertas tareas.
 Debido a esto, las pantallas de \textit{Perfil de usuario}, \textit{Búsqueda de partida} y \textit{Buzón de notificaciones} no han sido realizadas para la primera entrega y se ha puesto un mayor enfasis en la implementación del \textit{Mapa de juego}. 
 Pese a las variaciones comentadas anteriormente, el equipo considera que se han cumplido los objetivos de esta entrega intermedia debido a que la pantalla del \textit{Mapa} se trata de la más compleja de implementar y desarrollar y tiene una importancia relevante sobre todas las demás. \\
 
 Por último, en relación al despliegue del frontend web cabe destacar un problema que surgió, debido a que existen incompatibilidades entre \textit{macOS} y los archivos iniciales de\textit{Docker}. Tras revisar y estudiar el error en prufundidad el equipo consiguió solucionar el problema. 
+
 \subsubsection{Backend}
 
 El proceso de ejecución y control del proyecto para el equipo de \textit{backend} se ha considerado satisfactorio.\\
@@ -760,7 +739,7 @@ Respecto al seguimiento de los procedimientos establecidos, se han seguido los s
 
 % discutir como se ha seguido el calendario
 
-Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.
+Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.\\
 
 La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego.
 
@@ -772,52 +751,58 @@ Por último, durante el desarrollo del sistema se han detectado los siguientes p
 
     \item El despliegue automático ha requerido ligeros cambios para que fuera posible su ejecución en equipos con \textit{macOS}.
 \end{itemize}
-% TODO hablar de pruebas
-
 \subsection{Cierre del proyecto}
 
-El proyecto, al dividirse en tres partes bien diferenciadas, cuenta con tres velocidades distintas. Pese a eso, hemos conseguido en gran medida una gran compenetración entre todos los equipos y hemos logrado en gran medida, hasta la fecha, los objetivos iniciales establecidos. A continuación, se pondrá énfasis en el análisis de los resultados obtenidos en contraposición con las estimaciones iniciales. \\
+El proyecto, al dividirse en tres partes bien diferenciadas, cuenta con tres ritmos de trabajo distintos. Pese a eso, hemos conseguido en gran medida una gran compenetración entre todos los equipos y hemos logrado en gran medida, hasta la fecha, los objetivos iniciales establecidos. A continuación, se pondrá énfasis en el análisis de los resultados obtenidos frente a las estimaciones iniciales. \\
 
+\subsubsection{Cierre del proyecto por el equipo de \textit{Backend}}
 El tiempo utilizado para la realización de las distintas tareas del \textbf{Backend} se ajusta razonablemente a la estimación inicial.
 Aún así, a la hora de realizar el proyecto hemos podido comprobar que las tareas elegidas para las estimaciones eran demasiado generales.\\
 
-Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente el diseño de la máquina de estados, la implementación del mapa, las diferentes fases de juego...\\
-Creemos que estas divisiones se podrían haber realizado al inicio del proyecto, analizando más exhaustivamente el funcionamiento del juego para permitir estimaciones más precisas. \\
+Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente enel diseño de la máquina de estados, la implementación del mapa y la de las diferentes fases de juego. Creemos que estas divisiones se podrían haber realizado al inicio del proyecto, analizando más exhaustivamente el funcionamiento del juego para permitir estimaciones más precisas. \\
 
-Mencionamos también que aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\  
+Mencionamos también que, aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado, y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\  
 
 Destacamos que si el desarrollo del \textit{backend} sigue progresando al ritmo actual, se acabará su implementación antes de lo planeado en el calendario. De esta forma, los encargados del \textit{backend} podrán ayudar en la implementación de los \textit{frontend}, encargándose además de modificar y corregir el backend cuando sea necesario. \\
 
-Por otro lado, el frontend desarrollado en \textbf{React} pese a haber subestimado esfuerzos que se tenían que dedicar en ciertas partes del sistema, como puede ser el mapa, hemos conseguido mantener y conseguir mayoritariamente los objetivos iniciales y creemos que se conseguirán conseguir los objetivos finales en el plazo establecido. \\
+Una de las principales lecciones que hemos aprendido durante el desarrollo del \textit{backend}, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Debido a esto, se han tenido que dedicar múltiples reuniones, aunque de corta duración, a la refactorización del código.\\
+
+\subsubsection{Cierre del proyecto por el equipo de \textit{React}}
+Por otro lado, desde el punto de vista del frontend desarrollado en \textbf{React}, pese a haber subestimado esfuerzos que se tenían que dedicar en ciertas partes del sistema, como puede ser el mapa, hemos conseguido mantener y conseguir mayoritariamente los objetivos iniciales. Además, creemos que se conseguirán conseguir los objetivos finales en el plazo establecido. \\
 
 Cabe destacar que las pequeñas divergencias entre las estimaciones iniciales y el coste y esfuerzos reales se deben, en gran medida, a la falta de experiencia en la realización de proyectos de tal envergadura. Es por eso, que se quiere recalcar la experiencia que hemos adquirido de cara a establecer estimaciones iniciales con mayor eficacia en futuros proyectos. \\
 
-% Lecciones aprendidas
-Una de las principales lecciones que hemos aprendido durante el desarrollo del \textit{backend}, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Al estar acostumbrados a proyectos más pequeños, tendemos a escribir código sin pensar en su organización dentro del componente, lo que genera ficheros muy largos y difíciles de leer.\\
 
-Debido a esto, ha sido necesarios realizar varias refactorizaciones del código, lo cuál nos ha servido para familiarizarnos con las diferentes herramientas de refactorización del \textit{IDE} utilizado, \textit{GoLand} en nuestro caso. Hemos mejorado nuestros hábitos de programación, dividiendo el código de un mismo componente en diferentes ficheros más sencillos.\\
+\subsubsection{Cierre del proyecto por el equipo de \textit{Angular}}
 
-En cambio, en el desarrollo del \textit{frontend} cabe destacar el avance y aprendizaje obtenido en el desarrollo y creación de interfaces, \textit{UX design}.
+\subsubsection{Valoraciones comunes entre todos los equipos}
 
-% Omitir repeticion del CORS
-El tamaño del proyecto ha fomentado también realizar \textit{commits} más concisos y frecuentes.
-Además, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado al servir los clientes web y la API desde dominios diferentes. \\
+La magnitud del proyecto ha fomentado a realizar \textit{commits} más concisos y frecuentes.
+
+Durante el desarrollo del \textit{backend}, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado, al servir los clientes web y la API desde dominios diferentes. Así mismo, hemos ganado experiencia en el despliegue y depuración de contenedores con \textit{Docker}.
+
+Así mismo, durante el desarrollo de los \textit{frontend}, cabe destacar el avance y aprendizaje obtenido en el desarrollo y creación de interfaces, \textit{UX design}.\\
 
 % Esfuerzos realizados
 Los esfuerzos realizados por los integrantes del equipo han sido los siguientes:
 
 \begin{itemize}
     \item En primer lugar, \textbf{Guillermo} invirtió un total de 34 horas, encargándose de implementar la fase de refuerzo, las funciones de creación y configuración de partidas, la implementación de la baraja y otras funciones sociales.
+    
     \item \textbf{Samuel} se encargó de desarrollar la fase inicial del juego, la gestión de las listas de amigos, la configuración del \textit{CORS}, el despliegue de la aplicación, la generación automática de documentación con la herramienta \textit{godoc}, el sistema de búsqueda de partidas y las notificaciones. En total, invirtió 35 horas.
+    
     \item \textbf{Fran} desarrolló junto con el resto del grupo de \textit{frontend} el diseño del mapa de juego. Además, la implementación de diversas pantallas como \textit{Registro Usuario, Inicio Sesión y Crear Partida}, entre otras. También, realizó dinámica adicional del mapa como ciertos botones, un mapa informativo o pantallas de avisos. En conjunto dedicó un estimado de 37 horas.
+    
+    \item \textbf{Emilio Estevan} dedicó un total de 41 horas a las tareas asignadas, entre las que destacan la puesta en marcha inicial del cliente, conexiones con la API y su gestión de errores, mantenimiento de cookies, implementación y diseño de pantallas y elementos gráficos, y redacción, maquetación y diseño de apartados de la memoria.
+    
+    \item \textbf{Jorge} diseñó de las pantallas de inicio de sesión y registro de usuario. También realizó el diseño del mapa, tratando de aprender cuestiones básicas sobre \textit{svg}, transiciones en angular, y otros elementos de diseño que proporciona la herramienta. Además, realizó la pantalla de búsqueda de partida, en la cual fue necesario aprender nuevos aspectos de diseño y cuestiones básicas sobre conexiones a la API. En total, invirtió 32 horas.
+
+    \item \textbf{Laura} realizó el diseño de las pantallas de inicio de sesión y registro de usuario, también se encargó de realizar la conexión de las pantallas de inicio de sesión y registro la API. Además, implementó el diseño diseño y conexión con la API para la pantalla de crear partida. También, realizó el diseño y la funcionalidad de las 2 \textit{top-bar} y la \textit{bottom-bar} que usarán ambos \textit{frontend}. En conjunto dedicó un estimado de 36 horas.
     %% Continuar aqui el resto
 \end{itemize}
 
-Como hemos mencionado antes, diferentes tareas fundamentales para el desarrollo del proyecto se realizaron en pareja. Entre ellas podemos destacar la definición del diagrama de estados del juego, la implementación y diseño del mapa, el grafo de regiones utilizados, el sistema de gestión de sesiones y el diseño de diversas pantallas, entre otros.
 %\section{Conclusiones}
-
-
-\clearpage
+%\clearpage
 %\section{Anexos}
 %\subsection{Glosario}
 %\subsection{Actas de todas las reuniones realizadas}
@@ -826,5 +811,11 @@ Como hemos mencionado antes, diferentes tareas fundamentales para el desarrollo 
 \section{Referencias}
 \subsection{Bibliografía}
 \printbibliography
+
+%\newpage
+%\section{Anexos}
+%\subsection{Diagrama de la API del sistema}
+%\label{anexo:A}
+%\markdownInput{diagramas/API.md}
 
 \end{document}
