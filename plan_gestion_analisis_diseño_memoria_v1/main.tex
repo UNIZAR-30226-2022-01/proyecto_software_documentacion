@@ -600,24 +600,42 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
 
 El diseño y planificación de los elementos y lógica de un sistema es fundamental para su desarrollo. En consecuencia, se han desarrollado los correspondientes diagramas arquitecturales que reflejan los componentes de la aplicación, así como la interacción entre ellos. \newline
 
-En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura 2, el cual representa los componentes principales en ejecución, sus interfaces y conectores que les permiten interactuar. Concretamente, se puede apreciar los dos componentes cliente, uno para cada tecnología a utilizar, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema.
+En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura \ref{ref:componentes}, el cual representa los componentes principales en ejecución, sus interfaces y conectores que les permiten interactuar. Concretamente, se puede apreciar los dos componentes cliente, uno para cada tecnología a utilizar, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\linewidth]{diagramas/DC.png}
     \caption{Diagrama de componentes.}
+    \label{ref:componentes}
 \end{figure}
 
 
-Por otro lado, en la Figura 3 se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor \textit{web} junto con los artefactos de comprenden la lógica interna del servidor y el sistema gestor de base de datos. Este nodo da soporte a los dos tipos de clientes posibles, uno con cada tecnología, los cuales implementan cierta lógica interna de la aplicación y se encargan de mostrar y gestionar la interfaz al usuario. 
+Por otro lado, en la Figura \ref{ref:despliegue} se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor \textit{web} junto con los artefactos de comprenden la lógica interna del servidor y el sistema gestor de base de datos. Este nodo da soporte a los dos tipos de clientes posibles, uno con cada tecnología, los cuales implementan cierta lógica interna de la aplicación y se encargan de mostrar y gestionar la interfaz al usuario. 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\linewidth]{diagramas/DD.png}
     \caption{Diagrama de despliegue.}
+    \label{ref:despliegue}
 \end{figure}
 
 Dadas las características del tipo de aplicación \textit{web}, se va a desarrollar una \textbf{arquitectura} cliente-servidor como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará \textbf{HTTP}.
+
+En la figura \ref{ref:relacional} aparece el modelo relacional utilizado para la base de datos de la aplicación. Este constará de 5 tablas:
+\begin{itemize}
+    \item Tabla \textit{Usuario}, en la que se almacenará la información de los distintos usuarios.
+    \item Tabla \textit{Partida}, en la que se almacenará la información de las partidas en curso.
+    \item Tabla \textit{ItemTienda}, en la que se almacenarán los diferentes elementos de personalización que se podrán comprar a través de la tienda.
+    \item Tabla \textit{EsAmigo}, en la que se almacenarán las relaciones y solicitudes de amistad entre usuarios.
+    \item Tabla \textit{Participa}, en la que se guardarán los usuarios que participan en cada partida.
+    \item Tabla \textit{TieneItems}, en la que se almacenarán los elemenos de personalización que posee cada usuario.
+\end{itemize}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{diagramas/relacional.pdf}
+    \caption{Esquema relacional de la base de datos.}
+    \label{ref:relacional}
+\end{figure}
 
 \subsubsection{Tecnologías elegidas}
 
@@ -661,7 +679,7 @@ En relación al equipo del frontend de \textbf{React} se realizo de forma correc
 Cabe resaltar que \textbf{se cumplieron los objetivos} deseados de acuerdo a la planificación inicial. \\
 
 % Apartado backend
-Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Hemos utilizado \textit{Go} recientemente para las prácticas de la asignatura \textit{Sistemas Distribuidos} y \texit{PostgreSQL} como gestor de bases de datos en \textit{Sistemas de la Información}.
+Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Aún así ambos consultaron tutoriales y documentación de \textbf{React} y \textbf{Angular} para poder ayudar en el desarrollo del \textit{frontend}.
 
 \subsection{Ejecución y control del proyecto}
 
