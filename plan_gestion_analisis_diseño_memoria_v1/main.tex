@@ -600,7 +600,9 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
 
 El diseño y planificación de los elementos y lógica de un sistema es fundamental para su desarrollo. En consecuencia, se han desarrollado los correspondientes diagramas arquitecturales que reflejan los componentes de la aplicación, así como la interacción entre ellos. \newline
 
-En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura \ref{ref:componentes}, el cual representa los componentes principales en ejecución, sus interfaces y conectores que les permiten interactuar. Concretamente, se puede apreciar los dos componentes cliente, uno para cada tecnología a utilizar, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema.
+En primer lugar, se ha modelado el \textbf{diagrama de paquetes}, observable en la Figura 3, cuyo contenido refleja la organización de los distintos módulos del sistema, así como las dependencias entre ellos. \\
+
+En siguiente lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura 4, en el cual se puede apreciar los dos componentes cliente, uno para cada tecnología, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web} para la \textit{API}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará HTTP. \\
 
 \begin{figure}[h!]
     \centering
@@ -610,7 +612,7 @@ En primer lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable 
 \end{figure}
 
 
-Por otro lado, en la Figura \ref{ref:despliegue} se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor \textit{web} junto con los artefactos de comprenden la lógica interna del servidor y el sistema gestor de base de datos. Este nodo da soporte a los dos tipos de clientes posibles, uno con cada tecnología, los cuales implementan cierta lógica interna de la aplicación y se encargan de mostrar y gestionar la interfaz al usuario. 
+Por otro lado, en la Figura 5 se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor web de la \textit{API}, el cual contiene un entorno de ejecución para el contenedor de \textit{Docker}, que ejecuta el código del servidor, y otro entorno con el contenedor para el SGBD \textit{PostgreSQL}. Por otro lado, se encuentran los servidores de React y Angular, cada uno con su entorno de ejecución con un contenedor de \textit{Docker}, que proporcionan el cliente web correspondiente. Por último, se encuentra la máquina del usuario, la cual contiene el entorno de ejecución (navegador web), junto con los artefactos necesarios para ejecutar el cliente correspondiente. \\
 
 \begin{figure}[h!]
     \centering
@@ -619,7 +621,7 @@ Por otro lado, en la Figura \ref{ref:despliegue} se ilustra el \textbf{diagrama 
     \label{ref:despliegue}
 \end{figure}
 
-Dadas las características del tipo de aplicación \textit{web}, se va a desarrollar una \textbf{arquitectura} cliente-servidor como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará \textbf{HTTP}.
+Dadas las características del tipo de aplicación \textit{web}, se va a desarrollar una \textbf{arquitectura cliente-servidor en 3 niveles} como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente, que será procesada por la lógica desarrollada en el cliente. \\
 
 En la figura \ref{ref:relacional} aparece el modelo relacional utilizado para la base de datos de la aplicación. Este constará de 5 tablas:
 \begin{itemize}
@@ -639,35 +641,33 @@ En la figura \ref{ref:relacional} aparece el modelo relacional utilizado para la
 
 \subsubsection{Tecnologías elegidas}
 
-En cuanto a las \textbf{tecnologías elegidas}, cabe destacar el uso de \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript} para la parte del frontend de la aplicación, en la que se distinguirá la utilización de dos librerías de creación de interfaces de usuario: \textbf{React} y \textbf{Angular}. Por ello, la aplicación divergirá en dos clientes ligeramente distintos para el usuario e internamente construidos de distinta forma, que se comunicarán con el servidor web central, el cual no distinguirá entre tipos de clientes, sino que se limitará a atender peticiones, gestionarlas y devolver la respuesta adecuada. \newline
+En cuanto a las \textbf{tecnologías elegidas}, cabe destacar el uso de \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript} para la parte del frontend de la aplicación, en la que se distinguirá la utilización de dos frameworks de creación de interfaces de usuario: \textbf{React} y \textbf{Angular}. Por ello, la aplicación divergirá en dos clientes ligeramente distintos para el usuario e internamente construidos de distinta forma, que se comunicarán con el servidor web central, el cual no distinguirá entre tipos de clientes, sino que se limitará a atender peticiones, gestionarlas y devolver la respuesta adecuada. \newline
 
-Por otro lado, la tecnología elegida para el servidor o backend es el lenguaje \textbf{Go}, ya que es uno de los lenguajes más potentes y con más futuro en sistemas distribuidos, el cual ofrece infinidad de herramientas de gestión para un servidor de las características del sistema. Para la persistencia de datos del sistema, se recurrirá al gestor \textbf{PostgreSQL}, ya que cubre con garantías todas las necesidades de la aplicación. \newline
-
+Por otro lado, la tecnología elegida para el servidor o \textbf{backend} es el lenguaje \textbf{Go}, ya que ofrece infinidad de herramientas de gestión para un servidor de las características del sistema. Para la persistencia de datos del sistema, se recurrirá al SGBD \textbf{PostgreSQL}, ya que cubre con garantías todas las necesidades de la aplicación. \newline
 
 Para el backend se ha valorado utilizar las siguientes librerías auxiliares para servir contenidos \textbf{HTTP}:
 
 \begin{itemize}
     \item \textit{Frameworks de web}: Se ha valorado utilizar frameworks web como \textbf{Echo} o \textbf{Gin}. Sin embargo, se ha considerado que  la documentación era escasa en todos los \textit{frameworks} evaluados, y su uso forzaría a una dependencia en las mismas. 
     
-    \item Por otro lado, se ha optado por utilizar una librería auxiliar a la librería estándar de \textbf{HTTP} de \textbf{Go}, \textbf{Chi}, que se caracteriza por ser solamente una ampliación a la librería estándar muy sencilla de utilizar, y que permite establecer diferentes \textit{middleware} programables para diferentes \textit{URLs}, algo que se va a necesitar.
+    \item Por otro lado, se ha optado por utilizar una librería auxiliar a la librería estándar de \textbf{HTTP} de \textbf{Go}, \textbf{Chi}, que se caracteriza por ser una ampliación a la librería estándar muy sencilla de utilizar, y que permite establecer diferentes \textit{middleware} programables para diferentes \textit{URLs}.
     
-    \item Librerías auxiliares de \textbf{SQL}: Se ha evaluado utilizar \textbf{ORMs} como \textbf{Gorm}, pero se ha considerado que el modelo de datos es lo suficientemente sencillo como para utilizar la librería \textbf{SQL} y consultas tradicionales.
+    \item Librerías auxiliares de \textbf{SQL}: Se ha evaluado utilizar \textbf{ORMs} como \textbf{Gorm}, pero se ha considerado que el modelo de datos es lo suficientemente alcanzable como para utilizar la librería \textbf{SQL} y consultas tradicionales.
 \end{itemize}
 
 \subsubsection{Aspectos a considerar}
 
-Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de \textbf{Docker}, preferiblemente en un sistema operativo \textbf{Linux}, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar \textbf{SQL}, es decir, un modelo relacional. El servidor ofrece una \textit{API Web} de tipo \textbf{REST}, de forma que cada petición contenga toda la información necesaria para comprenderla, sin que exista un estado explícito a consensuar entre cliente y servidor. \newline
+Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de \textbf{Docker}, preferiblemente en un sistema operativo \textbf{Linux}, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar \textbf{SQL}, es decir, un esquema relacional. El servidor ofrece una \textit{API Web} de tipo \textbf{REST}, junto con el uso de \textbf{cookies} para mantener el estado de las sesiones de usuario. \\ 
 
 Por último, se barajaron otras opciones a las comentadas anteriormente:
 
 \begin{itemize}
-    \item Utilizar otro lenguaje para el \textit{backend}, como \textbf{Java}. Sin embargo, se decidió que era más apropiado el uso de \textbf{Go}, que es uno de los lenguajes para sistemas distribuidos más usados, ya que ofrece múltiples recursos para soportar distintos protocolos de comunicación, junto con aspectos de seguridad, así como simplicidad, compatibilidad y eficiencia en la gestión de peticiones de red dentro de su propia librería estándar. Además, el equipo está habituado al desarrollo de aplicaciones web con \textbf{Go}, hecho que impulsa su utilización.
+    \item Utilizar otro lenguaje para el \textit{backend}, como \textbf{Java}, \textbf{JavaScript} o \textbf{Python}. Sin embargo, se decidió que era más apropiado el uso de \textbf{Go}, ya el equipo está habituado al desarrollo de aplicaciones web con este lenguaje y cubre con garantías las necesidades tecnológicas requeridas.
     
-    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de  \textbf{PostgreSQL} ya que es uno de los gestores de código abierto más utilizados y que ofrece aspectos muy interesantes. También, el equipo está habituado al uso de este gestor en concreto.
+    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir, y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de \textbf{PostgreSQL}, ya que el equipo está habituado con el uso de este gestor, además de tratarse de uno de los SGBD de código abierto más utilizados y con aspectos muy interesantes. 
     
-    \item Existen muchas librerías para el desarrollo de interfaces \textit{web}. Sin embargo, se decidió utilizar  \textbf{React} y \textbf{Angular} porque ofrecen una gran cantidad de recursos que permiten construir elementos complejos mediante instrucciones muy simples, así como el soporte y documentación que tienen dado su extendido uso en la actualidad.
+    \item Existen muchos frameworks para el desarrollo de \textit{frontend web}. Sin embargo, se decidió utilizar  \textbf{React} y \textbf{Angular} porque ofrecen una gran cantidad de recursos que permiten construir interfaces de usuario y toda la lógica asociada a la aplicación. Además, los miembros del equipo mostraban interés para el aprendizaje sobre estas tecnologías tan extendidas en la actualidad.
 \end{itemize}
-
 
 % Entrega 2 y final
 \section{Memoria del proyecto}
