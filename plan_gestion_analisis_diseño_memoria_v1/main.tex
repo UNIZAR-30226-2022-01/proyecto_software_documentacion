@@ -153,23 +153,23 @@ A lo largo del documento se va a presentar un proyecto que se ha denominado\text
 %Algunos de los objetivos fundamentales del sistema son: 
 
 %que constan de un \textit{email} y contraseña,%
-Así mismo, el juego permitirá a los usuarios registrarse e iniciar sesión con sus credenciales, y el uso de una cuenta de usuario será necesario para jugar partidas. Gracias a que se almacenan cuentas de usuario, el sistema contará con una clasificación global de los mejores jugadores y de sus respectivas puntuaciones de las partidas jugadas. Por otro lado, el juego proporcionará funcionalidades adicionales que permitirán disfrutar de una experiencia social, fomentando la competición y una mayor participación en futuras partidas. %Cada usuario podrá gestionar una lista de amigos.\\
+Así mismo, el juego permitirá a los usuarios registrarse e iniciar sesión con sus credenciales, y el uso de una cuenta de usuario será necesario para jugar partidas. Gracias a que se almacenan cuentas de usuario, el sistema contará con una clasificación global de los mejores jugadores y de sus respectivas puntuaciones de las partidas jugadas. Por otro lado, el juego proporcionará funcionalidades adicionales que permitirán disfrutar de una experiencia social, fomentando la competición y una mayor participación en futuras partidas.\\ %Cada usuario podrá gestionar una lista de amigos.\\
 
-Adicionalmente, los usuarios podrán personalizar elementos del juego en función de sus preferencias, como las fichas, su foto de perfil, o los dados usados durante las partidas, mediante puntos canjeables en la tienda del juego, que el sistema recompensará por haber jugado o ganado partidas.
+Adicionalmente, los usuarios podrán personalizar elementos del juego en función de sus preferencias, como las fichas, su foto de perfil, o los dados usados durante las partidas, mediante puntos canjeables en la tienda del juego, que el sistema recompensará por haber jugado o ganado partidas. \\
 
 Por otro lado, el juego permitirá crear partidas públicas y privadas, con contraseña, de 2 a 6 jugadores. Esto permitirá crear partidas entre grupos de amigos, o unirse a partidas públicas y conocer nuevos usuarios.\\
 
 %Las partidas se desarrollarán de forma asíncrona, permitiendo a los usuarios responder en cualquier momento. Si el usuario se encuentra conectado, podrá ver una notificación en la pantalla. En el caso contrario, se enviará un correo al mismo notificando que puede realizar la jugada. Habrá un mecanismo de expulsión de jugadores que no respondan o realicen jugadas en un tiempo determinado. \\
 
-A lo largo de la realización del proyecto, se realizarán entregas parciales del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:
+A lo largo de la realización del proyecto se realizarán entregas parciales del trabajo llevado a cabo, en reuniones propuestas en unos plazos establecidos:
 
-En primer lugar, se realizará una reunión para la evaluación parcial del sistema, con el objetivo de refinar requisitos y mostrar el progreso del desarrollo. Esto se realizará en la semana del 4 al 8 de Abril.
+En primer lugar, se realizará una reunión para la evaluación parcial del sistema, con el objetivo de refinar requisitos y mostrar el progreso del desarrollo. Esto se realizará en la semana del 4 al 8 de Abril. \\
 
-En segundo lugar, se realizará reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales. Esto se realizará en la semana del 16 al 20 de Mayo.
+En segundo lugar, se realizará reunión para la evaluación de todas las funcionalidades del juego, con el sistema implementado en una versión final, con el objetivo de realizar ajustes finales. Esto se realizará en la semana del 16 al 20 de Mayo. \\
 
 El sistema final se entregará no más tarde del 1 de junio, con los cambios propuestos durante las reuniones intermedias. \\
 
-A continuación se detallará la organización del proyecto, los equipos creados y sus objetivos, las tecnologías utilizadas,  y el calendario del proyecto con la división de las tareas asignadas a cada uno.
+A continuación, se detallará la organización del proyecto, los equipos creados y sus objetivos, las tecnologías utilizadas,  y el calendario del proyecto con la división de las tareas asignadas a cada uno.
 Además, realizaremos un análisis y diseño del sistema, y una revisión del transcurso del proyecto, desde el inicio hasta el cierre del mismo. \newpage
 
 \section{Organización del proyecto}
@@ -186,7 +186,7 @@ Aunque cada uno tenga un bloque asignado, en todo momento se ayudará a integran
 
 El equipo decidió nombrar como director a Francisco Crespo, será el portavoz y el encargado de tomar las decisiones más controvertidas, así como de realizar las entregas necesarias del trabajo.\newline
 
-El responsable del control de configuraciones, construcción del software y aseguramiento de la calidad del producto será Samuel García.
+El responsable del control de configuraciones, construcción del software y aseguramiento de la calidad del producto será Samuel García.\\
 
 La responsable de la división del trabajo, coordinación y la comunicación entre los miembros del proyecto será Laura González.
 
@@ -363,7 +363,7 @@ La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante
     \begin{figure}[!p]
     \centering
     
-    \includegraphics[width=1.7\textwidth]{diagramas/gantt.PNG}
+    \includegraphics[width=1.7\textwidth]{diagramas/gantt.png}
     \caption{Diagrama de Gantt.}
     \label{fig:gantt}
 \end{figure}
@@ -387,7 +387,7 @@ Las métricas de rendimiento del equipo irán marcadas por el estado por cada un
 El calendario interno para el \textit{frontend} va a ser el mismo para ambas implementaciones. La tabla \ref{table:frontend} muestra las tareas a realizar por este equipo. \newline
 
 \subsubsection{Calendario de seguimiento para el backend}
- La tabla \ref{table:backend} muestra las tareas de este equipo a realizar. \newline
+ La tabla \ref{table:backend} muestra las tareas a realizar por el equipo. \newline
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -446,9 +446,8 @@ El calendario interno para el \textit{frontend} va a ser el mismo para ambas imp
 
 \newpage
 
-
-
 \begin{landscape}
+\pagestyle{empty}
 \begin{table}[hbt!]
 \small
 \centering
@@ -618,11 +617,18 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
 
 El diseño y planificación de los elementos y lógica de un sistema es fundamental para su desarrollo. En consecuencia, hemos desarrollado los correspondientes diagramas arquitecturales que reflejan los componentes de la aplicación, así como la interacción entre ellos. \newline
 
-En primer lugar, se ha modelado el \textbf{diagrama de paquetes}, observable en la Figura 3, cuyo contenido refleja la organización de los distintos módulos del sistema, así como las dependencias entre ellos. \\
+En primer lugar, se ha modelado el \textbf{diagrama de paquetes}, observable en la Figura \ref{ref:paquetes}, cuyo contenido refleja la organización de los distintos módulos del sistema, así como las dependencias entre ellos. \\ \\
 
-En siguiente lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura 4, en el cual se puede apreciar los dos componentes cliente, uno para cada tecnología, los cuales implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web} para la \textit{API}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará HTTP. \\
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{diagramas/DP.png}
+    \caption{Diagrama de paquetes.}
+    \label{ref:paquetes}
+\end{figure}
 
-En siguiente lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura \ref{ref:componentes}, en el cual se puede apreciar los dos componentes cliente, uno para cada tecnología. Estos implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web} para la \textit{API}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará \textit{HTTP}. \\
+\newpage
+
+En siguiente lugar, se ha modelado el \textbf{diagrama de componentes}, apreciable en la Figura \ref{ref:componentes}, en el cual se puede apreciar los dos componentes cliente, uno para cada tecnología. Estos implementan la lógica de presentación y contienen parte de lógica interna de la aplicación, y se comunican con el servidor mediante la misma interfaz (\textit{API}). En siguiente lugar, se encuentra el servidor \textit{web} para la \textit{API}, el cual ofrece una interfaz común a los clientes e implementa la lógica de negocio y el acceso a los datos del sistema. Por último, se encuentra el gestor de base de datos, el cual aporta la persistencia necesaria al sistema. Además, como \textbf{protocolo de comunicación} entre los nodos de la red, se utilizará \textit{HTTP}. \\ \\
 
 \begin{figure}[!h]
     \centering
@@ -631,9 +637,9 @@ En siguiente lugar, se ha modelado el \textbf{diagrama de componentes}, apreciab
     \label{ref:componentes}
 \end{figure}
 
+\newpage
 
-
-Por otro lado, en la Figura 5 se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor web de la \textit{API}, el cual contiene un entorno de ejecución para el contenedor de \textit{Docker}, que ejecuta el código del servidor, y otro entorno con el contenedor para el SGBD \textit{PostgreSQL}. Por otro lado, se encuentran los servidores de React y Angular, cada uno con su entorno de ejecución con un contenedor de \textit{Docker}, que proporcionan el cliente web correspondiente. Por último, se encuentra la máquina del usuario, la cual contiene el entorno de ejecución (navegador web), junto con los artefactos necesarios para ejecutar el cliente correspondiente. \\
+Por otro lado, en la Figura \ref{ref:despliegue} se ilustra el \textbf{diagrama de despliegue}, donde se puede apreciar la distribución de los distintos nodos que componen el sistema. En consecuencia, se ha representado el servidor web de la \textit{API}, contenido en un entorno de ejecución para correspondiente a un contenedor de \textit{Docker}, que ejecuta el código del servidor, y otro entorno con el contenedor para el SGBD \textit{PostgreSQL}. Por otro lado, se encuentran los servidores de React y Angular, cada uno con su entorno de ejecución con un contenedor de \textit{Docker}, que proporcionan el cliente web correspondiente. Por último, se encuentra la máquina del usuario, la cual contiene el entorno de ejecución (navegador web), junto con los artefactos necesarios para ejecutar el cliente correspondiente. \\
 
 \begin{figure}[!h]
     \centering
@@ -645,6 +651,8 @@ Por otro lado, en la Figura 5 se ilustra el \textbf{diagrama de despliegue}, don
 \FloatBarrier
 
 Dadas las características del tipo de aplicación \textit{web}, se va a desarrollar una \textbf{arquitectura cliente-servidor en 3 niveles} como modelo de diseño, en la que los clientes lanzarán peticiones al servidor, este las gestionará y mantendrá el estado del sistema y su persistencia, y devolverá la respuesta correspondiente, que será procesada por la lógica desarrollada en el cliente. \\
+
+\newpage
 
 En la Figura \ref{ref:relacional} aparece el modelo relacional utilizado para la base de datos de la aplicación. Este constará de 5 tablas:
 \begin{itemize}
@@ -662,7 +670,7 @@ En la Figura \ref{ref:relacional} aparece el modelo relacional utilizado para la
     \label{ref:relacional}
 \end{figure}
 
-Desde el punto de vista de las interfaces del sistema, se ha realizado un diseño completo de la API a consumir por ambos \textit{frontend}. El diagrama de la API, junto a la descripción de los diferentes aspectos implementados, está disponible en el repositorio de documentación\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion/documentacion_API.md}{\color{blue}{Documentación de la API.}}}.
+Desde el punto de vista de las interfaces del sistema, se ha realizado un diseño completo de la API a consumir por ambos \textit{frontend}. El diagrama de la API, junto a la descripción de los diferentes aspectos implementados, está disponible en el repositorio de documentación\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion/documentacion_API.md}{\color{blue}{Documentación de la API.}}}. \\
 
 Adicionalmente, todas las funciones públicas del \textit{backend} se han documentado y se encuentran disponibles en la página oficial de documentación de paquetes de Go \footnote{\href{https://pkg.go.dev/github.com/UNIZAR-30226-2022-01/proyecto_software_backend}{\color{blue}{Documentación pública del \textit{backend}.}}}. De esta forma, se permite a ambos equipos de \textit{frontend} acceder a la documentación detallada de cada \textit{endpoint} de la API, que cuenta con ejemplos de respuestas y datos devueltos\footnote{\href{https://pkg.go.dev/github.com/UNIZAR-30226-2022-01/proyecto_software_backend/handlers}{\color{blue}{Documentación de cada \textit{endpoint} del \textit{backend}.}}}.
 
@@ -704,14 +712,17 @@ A continuación se va a describir el inicio y desarrollo del proyecto, desde el 
 
 \subsection{Inicio del proyecto}
 %Apartado react
-En relación al equipo del frontend de \textbf{React}, hemos seguido de forma correcta el plan establecido. Hemos seguido los tutoriales correspondientes y, posteriormente, realizamos un proyecto de prueba de cara a probar y poner en práctica las competencias adquiridas. También hemos investigado y probado diversos paquetes o librerías adicionales de \textit{React}, y aprendido a realizar las conexiones con la API y gestionar cookies. \\
-Cabe resaltar que \textbf{se han cumplido los objetivos} deseados de acuerdo a la planificación inicial. \\
+En relación al equipo del frontend de \textbf{React}, hemos seguido de forma correcta el plan establecido. Hemos seguido los tutoriales correspondientes y, posteriormente, realizamos un proyecto de prueba de cara a probar y poner en práctica las competencias adquiridas. También hemos investigado y probado diversos paquetes o librerías adicionales de \textit{React}, y aprendido a realizar las conexiones con la API y gestionar cookies. Cabe resaltar que \textbf{se han cumplido los objetivos} deseados de acuerdo a la planificación inicial. 
 
 % Apartado backend
 Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Aún así ambos consultaron tutoriales y documentación de \textbf{React} y \textbf{Angular} para poder ayudar en el desarrollo del \textit{frontend}, además de los tutoriales sobre diseño de \textit{API} y uso de \LaTeX.
 
 \subsection{Ejecución y control del proyecto}
 \subsubsection{Frontend Angular}
+
+El tiempo invertido para la realización de las tareas propuestas no se ha ajustado al plan inicial, y es por ello que no han podido alcanzar los objetivos propuestos en el calendario original. La implementación de algunos aspectos del \textit{frontend} han sido mas costosos de lo esperado, principalmente por la poca del experiencia del equipo al trabajar con el \textit{framework}. La gestión de cookies, y el diseño de una primera versión del mapa fueron las tareas más complejas, y dispararon las horas de trabajo invertidas, escapando del plan inicial.\\
+
+Ambos equipos encargados del \textit{frontend} han aprendido que es muy difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}, ya que difieren en multitud de aspectos. 
 
 \subsubsection{Frontend React}
 
@@ -756,9 +767,9 @@ El proceso de ejecución y control del proyecto para el equipo de \textit{backen
 
 %% Repartición de tareas
 
-En términos de repartición de trabajo, el comienzo del proceso de desarrollo ha consistido en programación en pareja de los aspectos fundamentales del sistema, como la definición del modelo de datos, o la de módulos base, funciones críticas y estructuras a utilizar en el servidor.
+En términos de repartición de trabajo, el comienzo del proceso de desarrollo ha consistido en programación en pareja de los aspectos fundamentales del sistema, como la definición del modelo de datos, o la de módulos base, funciones críticas y estructuras a utilizar en el servidor. \\
 
-Una vez realizado esto, se han repartido tareas individuales equitativamente y puesto en común en reuniones más breves todas aquellas funcionalidades comunes a todas las tareas a realizar.
+Una vez realizado esto, se han repartido tareas individuales equitativamente y puesto en común en reuniones más breves todas aquellas funcionalidades comunes a todas las tareas a realizar. \\
 
 %% Tecnologías / librerías elegidas
 %% Seguimiento de nombrado de ficheros y formato, etc
@@ -791,7 +802,9 @@ Respecto al seguimiento de los procedimientos establecidos, se han seguido los s
 
 Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.\\
 
-La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego.
+La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego. \\
+
+\newpage
 
 Por último, durante el desarrollo del sistema se han detectado los siguientes problemas respecto al control de versiones, construcción y despliegue del software:
 \begin{itemize}
@@ -828,12 +841,12 @@ Cabe destacar que las pequeñas divergencias entre las estimaciones iniciales y 
 El tiempo invertido para la realización de las tareas propuestas no se ha ajustado al plan inicial, y es por ello que no han podido alcanzar los objetivos propuestos en el calendario original. La implementación de algunos aspectos del \textit{frontend} han sido mas costosos de lo esperado, principalmente por la poca del experiencia del equipo al trabajar con el \textit{framework}. La gestión de cookies, y el diseño de una primera versión del mapa fueron las tareas más complejas, y dispararon las horas de trabajo invertidas, escapando del plan inicial.
 \\
 
-Ambos equipos encargados del \textit{frontend} han aprendido que es muy difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}, ya que difieren en multitud de aspectos. \\
+Ambos equipos encargados del \textit{frontend} han aprendido que es difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}. \\
 \subsubsection{Valoraciones comunes entre todos los equipos}
 
-La magnitud del proyecto ha fomentado a realizar \textit{commits} más concisos y frecuentes.
+La magnitud del proyecto ha fomentado a realizar \textit{commits} más concisos y frecuentes. \\
 
-Durante el desarrollo del \textit{backend}, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado, al servir los clientes web y la API desde dominios diferentes. Así mismo, hemos ganado experiencia en el despliegue y depuración de contenedores con \textit{Docker}.
+Durante el desarrollo del \textit{backend}, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado, al servir los clientes web y la API desde dominios diferentes. Así mismo, hemos ganado experiencia en el despliegue y depuración de contenedores con \textit{Docker}. \\
 
 Así mismo, durante el desarrollo de los \textit{frontend}, cabe destacar el avance y aprendizaje obtenido en el desarrollo y creación de interfaces, \textit{UX design}.\\
 
@@ -847,7 +860,7 @@ Los esfuerzos realizados por los integrantes del equipo han sido los siguientes:
     
     \item \textbf{Fran} desarrolló junto con el resto del grupo de \textit{frontend} el diseño del mapa de juego. Además, la implementación de diversas pantallas como \textit{Registro Usuario, Inicio Sesión y Crear Partida}, entre otras. También, realizó dinámica adicional del mapa como ciertos botones, un mapa informativo o pantallas de avisos. En conjunto dedicó un estimado de 37 horas.
     
-    \item \textbf{Emilio Estevan} dedicó un total de 41 horas a las tareas asignadas, entre las que destacan la puesta en marcha inicial del cliente, conexiones con la API y su gestión de errores, mantenimiento de cookies, implementación y diseño de pantallas y elementos gráficos, y redacción, maquetación y diseño de apartados de la memoria.
+    \item \textbf{Emilio} dedicó un total de 41 horas a las tareas asignadas, entre las que destacan la puesta en marcha inicial del cliente, conexiones con la API y su gestión de errores, mantenimiento de cookies, implementación y diseño de pantallas y elementos gráficos, y redacción, maquetación y diseño de apartados de la memoria.
     
     \item \textbf{Jorge} diseñó de las pantallas de inicio de sesión y registro de usuario. También realizó el diseño del mapa, tratando de aprender cuestiones básicas sobre \textit{svg}, transiciones en angular, y otros elementos de diseño que proporciona la herramienta. Además, realizó la pantalla de búsqueda de partida, en la cual fue necesario aprender nuevos aspectos de diseño y cuestiones básicas sobre conexiones a la API. En total, invirtió 32 horas.
 
