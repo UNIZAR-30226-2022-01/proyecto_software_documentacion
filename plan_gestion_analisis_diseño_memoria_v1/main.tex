@@ -188,6 +188,7 @@ El equipo decidió nombrar como director a Francisco Crespo, será el portavoz y
 
 El responsable del control de configuraciones, construcción del software y aseguramiento de la calidad del producto será Samuel García.
 
+La responsable de la división del trabajo, coordinación y la comunicación entre los miembros del proyecto será Laura González.
 
 \section{Plan de gestión del proyecto}
 
@@ -361,11 +362,15 @@ La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante
     \pagestyle{empty}
     \begin{figure}[!p]
     \centering
-    \includegraphics[scale=0.6]{diagramas/gant.PNG}
+    
+    \includegraphics[width=1.7\textwidth]{diagramas/gantt.PNG}
     \caption{Diagrama de Gantt.}
     \label{fig:gantt}
 \end{figure}
 \end{landscape}
+
+ Para el diseño de las pantallas se realizó un boceto simple de estas, el cual se tomará como referencia en mayor medida por ambos \texit{frontend}.\footnote{\href{https://github.com/UNIZAR-30226-2022-01/proyecto_software_documentacion/tree/main/imagenes}{\color{blue}{\textit{Diseño inicial}}}}.
+\\
 
 La división de tareas diarias internas en cada uno de los equipos se consensuará entre sus miembros, y se preferirá en todo momento la programación por pares.\\
 
@@ -381,71 +386,113 @@ Las métricas de rendimiento del equipo irán marcadas por el estado por cada un
 \subsubsection{Calendario de seguimiento para el frontend}
 El calendario interno para el \textit{frontend} va a ser el mismo para ambas implementaciones. La tabla \ref{table:frontend} muestra las tareas a realizar por este equipo. \newline
 
+\subsubsection{Calendario de seguimiento para el backend}
+ La tabla \ref{table:backend} muestra las tareas de este equipo a realizar. \newline
 
-\renewcommand{\arraystretch}{1.3}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{landscape}
+\pagestyle{empty}
 \begin{table}[hbt!]
-\begin{adjustbox}{minipage=18cm, center}
-\begin{tabularx}{\textwidth}{|c|X|c| }
-\hline
-Entrega & Tarea & Fecha objetivo\\ \hline
-\multirow{9}{*}{Entrega 1} & Diseño inicial y \textit{Wireframing} de las pantallas & 18 marzo \\\cline{2-3}
-& Pantalla inicial & 18 marzo\\\cline{2-3}
-& Pantalla de registro de usuario & 18 marzo \\\cline{2-3}
-& Pantalla de inicio de sesión &  18 marzo \\\cline{2-3}
-& Pantalla del perfil de usuario &  25 marzo \\\cline{2-3}
-& Pantalla de búsqueda de partida &  25 marzo \\\cline{2-3}
-& Pantalla de configuración de partida & 25 marzo \\\cline{2-3}
-& Pantalla del buzón de notificaciones del usuario &  8 abril \\\cline{2-3}
-& Implementación de una versión inicial de la pantalla del juego y del mapa & 8 abril
-\\\hline
-\multirow{6}{*}{Entrega 2} & Pantalla de fin de partida & 15 abril \\\cline{2-3}
-& Implementación de una versión final de la pantalla del juego y del mapa & 30 mayo\\\cline{2-3}
-& Pantalla de la tienda & 29 abril \\\cline{2-3}
-& Pantalla de personalización de usuario & 6 mayo\\\cline{2-3}
-& Pantalla del \textit{chat} en la partida & 20 mayo \\\cline{2-3}
-& Pantalla de la clasificación global de usuarios& 27 mayo \\\cline{2-3}
-\hline
-\end{tabularx}
-\caption{Tabla de seguimiento del \textit{frontend}}
+\small
+\centering
+\begin{tabular}{c|ccll|cc|}
+\cline{2-7}
+\multirow{2}{*}{}                                 & \multicolumn{4}{c|}{\multirow{2}{*}{Tarea}}                                                                                                                                                                                      & \multicolumn{2}{c|}{Personas asignadas}                                      \\ \cline{6-7} 
+                                                  & \multicolumn{4}{c|}{}                                                                                                                                                                                                            & \multicolumn{1}{c|}{Angular}                & \multicolumn{1}{l|}{React}     \\ \hline
+\multicolumn{1}{|c|}{\multirow{14}{*}{Entrega 1}} & \multicolumn{4}{c|}{Pantalla inicial}                                                                                                                                                                                            & \multicolumn{1}{c|}{Jorge y Laura}          & \multirow{9}{*}{Emilio y Fran} \\ \cline{2-6}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de registro de usuario}}                                           & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{Jorge y Laura}          &                                \\ \cline{3-6}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{Laura}                  &                                \\ \cline{2-6}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de inicio de sesión}}                                              & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{Jorge y Laura}          &                                \\ \cline{3-6}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{Laura}                  &                                \\ \cline{2-6}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de crear de partida}}                                              & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{\multirow{2}{*}{Laura}} &                                \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{}                       &                                \\ \cline{2-6}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de búsqueda de partidas}}                                          & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{\multirow{2}{*}{Jorge}} &                                \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{}                       &                                \\ \cline{2-7} 
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{5}{*}{Implementación de una versión inicial de la pantalla del juego y del mapa}} & \multicolumn{3}{c|}{Diseño del mapa}                                                                           & \multicolumn{2}{c|}{Emilio, Fran, Jorge y Laura}                             \\ \cline{3-7} 
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Mapa auxiliar}                                                                             & \multicolumn{2}{c|}{Fran}                                                    \\ \cline{3-7} 
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Representación de usuarios}                                                                & \multicolumn{2}{c|}{Emilio}                                                  \\ \cline{3-7} 
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Botones del mapa}                                                                          & \multicolumn{2}{c|}{Fran}                                                    \\ \cline{3-7} 
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de las top-bar y bottom-bar}                                                        & \multicolumn{2}{c|}{Laura}                                                   \\ \hline
+\multicolumn{1}{|c|}{\multirow{22}{*}{Entrega 2}} & \multicolumn{1}{c|}{\multirow{8}{*}{Implementación de la versión final de la pantalla del juego y del mapa}}    & \multicolumn{3}{c|}{Diseño de los dados}                                                                       & \multicolumn{2}{c|}{\multirow{22}{*}{Por determinar}}                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de las cartas}                                                                      & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de atacar a un pais}                                                                & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de movimientos de tropas}                                                           & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{\begin{tabular}[c]{@{}c@{}}Diseño de componente de información \\ de usuario\end{tabular}} & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño del battle log}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de ayuda del mapa}                                                                  & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de canjeo de cartas}                                                                & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla del perfil de usuario}}                                            & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla del buzón de notificaciones del usuario}}                          & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de fin de partida}}                                                & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de la tienda}}                                                     & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de personalización de usuario}}                                    & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla del chat en la partida}}                                           & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \cline{2-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de la clasificación global de usuarios}}                           & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{2}{c|}{}                                                        \\ \hline
+\end{tabular}
+\caption{Tabla de esfuerzos del frontend}
 \label{table:frontend}
-\end{adjustbox}
 \end{table}
+\end{landscape}
 %\end{center}
 \FloatBarrier    
 
 \newpage
 
-\subsubsection{Calendario de seguimiento para el backend}
- La tabla \ref{table:backend} muestra las tareas de este equipo a realizar. \newline
 
-\renewcommand{\arraystretch}{1.3}
+
+\begin{landscape}
 \begin{table}[hbt!]
-\begin{adjustbox}{minipage=18cm, center}
-\begin{tabularx}{\textwidth}{|c|X|c| }
-\hline
-Entrega & Tarea & Fecha objetivo \\\hline
-\multirow{6}{*}{Entrega 1}& Diseño el modelo de datos del sistema & 18 marzo\\\cline{2-3}
- & Implementación de la base de datos & 18 marzo \\\cline{2-3}
- & Implementación de los mecanismos de autenticación de usuarios frente al sistema y la persistencia de sesiones & 25 marzo \\\cline{2-3}
- & \textit{API} de búsqueda y configuración de partidas & 25 marzo\\\cline{2-3}
- & \textit{API} de notificaciones &  1 abril \\\cline{2-3}
- & Versión parcial de la \textit{API} de lógica del juego & 8 abril \\\cline{2-3}
-\hline
-\multirow{5}{*}{Entrega 2} & Versión final de la \textit{API} de lógica del juego & 20 mayo \\\cline{2-3}
-& \textit{API} de la tienda & 29 abril \\\cline{2-3}
-& \textit{API} de personalización de usuario& 6 mayo \\\cline{2-3}
-& Sistema de \textit{chat} & 20 mayo \\\cline{2-3}
-& \textit{API} de la clasificación de usuarios &  27 mayo \\\cline{2-3}
-\hline
-\end{tabularx}
-\caption{Tabla de seguimiento del \textit{backend}}
+\small
+\centering
+\begin{tabular}{c|cc|c|}
+\cline{2-4}
+                                                   & \multicolumn{2}{c|}{Tarea}                                                                                                                                                                                                                                                                                                        & Personas asignada                   \\ \hline
+\multicolumn{1}{|c|}{\multirow{25}{*}{2º entrega}} & \multicolumn{2}{c|}{Diseño del modelo de datos del sistema}                                                                                                                                                                                                                                                                       & Samuel y Guillermo                  \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la base de datos}                                                                                                                                                                                                                                                                           & Samuel y Guillermo                  \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Implementación de los mecansimos de autenticación \\ de usuarios frente al sistema y persistencia de sesiones\end{tabular}}                                                                                                                                                        & Samuel y Guillermo                  \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}API de búsqueda y \\ configuración de partidas\end{tabular}}}   & Búsqueda de partidas                                                                                                                                                                             & \multirow{5}{*}{Samuel y Guillermo} \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Creación de partidas                                                                                                                                                                             &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Documentar búsqueda de partidas                                                                                                                                                                  &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Documentar creación de partidas                                                                                                                                                                  &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Unirse a partidas                                                                                                                                                                                &                                     \\ \cline{3-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Abandonar partidas                                                                                                                                                                               & Samuel                              \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de notificaciones}                                                                                                                                                                                                                                                                                        & Samuel                              \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Versión parcial de la API de \\ lógica del juego\end{tabular}}} & Crear autómata de una partida                                                                                                                                                                    & \multirow{4}{*}{Samuel y Guillermo} \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir acciones a realizar                                                                                                                                                                      &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir el estado de una partida                                                                                                                                                                 &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir endponits de API para consultar cada elemento de la partida                                                                                                                              &                                     \\ \cline{3-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir endpoints de API para acciones de la partida                                                                                                                                             & Samuel                              \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{2}{*}{API auxiliares}}                                                                           & Listar amigos                                                                                                                                                                                    & \multirow{2}{*}{Guillermo}          \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Obtener información de perfil de usuario                                                                                                                                                         &                                     \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{7}{*}{Implementación del principio de la partida}}                                               & Función de poblado aleatorio del mapa                                                                                                                                                            & \multirow{7}{*}{Samuel}             \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Función de roll de dados                                                                                                                                                                         &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Función de selección de primer usuario de una partida y siguientes                                                                                                                               &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Función de inicio de partida                                                                                                                                                                     &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Endpoint de obtener la lista de acciones para un usuario y su indice de la lista actual                                                                                                          &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Endpoint de reforzar territorio                                                                                                                                                                  &                                     \\ \cline{3-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Test unitarios de comprobación de almacen de partidas, inicio de una partida \\ tras alcanzar maxJugadores, acciones y obtención de la lista de acciones\end{tabular} &                                     \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la fase de ataque}                                                                                                                                                                                                                                                                          & Guillermo                           \\ \hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{2º entrega}}  & \multicolumn{2}{c|}{API de ranking}                                                                                                                                                                                                                                                                                               & \multirow{6}{*}{Por determinar}     \\ \cline{2-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de personalización de perfiles de usuario}                                                                                                                                                                                                                                                                &                                     \\ \cline{2-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de tienda}                                                                                                                                                                                                                                                                                                &                                     \\ \cline{2-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la fase de fortiticación}                                                                                                                                                                                                                                                                   &                                     \\ \cline{2-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la fase de fortificación}                                                                                                                                                                                                                                                                   &                                     \\ \cline{2-3}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de notificaciones}                                                                                                                                                                                                                                                                                        &                                     \\ \hline
+\end{tabular}
+\caption{Tabla de esfuerzos del backend}
 \label{table:backend}
-\end{adjustbox}
 \end{table}
+\end{landscape}
 \FloatBarrier
  
-La responsable del seguimiento de todos estos aspectos será Laura González.
-
 \section{Análisis y diseño del sistema}
 
 \subsection{Análisis de requisitos}
@@ -778,6 +825,10 @@ Cabe destacar que las pequeñas divergencias entre las estimaciones iniciales y 
 
 \subsubsection{Cierre del proyecto por el equipo de \textit{Angular}}
 
+El tiempo invertido para la realización de las tareas propuestas no se ha ajustado al plan inicial, y es por ello que no han podido alcanzar los objetivos propuestos en el calendario original. La implementación de algunos aspectos del \textit{frontend} han sido mas costosos de lo esperado, principalmente por la poca del experiencia del equipo al trabajar con el \textit{framework}. La gestión de cookies, y el diseño de una primera versión del mapa fueron las tareas más complejas, y dispararon las horas de trabajo invertidas, escapando del plan inicial.
+\\
+
+Ambos equipos encargados del \textit{frontend} han aprendido que es muy difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}, ya que difieren en multitud de aspectos. \\
 \subsubsection{Valoraciones comunes entre todos los equipos}
 
 La magnitud del proyecto ha fomentado a realizar \textit{commits} más concisos y frecuentes.
