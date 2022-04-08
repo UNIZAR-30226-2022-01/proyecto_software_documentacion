@@ -4,7 +4,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Encoding e idioma Español, 
+% Encoding e idioma Español,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-tabla]{babel} % Para poner cuadro en vez de tabla, etc
@@ -13,7 +13,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Paquetes 
+% Paquetes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[colorlinks=true, urlcolor=cyan, citecolor=blue, linkcolor=blue, hidelinks]{hyperref} % /url{}, /ref{}...
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
@@ -28,7 +28,7 @@
 
 \usepackage{amsmath}
 
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 
 \usepackage[table]{xcolor} % Colores en tablas/texto/etc
 
@@ -45,10 +45,10 @@
 \usepackage{datetime} % Fechas
 \usepackage{svg} % para el svg del logo de la eina
 \usepackage{titlesec}
-\usepackage[section]{placeins}  % para floatbarrier en secciones, 
+\usepackage[section]{placeins}  % para floatbarrier en secciones,
                                 % con [section] se ponen silenciosamente en cada seccion
 
-\usepackage{listliketab}                                
+\usepackage{listliketab}
 \usepackage{fancyhdr} %pagestyles adicionales
 
 \usepackage{lmodern} % Fuente moderna, \code con negrita
@@ -107,10 +107,10 @@
   \addtocontents{lof}{\small}
 }
 % Cuerpo del documento
-\begin{document} 
+\begin{document}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PORTADA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
@@ -126,7 +126,7 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CUERPO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}
@@ -148,9 +148,9 @@
 \setcounter{page}{1}
 \section{Introducción}
 A lo largo del documento se va a presentar un proyecto que se ha denominado\textit{ \textbf{World Domination}}. Se trata de un juego de estrategia \textit{on-line} por turnos inspirado en \textit{Risk}, en el que cada jugador lucha contra el resto por la dominación del mundo. Cada uno de los jugadores cuenta con un número de soldados y territorios, así como con una baraja de cartas propia que podrán canjear por más soldados. En cada turno, los jugadores tendrán que luchar contra tropas bajo el dominio de los rivales, decidiéndose los resultados mediante tiradas de dados. \newline
-%El sistema será capaz de gestionar las cuentas de los usuarios junto con las partidas que se desarrollen, así como la gestión de turnos y la inicialización y finalización de cada una de las partidas. 
+%El sistema será capaz de gestionar las cuentas de los usuarios junto con las partidas que se desarrollen, así como la gestión de turnos y la inicialización y finalización de cada una de las partidas.
 
-%Algunos de los objetivos fundamentales del sistema son: 
+%Algunos de los objetivos fundamentales del sistema son:
 
 %que constan de un \textit{email} y contraseña,%
 Así mismo, el juego permitirá a los usuarios registrarse e iniciar sesión con sus credenciales, y el uso de una cuenta de usuario será necesario para jugar partidas. Gracias a que se almacenan cuentas de usuario, el sistema contará con una clasificación global de los mejores jugadores y de sus respectivas puntuaciones de las partidas jugadas. Por otro lado, el juego proporcionará funcionalidades adicionales que permitirán disfrutar de una experiencia social, fomentando la competición y una mayor participación en futuras partidas.\\ %Cada usuario podrá gestionar una lista de amigos.\\
@@ -181,7 +181,7 @@ Hemos dividido el proyecto en tres bloques fundamentales:\newline
     \item Segunda versión del \textit{frontend} implementada con \textbf{Angular}.\newline
 \end{itemize}
 
-El trabajo del primer bloque será llevado a cabo por Samuel y Guillermo, el del segundo bloque por Francisco y Emilio, mientras que el del tercer bloque será realizado por Laura y Jorge. 
+El trabajo del primer bloque será llevado a cabo por Samuel y Guillermo, el del segundo bloque por Francisco y Emilio, mientras que el del tercer bloque será realizado por Laura y Jorge.
 Aunque cada uno tenga un bloque asignado, en todo momento se ayudará a integrantes encargados del trabajo en otros bloques si fuera necesario. \newline
 
 El equipo decidió nombrar como director a Francisco Crespo, será el portavoz y el encargado de tomar las decisiones más controvertidas, así como de realizar las entregas necesarias del trabajo.\newline
@@ -200,9 +200,11 @@ Diversas tecnologías y lenguajes de programación utilizados en este proyecto e
 
 \begin{itemize}
 
-\item Debido a que toda la documentación necesaria para el proyecto va a ser realizada en \textbf{Latex}, todos los miembros del equipo deberán adquirir conocimientos básicos para la utilización y explotación de esta herramienta. Para lograr este objetivo, realizaremos dos tutoriales. El primero de ellos <<Learn LaTeX in 30 minutes>>\cite{latextutorial1} se puede encontrar en la página web de \textit{Overleaf}. A su vez, seguiremos los manuales de ayuda proporcionados por la página oficial de \textit{Latex}\cite{latextutorial2}. 
+\item Debido a que toda la documentación necesaria para el proyecto va a ser realizada en \textbf{Latex}, todos los miembros del equipo deberán adquirir conocimientos básicos para la utilización y explotación de esta herramienta. Para lograr este objetivo, realizaremos dos tutoriales. El primero de ellos, <<Learn LaTeX in 30 minutes>>\footnote{\href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{\color{blue}{Learn LaTeX in 30 minutes}}}, se puede encontrar en la página web de \textit{Overleaf}. A su vez, seguiremos los manuales de ayuda proporcionados por la página oficial de \LaTeX \footnote{\href{https://latex-tutorial.com/tutorials/}{\color{blue}{Tutorial oficial de \LaTeX}}}.
 
-\item Continuando lo anterior, los integrantes del Grupo 1 asistieron a la práctica: \textit{Puesta en marcha de GitHub y fundamentos de Git} impartida por los profesores de la asignatura \textit{Proyecto Software}, la cual consistió en familiarizarse con la herramienta \textbf{Git} y su uso en conjunto con \textbf{GitHub}. A su vez, por medio del tutorial: \textit{Git, GitHub y Publicación Web}\cite{githubtutorial} se habían adquirido los conocimientos básicos de la misma.
+
+
+\item Continuando lo anterior, los integrantes del Grupo 1 asistieron a la práctica: \textit{Puesta en marcha de GitHub y fundamentos de Git} impartida por los profesores de la asignatura \textit{Proyecto Software}, la cual consistió en familiarizarse con la herramienta \textbf{Git} y su uso en conjunto con \textbf{GitHub}. A su vez, por medio del tutorial: \textit{Git, GitHub y Publicación Web}\footnote{\href{https://github.com/flowsta/github}{\color{blue}{Git, GitHub y Publicación Web}}} se habían adquirido los conocimientos básicos de la misma.
 
 \end{itemize}
 
@@ -210,32 +212,32 @@ Los grupos encargados de cada bloque del sistema realizaron formación específi
 
 \begin{itemize}
 
-\item Harán uso de \textbf{Go} como lenguaje de programación, al tener experiencia previa gracias a las prácticas de la asignatura de \textit{Sistemas Distribuidos}. De cara a fijar conocimientos y a aprender nuevas mecánicas, realizarán el tutorial de la página web oficial de \textbf{Go}. 
+\item Harán uso de \textbf{Go} como lenguaje de programación, al tener experiencia previa gracias a las prácticas de la asignatura de \textit{Sistemas Distribuidos}. De cara a fijar conocimientos y a aprender nuevas mecánicas, realizarán el tutorial de la página web oficial de \textbf{Go}.
 
-\item A su vez, harán una formación relacionada con las distintas \textbf{API web}, concretamente el tutorial \textit{Introducción a las API web} de MozillaDeveloper\cite{apisweb}.
-
-\end{itemize}
-
-Por otro lado, el equipo encargado del primer \textit{frontend}, implementado con \textbf{React}: 
-
-\begin{itemize}
-
-\item  Este grupo realizará el tutorial oficial de \textbf{ReactJs}: \textit{Tutorial: Introducción a React}\cite{reactjs}, que tiene una duración estimada de 8 horas. También harán el tutorial de API web anteriormente mencionado\cite{apisweb}.
+\item A su vez, harán una formación relacionada con las distintas \textbf{API web}, concretamente el tutorial \textit{Introducción a las API web} de MozillaDeveloper\footnote{\href{https://developer.mozilla.org/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction}{\color{blue}{Introducción a las API web}}}.
 
 \end{itemize}
 
-Por último, el equipo encargado de desarrollar el segundo \textit{frontend}, implementado con \textbf{Angular}: 
+Por otro lado, el equipo encargado del primer \textit{frontend}, implementado con \textbf{React}:
 
 \begin{itemize}
 
-\item Realizará el tutorial \textit{Angular y TypeScript}\cite{angular} proporcionado por \textit{DesarrolloWeb}, el cual tiene un tiempo estimado de realización próximo a las 7 horas.
+\item  Este grupo realizará el tutorial oficial de \textbf{ReactJs}: \textit{Tutorial: Introducción a React}\footnote{\href{https://es.reactjs.org/tutorial/tutorial.html}{\color{blue}{Tutorial: Introducción a React}}}, que tiene una duración estimada de 8 horas. También harán el tutorial de API web anteriormente mencionado.
+
+\end{itemize}
+
+Por último, el equipo encargado de desarrollar el segundo \textit{frontend}, implementado con \textbf{Angular}:
+
+\begin{itemize}
+
+\item Realizará el tutorial \textit{Angular y TypeScript}\footnote{\href{https://angular.io/tutorial}{\color{blue}{Tutorial: Angular y TypeScript}}} proporcionado por \textit{DesarrolloWeb}, el cual tiene un tiempo estimado de realización próximo a las 7 horas.
 
 \end{itemize}
 
 
 \subsection{Control de configuraciones, construcción del software y aseguramiento de la calidad del producto}
 
-Con el objetivo de tener una base de desarrollo, pruebas y objetivos de calidad comunes a todos los integrantes del grupo, se ha establecido una serie de normas a seguir durante el desarrollo del sistema. 
+Con el objetivo de tener una base de desarrollo, pruebas y objetivos de calidad comunes a todos los integrantes del grupo, se ha establecido una serie de normas a seguir durante el desarrollo del sistema.
 
 
 %Todas estas normas son relativas a las tareas de construcción del \textit{software}, gestión de incidencias, automatización, calidad y despliegue del sistema por completo.
@@ -247,12 +249,12 @@ Se han establecido las siguientes prácticas para mantener una configuración de
 \begin{itemize}
     \item La organización y nombrado de los ficheros fuente seguirá las prácticas recomendadas por cada uno de los \textit{frameworks} a utilizar. De este modo, seguiremos las siguientes guías de estilo, nombrado de ficheros y organización de proyectos:
     \begin{itemize}
-        \item Para \textbf{Angular}, utilizaremos la guía de estilo oficial\cite{estiloangular} y la guía de estructura de proyectos propuesta por la documentación oficial\cite{estructuraangular}.
+        \item Para \textbf{Angular}, utilizaremos la guía de estilo oficial\footnote{\href{https://angular.io/guide/styleguide}{\color{blue}{Guía de estilo oficial de Angular}}} y la guía de estructura de proyectos propuesta por la documentación oficial\footnote{\href{https://angular.io/guide/file-structure}{\color{blue}{Guía de estructura de proyectos oficial de Angular}}}.
 
         \item Para \textbf{React}, usaremos la
-        guía de estilo de \textit{airbnb}\cite{estiloreact} y la estructura de proyectos propuesta por la documentación oficial\cite{estructurareact}.
+        guía de estilo de \textit{airbnb}\footnote{\href{https://airbnb.io/javascript/react/}{\color{blue}{Guía de estilo de React y Javascript de Airbnb}}} y la estructura de proyectos propuesta por la documentación oficial\footnote{\href{https://es.reactjs.org/docs/faq-structure.html}{\color{blue}{Guía de estructura de proyectos oficial de React}}}.
 
-        \item Para \textbf{Go}, seguiremos el estilo impuesto por la herramienta automática de formato de dicho lenguaje\cite{estilogolang} y la estructura de proyectos recomendada por la comunidad\cite{estructuragolang}.
+        \item Para \textbf{Go}, seguiremos el estilo impuesto por la herramienta automática de formato de dicho lenguaje\footnote{\href{https://pkg.go.dev/cmd/gofmt}{\color{blue}{Herramienta de formato y estilo oficial de golang}}} y la estructura de proyectos recomendada por la comunidad\footnote{\href{https://github.com/golang-standards/project-layout}{\color{blue}{Guía de estructura de proyectos recomendada para golang por la comunidad}}}.
     \end{itemize}
 
     \item Todo el código será subido a los repositorios de la organización de \textit{Github}\footnote{\href{https://github.com/UNIZAR-30226-2022-01}{\color{blue}{Repositorio de la organización de \textit{Github}}}}, donde todos los miembros tendrán permisos de acceso, modificación y administración de los mismos. Los repositorios serán los siguientes:
@@ -295,12 +297,12 @@ Con el objetivo de proveer un despliegue homogéneo del proyecto, tanto para las
 Debido a que se van a utilizar diferentes lenguajes de programación y \textit{frameworks} en cada una de las partes del proyecto, se han establecido una serie de prácticas comunes a seguir. También se ha planteado una estrategia de pruebas manuales y automáticas, para poder medir y controlar la calidad del software.
 
 \begin{itemize}
-    \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textbf{Google}\cite{documentaciongoogle} para la documentación de la \textit{API} pública.
+    \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textit{Google}\footnote{\href{https://developers.google.com/style/api-reference-comments}{\color{blue}{\textit{Guía de documentacion para desarrolladores de Google}}}} para la documentación de la \textit{API} pública.
 
-    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, por lo que ambos equipos deberán llegar a un acuerdo al respecto. 
+    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, por lo que ambos equipos deberán llegar a un acuerdo al respecto.
     \item Tras añadir una nueva funcionalidad el encargado de su implementación comprobará su corrección, realizando pruebas manuales y automáticas. Para ello, seguiremos la siguiente estrategia:
     \begin{itemize}
-        \item El \textit{backend} proporcionará un conjunto de pruebas automáticas sobre cada uno de los elementos de la \textit{API}, utilizando las herramientas de \textit{testing} de \textit{Go}. 
+        \item El \textit{backend} proporcionará un conjunto de pruebas automáticas sobre cada uno de los elementos de la \textit{API}, utilizando las herramientas de \textit{testing} de \textit{Go}.
 
         Tras añadir una nueva funcionalidad a la \textit{API}, garantizaremos que se pasen todas las pruebas automáticas antes de persistir los cambios.
 
@@ -362,7 +364,7 @@ La coordinación y seguimiento de objetivos del proyecto se va a seguir mediante
     \pagestyle{empty}
     \begin{figure}[!p]
     \centering
-    
+
     \includegraphics[width=1.7\textwidth]{diagramas/gantt.png}
     \caption{Diagrama de Gantt.}
     \label{fig:gantt}
@@ -381,7 +383,7 @@ y \textbf{30 de junio} porque esta es la fecha de la entrega del proyecto.\\
 
 Cada dos semanas todos los miembros del equipo rellenarán un cuestionario indicando las horas trabajadas y el progreso realizado. Por otro lado las actas se tomarán por turnos durante las reuniones con el cliente en las fechas indicadas por él mismo.\\
 
-Las métricas de rendimiento del equipo irán marcadas por el estado por cada una de las incidencias y tareas pendientes de cada uno de los repositorios. Si se diese el caso de que algún equipo quedase rezagado respecto al resto o sufriera algún imprevisto, éste deberá comentárselo al coordinador del equipo para que así se pueda tomar una decisión sobre cómo actuar al respecto. 
+Las métricas de rendimiento del equipo irán marcadas por el estado por cada una de las incidencias y tareas pendientes de cada uno de los repositorios. Si se diese el caso de que algún equipo quedase rezagado respecto al resto o sufriera algún imprevisto, éste deberá comentárselo al coordinador del equipo para que así se pueda tomar una decisión sobre cómo actuar al respecto.
 
 \subsubsection{Calendario de seguimiento para el frontend}
 El calendario interno para el \textit{frontend} va a ser el mismo para ambas implementaciones. La tabla \ref{table:frontend} muestra las tareas a realizar por este equipo. \newline
@@ -398,7 +400,7 @@ El calendario interno para el \textit{frontend} va a ser el mismo para ambas imp
 \centering
 \begin{tabular}{c|ccll|cc|}
 \cline{2-7}
-\multirow{2}{*}{}                                 & \multicolumn{4}{c|}{\multirow{2}{*}{Tarea}}                                                                                                                                                                                      & \multicolumn{2}{c|}{Personas asignadas}                                      \\ \cline{6-7} 
+\multirow{2}{*}{}                                 & \multicolumn{4}{c|}{\multirow{2}{*}{Tarea}}                                                                                                                                                                                      & \multicolumn{2}{c|}{Personas asignadas}                                      \\ \cline{6-7}
                                                   & \multicolumn{4}{c|}{}                                                                                                                                                                                                            & \multicolumn{1}{c|}{Angular}                & \multicolumn{1}{l|}{React}     \\ \hline
 \multicolumn{1}{|c|}{\multirow{14}{*}{Entrega 1}} & \multicolumn{4}{c|}{Pantalla inicial}                                                                                                                                                                                            & \multicolumn{1}{c|}{Jorge y Laura}          & \multirow{9}{*}{Emilio y Fran} \\ \cline{2-6}
 \multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de registro de usuario}}                                           & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{Jorge y Laura}          &                                \\ \cline{3-6}
@@ -408,11 +410,11 @@ El calendario interno para el \textit{frontend} va a ser el mismo para ambas imp
 \multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de crear de partida}}                                              & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{\multirow{2}{*}{Laura}} &                                \\ \cline{3-5}
 \multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{}                       &                                \\ \cline{2-6}
 \multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{2}{*}{Pantalla de búsqueda de partidas}}                                          & \multicolumn{3}{c|}{Diseño del HTML y CSS}                                                                     & \multicolumn{1}{c|}{\multirow{2}{*}{Jorge}} &                                \\ \cline{3-5}
-\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{}                       &                                \\ \cline{2-7} 
-\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{5}{*}{Implementación de una versión inicial de la pantalla del juego y del mapa}} & \multicolumn{3}{c|}{Diseño del mapa}                                                                           & \multicolumn{2}{c|}{Emilio, Fran, Jorge y Laura}                             \\ \cline{3-7} 
-\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Mapa auxiliar}                                                                             & \multicolumn{2}{c|}{Fran}                                                    \\ \cline{3-7} 
-\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Representación de usuarios}                                                                & \multicolumn{2}{c|}{Emilio}                                                  \\ \cline{3-7} 
-\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Botones del mapa}                                                                          & \multicolumn{2}{c|}{Fran}                                                    \\ \cline{3-7} 
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Conexión con la API}                                                                       & \multicolumn{1}{c|}{}                       &                                \\ \cline{2-7}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{\multirow{5}{*}{Implementación de una versión inicial de la pantalla del juego y del mapa}} & \multicolumn{3}{c|}{Diseño del mapa}                                                                           & \multicolumn{2}{c|}{Emilio, Fran, Jorge y Laura}                             \\ \cline{3-7}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Mapa auxiliar}                                                                             & \multicolumn{2}{c|}{Fran}                                                    \\ \cline{3-7}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Representación de usuarios}                                                                & \multicolumn{2}{c|}{Emilio}                                                  \\ \cline{3-7}
+\multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Botones del mapa}                                                                          & \multicolumn{2}{c|}{Fran}                                                    \\ \cline{3-7}
 \multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de las top-bar y bottom-bar}                                                        & \multicolumn{2}{c|}{Laura}                                                   \\ \hline
 \multicolumn{1}{|c|}{\multirow{22}{*}{Entrega 2}} & \multicolumn{1}{c|}{\multirow{8}{*}{Implementación de la versión final de la pantalla del juego y del mapa}}    & \multicolumn{3}{c|}{Diseño de los dados}                                                                       & \multicolumn{2}{c|}{\multirow{22}{*}{Por determinar}}                        \\ \cline{3-5}
 \multicolumn{1}{|c|}{}                            & \multicolumn{1}{c|}{}                                                                                           & \multicolumn{3}{c|}{Diseño de las cartas}                                                                      & \multicolumn{2}{c|}{}                                                        \\ \cline{3-5}
@@ -442,7 +444,7 @@ El calendario interno para el \textit{frontend} va a ser el mismo para ambas imp
 \end{table}
 \end{landscape}
 %\end{center}
-\FloatBarrier    
+\FloatBarrier
 
 \newpage
 
@@ -454,30 +456,30 @@ El calendario interno para el \textit{frontend} va a ser el mismo para ambas imp
 \begin{tabular}{c|cc|c|}
 \cline{2-4}
                                                    & \multicolumn{2}{c|}{Tarea}                                                                                                                                                                                                                                                                                                        & Personas asignada                   \\ \hline
-\multicolumn{1}{|c|}{\multirow{25}{*}{2º entrega}} & \multicolumn{2}{c|}{Diseño del modelo de datos del sistema}                                                                                                                                                                                                                                                                       & Samuel y Guillermo                  \\ \cline{2-4} 
-\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la base de datos}                                                                                                                                                                                                                                                                           & Samuel y Guillermo                  \\ \cline{2-4} 
-\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Implementación de los mecansimos de autenticación \\ de usuarios frente al sistema y persistencia de sesiones\end{tabular}}                                                                                                                                                        & Samuel y Guillermo                  \\ \cline{2-4} 
+\multicolumn{1}{|c|}{\multirow{25}{*}{2º entrega}} & \multicolumn{2}{c|}{Diseño del modelo de datos del sistema}                                                                                                                                                                                                                                                                       & Samuel y Guillermo                  \\ \cline{2-4}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la base de datos}                                                                                                                                                                                                                                                                           & Samuel y Guillermo                  \\ \cline{2-4}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Implementación de los mecansimos de autenticación \\ de usuarios frente al sistema y persistencia de sesiones\end{tabular}}                                                                                                                                                        & Samuel y Guillermo                  \\ \cline{2-4}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{6}{*}{\begin{tabular}[c]{@{}c@{}}API de búsqueda y \\ configuración de partidas\end{tabular}}}   & Búsqueda de partidas                                                                                                                                                                             & \multirow{5}{*}{Samuel y Guillermo} \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Creación de partidas                                                                                                                                                                             &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Documentar búsqueda de partidas                                                                                                                                                                  &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Documentar creación de partidas                                                                                                                                                                  &                                     \\ \cline{3-3}
-\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Unirse a partidas                                                                                                                                                                                &                                     \\ \cline{3-4} 
-\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Abandonar partidas                                                                                                                                                                               & Samuel                              \\ \cline{2-4} 
-\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de notificaciones}                                                                                                                                                                                                                                                                                        & Samuel                              \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Unirse a partidas                                                                                                                                                                                &                                     \\ \cline{3-4}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Abandonar partidas                                                                                                                                                                               & Samuel                              \\ \cline{2-4}
+\multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de notificaciones}                                                                                                                                                                                                                                                                                        & Samuel                              \\ \cline{2-4}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Versión parcial de la API de \\ lógica del juego\end{tabular}}} & Crear autómata de una partida                                                                                                                                                                    & \multirow{4}{*}{Samuel y Guillermo} \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir acciones a realizar                                                                                                                                                                      &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir el estado de una partida                                                                                                                                                                 &                                     \\ \cline{3-3}
-\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir endponits de API para consultar cada elemento de la partida                                                                                                                              &                                     \\ \cline{3-4} 
-\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir endpoints de API para acciones de la partida                                                                                                                                             & Samuel                              \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir endponits de API para consultar cada elemento de la partida                                                                                                                              &                                     \\ \cline{3-4}
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Definir endpoints de API para acciones de la partida                                                                                                                                             & Samuel                              \\ \cline{2-4}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{2}{*}{API auxiliares}}                                                                           & Listar amigos                                                                                                                                                                                    & \multirow{2}{*}{Guillermo}          \\ \cline{3-3}
-\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Obtener información de perfil de usuario                                                                                                                                                         &                                     \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Obtener información de perfil de usuario                                                                                                                                                         &                                     \\ \cline{2-4}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{\multirow{7}{*}{Implementación del principio de la partida}}                                               & Función de poblado aleatorio del mapa                                                                                                                                                            & \multirow{7}{*}{Samuel}             \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Función de roll de dados                                                                                                                                                                         &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Función de selección de primer usuario de una partida y siguientes                                                                                                                               &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Función de inicio de partida                                                                                                                                                                     &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Endpoint de obtener la lista de acciones para un usuario y su indice de la lista actual                                                                                                          &                                     \\ \cline{3-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & Endpoint de reforzar territorio                                                                                                                                                                  &                                     \\ \cline{3-3}
-\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Test unitarios de comprobación de almacen de partidas, inicio de una partida \\ tras alcanzar maxJugadores, acciones y obtención de la lista de acciones\end{tabular} &                                     \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                             & \multicolumn{1}{c|}{}                                                                                                          & \begin{tabular}[c]{@{}c@{}}Test unitarios de comprobación de almacen de partidas, inicio de una partida \\ tras alcanzar maxJugadores, acciones y obtención de la lista de acciones\end{tabular} &                                     \\ \cline{2-4}
 \multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{Implementación de la fase de ataque}                                                                                                                                                                                                                                                                          & Guillermo                           \\ \hline
 \multicolumn{1}{|c|}{\multirow{6}{*}{2º entrega}}  & \multicolumn{2}{c|}{API de ranking}                                                                                                                                                                                                                                                                                               & \multirow{6}{*}{Por determinar}     \\ \cline{2-3}
 \multicolumn{1}{|c|}{}                             & \multicolumn{2}{c|}{API de personalización de perfiles de usuario}                                                                                                                                                                                                                                                                &                                     \\ \cline{2-3}
@@ -491,13 +493,13 @@ El calendario interno para el \textit{frontend} va a ser el mismo para ambas imp
 \end{table}
 \end{landscape}
 \FloatBarrier
- 
+
 \section{Análisis y diseño del sistema}
 
 \subsection{Análisis de requisitos}
 Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados en la tabla \ref{tab:rf}. La tabla \ref{tab:rnf} recoge los requisitos no funcionales. Ambos tipos de requisitos se encuentran claramente detallados e identificados, para facilitar su referencia en documentación futura.
 \renewcommand{\arraystretch}{1.3}\\
-\begin{longtable}[h!]{| p{.10\textwidth} | p{.90\textwidth} |} 
+\begin{longtable}[h!]{| p{.10\textwidth} | p{.90\textwidth} |}
     \caption{Requisitos funcionales de la aplicación.}
     \label{tab:rf}
     \centering
@@ -684,24 +686,24 @@ Para el \textit{backend} se ha valorado utilizar las siguientes librerías auxil
 
 
 \begin{itemize}
-    \item \textit{Frameworks de web}: Se ha valorado utilizar frameworks web como \textbf{Echo} o \textbf{Gin}. Sin embargo, se ha considerado que  la documentación era escasa en todos los \textit{frameworks} evaluados, y su uso forzaría a una dependencia en las mismas. 
-    
+    \item \textit{Frameworks de web}: Se ha valorado utilizar frameworks web como \textbf{Echo} o \textbf{Gin}. Sin embargo, se ha considerado que  la documentación era escasa en todos los \textit{frameworks} evaluados, y su uso forzaría a una dependencia en las mismas.
+
     \item Por otro lado, se ha optado por utilizar una librería auxiliar a la librería estándar de \textbf{HTTP} de \textbf{Go}, \textbf{Chi}, que se caracteriza por ser una ampliación a la librería estándar muy sencilla de utilizar, y que permite establecer diferentes \textit{middleware} programables para diferentes \textit{URLs}.
-    
+
     \item Librerías auxiliares de \textbf{SQL}: Se ha evaluado utilizar \textbf{ORMs} como \textbf{Gorm}, pero se ha considerado que el modelo de datos es lo suficientemente alcanzable como para utilizar la librería \textbf{SQL} y consultas tradicionales.
 \end{itemize}
 
 \subsubsection{Aspectos a considerar}
 
-Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de \textbf{Docker}, preferiblemente en un sistema operativo \textbf{Linux}, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar \textbf{SQL}, es decir, un esquema relacional. El servidor ofrece una \textit{API Web} de tipo \textbf{REST}, junto con el uso de \textbf{cookies} para mantener el estado de las sesiones de usuario. \\ 
+Entre otros \textbf{aspectos a considerar}, cabe destacar los siguientes. El despliegue e instalación de la aplicación se llevará a cabo mediante contenedores de \textbf{Docker}, preferiblemente en un sistema operativo \textbf{Linux}, dada la facilidad de uso y el rápido despliegue que ofrece. Por otro lado, el modelo de datos a implementar se limita al estándar \textbf{SQL}, es decir, un esquema relacional. El servidor ofrece una \textit{API Web} de tipo \textbf{REST}, junto con el uso de \textbf{cookies} para mantener el estado de las sesiones de usuario. \\
 
 Por último, se barajaron otras opciones a las comentadas anteriormente:
 
 \begin{itemize}
     \item Utilizar otro lenguaje para el \textit{backend}, como \textbf{Java}, \textbf{JavaScript} o \textbf{Python}. Sin embargo, se decidió que era más apropiado el uso de \textbf{Go}, ya el equipo está habituado al desarrollo de aplicaciones web con este lenguaje y cubre con garantías las necesidades tecnológicas requeridas.
-    
-    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir, y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de \textbf{PostgreSQL}, ya que el equipo está habituado con el uso de este gestor, además de tratarse de uno de los SGBD de código abierto más utilizados y con aspectos muy interesantes. 
-    
+
+    \item  Manejar otro sistema gestor de base de datos similar, como un gestor de bases de datos \textbf{NoSQL}. Actualmente existe un amplio abanico de opciones para elegir, y como las necesidades de la aplicación se cubren con prácticamente cualquier gestor, se determinó el uso de \textbf{PostgreSQL}, ya que el equipo está habituado con el uso de este gestor, además de tratarse de uno de los SGBD de código abierto más utilizados y con aspectos muy interesantes.
+
     \item Existen muchos frameworks para el desarrollo de \textit{frontend web}. Sin embargo, se decidió utilizar  \textbf{React} y \textbf{Angular} porque ofrecen una gran cantidad de recursos que permiten construir interfaces de usuario y toda la lógica asociada a la aplicación. Además, los miembros del equipo mostraban interés para el aprendizaje sobre estas tecnologías tan extendidas en la actualidad.
 \end{itemize}
 
@@ -712,7 +714,7 @@ A continuación se va a describir el inicio y desarrollo del proyecto, desde el 
 
 \subsection{Inicio del proyecto}
 %Apartado react
-En relación al equipo del frontend de \textbf{React}, hemos seguido de forma correcta el plan establecido. Hemos seguido los tutoriales correspondientes y, posteriormente, realizamos un proyecto de prueba de cara a probar y poner en práctica las competencias adquiridas. También hemos investigado y probado diversos paquetes o librerías adicionales de \textit{React}, y aprendido a realizar las conexiones con la API y gestionar cookies. Cabe resaltar que \textbf{se han cumplido los objetivos} deseados de acuerdo a la planificación inicial. 
+En relación al equipo del frontend de \textbf{React}, hemos seguido de forma correcta el plan establecido. Hemos seguido los tutoriales correspondientes y, posteriormente, realizamos un proyecto de prueba de cara a probar y poner en práctica las competencias adquiridas. También hemos investigado y probado diversos paquetes o librerías adicionales de \textit{React}, y aprendido a realizar las conexiones con la API y gestionar cookies. Cabe resaltar que \textbf{se han cumplido los objetivos} deseados de acuerdo a la planificación inicial.
 
 % Apartado backend
 Con lo que respecta al equipo de \texit{backend}, la formación inicial necesaria no fue tan pesada como en el caso del \texit{frontend}, ya que ambos componentes del equipo tenían experiencia con las tecnologías utilizadas. Aún así ambos consultaron tutoriales y documentación de \textbf{React} y \textbf{Angular} para poder ayudar en el desarrollo del \textit{frontend}, además de los tutoriales sobre diseño de \textit{API} y uso de \LaTeX.
@@ -722,7 +724,7 @@ Con lo que respecta al equipo de \texit{backend}, la formación inicial necesari
 
 El tiempo invertido para la realización de las tareas propuestas no se ha ajustado al plan inicial, y es por ello que no han podido alcanzar los objetivos propuestos en el calendario original. La implementación de algunos aspectos del \textit{frontend} han sido mas costosos de lo esperado, principalmente por la poca del experiencia del equipo al trabajar con el \textit{framework}. La gestión de cookies, y el diseño de una primera versión del mapa fueron las tareas más complejas, y dispararon las horas de trabajo invertidas, escapando del plan inicial.\\
 
-Ambos equipos encargados del \textit{frontend} han aprendido que es muy difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}, ya que difieren en multitud de aspectos. 
+Ambos equipos encargados del \textit{frontend} han aprendido que es muy difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}, ya que difieren en multitud de aspectos.
 
 \subsubsection{Frontend React}
 
@@ -733,7 +735,7 @@ El trabajo desarrollado por el equipo de \textit{React} ha contado con una muy b
 La coordinación y el modelo de trabajo han seguido las siguientes indicaciones:
 
 \begin{itemize}
-    \item Las decisiones y partes de desarrollo de mayor envergadura o complejidad han sido desarrolladas concurrentemente por los dos integrantes. 
+    \item Las decisiones y partes de desarrollo de mayor envergadura o complejidad han sido desarrolladas concurrentemente por los dos integrantes.
     \item Por otro lado, en el resto de ejecuciones se ha optado por realizar dos reuniones semanales de cara a poner en común aspectos realizados, fijar distintos objetivos a lograr o especificar diseños de pantallas.
     \item Por último, se han repartido tareas individuales de forma equitativa, no excesivamente extensas.
 \end{itemize}
@@ -756,10 +758,10 @@ Respecto al seguimiento de los procedimientos y herramientas establecidas en un 
 \end{itemize}
 
 Por otro lado, con respecto al \textbf{calendario de tareas} fijado al inicio, no se han cumplido todos los objetivos planeados en un inicio. El motivo reside en que se ha optado por realizar variaciones y priorizar ciertas tareas.
-Debido a esto, las pantallas de \textit{Perfil de usuario}, \textit{Búsqueda de partida} y \textit{Buzón de notificaciones} no han sido realizadas para la primera entrega y se ha puesto un mayor enfasis en la implementación del \textit{Mapa de juego}. 
+Debido a esto, las pantallas de \textit{Perfil de usuario}, \textit{Búsqueda de partida} y \textit{Buzón de notificaciones} no han sido realizadas para la primera entrega y se ha puesto un mayor enfasis en la implementación del \textit{Mapa de juego}.
 Pese a las variaciones comentadas anteriormente, el equipo considera que se han cumplido los objetivos de esta entrega intermedia debido a que la pantalla del \textit{Mapa} se trata de la más compleja de implementar y desarrollar y tiene una importancia relevante sobre todas las demás. \\
 
-Por último, en relación al despliegue del frontend web cabe destacar un problema que surgió, debido a que existen incompatibilidades entre \textit{macOS} y los archivos iniciales de\textit{Docker}. Tras revisar y estudiar el error en prufundidad el equipo consiguió solucionar el problema. 
+Por último, en relación al despliegue del frontend web cabe destacar un problema que surgió, debido a que existen incompatibilidades entre \textit{macOS} y los archivos iniciales de\textit{Docker}. Tras revisar y estudiar el error en prufundidad el equipo consiguió solucionar el problema.
 
 \subsubsection{Backend}
 
@@ -824,11 +826,13 @@ Aún así, a la hora de realizar el proyecto hemos podido comprobar que las tare
 
 Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente enel diseño de la máquina de estados, la implementación del mapa y la de las diferentes fases de juego. Creemos que estas divisiones se podrían haber realizado al inicio del proyecto, analizando más exhaustivamente el funcionamiento del juego para permitir estimaciones más precisas. \\
 
-Mencionamos también que, aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado, y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\  
+Mencionamos también que, aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado, y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\
 
 Destacamos que si el desarrollo del \textit{backend} sigue progresando al ritmo actual, se acabará su implementación antes de lo planeado en el calendario. De esta forma, los encargados del \textit{backend} podrán ayudar en la implementación de los \textit{frontend}, encargándose además de modificar y corregir el backend cuando sea necesario. \\
 
 Una de las principales lecciones que hemos aprendido durante el desarrollo del \textit{backend}, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Debido a esto, se han tenido que dedicar múltiples reuniones, aunque de corta duración, a la refactorización del código.\\
+
+Adicionalmente, la magnitud del proyecto ha fomentado a realizar \textit{commits} más concisos y frecuentes. \\
 
 \subsubsection{Cierre del proyecto por el equipo de \textit{React}}
 Por otro lado, desde el punto de vista del frontend desarrollado en \textbf{React}, pese a haber subestimado esfuerzos que se tenían que dedicar en ciertas partes del sistema, como puede ser el mapa, hemos conseguido mantener y conseguir mayoritariamente los objetivos iniciales. Además, creemos que se conseguirán conseguir los objetivos finales en el plazo establecido. \\
@@ -842,9 +846,11 @@ El tiempo invertido para la realización de las tareas propuestas no se ha ajust
 \\
 
 Ambos equipos encargados del \textit{frontend} han aprendido que es difícil repartir actividades trabajando en \textit{frameworks} distintos, ya que tratamos de dividir el diseño del mapa entre los 4 integrantes de \textit{frontend}, y a la hora de integrar las tareas realizadas por el equipo de \textit{React} en la implementación de \textit{Angular}, ha sido necesario adaptar el código al \textit{framework}. \\
+
+
 \subsubsection{Valoraciones comunes entre todos los equipos}
 
-La magnitud del proyecto ha fomentado a realizar \textit{commits} más concisos y frecuentes. \\
+
 
 Durante el desarrollo del \textit{backend}, hemos podido aprender sobre el \textit{CORS} y las peticiones de datos de origen cruzado, al servir los clientes web y la API desde dominios diferentes. Así mismo, hemos ganado experiencia en el despliegue y depuración de contenedores con \textit{Docker}. \\
 
@@ -855,13 +861,13 @@ Los esfuerzos realizados por los integrantes del equipo han sido los siguientes:
 
 \begin{itemize}
     \item En primer lugar, \textbf{Guillermo} invirtió un total de 34 horas, encargándose de implementar la fase de refuerzo, las funciones de creación y configuración de partidas, la implementación de la baraja y otras funciones sociales.
-    
+
     \item \textbf{Samuel} se encargó de desarrollar la fase inicial del juego, la gestión de las listas de amigos, la configuración del \textit{CORS}, el despliegue de la aplicación, la generación automática de documentación con la herramienta \textit{godoc}, el sistema de búsqueda de partidas y las notificaciones. En total, invirtió 35 horas.
-    
+
     \item \textbf{Fran} desarrolló junto con el resto del grupo de \textit{frontend} el diseño del mapa de juego. Además, la implementación de diversas pantallas como \textit{Registro Usuario, Inicio Sesión y Crear Partida}, entre otras. También, realizó dinámica adicional del mapa como ciertos botones, un mapa informativo o pantallas de avisos. En conjunto dedicó un estimado de 37 horas.
-    
+
     \item \textbf{Emilio} dedicó un total de 41 horas a las tareas asignadas, entre las que destacan la puesta en marcha inicial del cliente, conexiones con la API y su gestión de errores, mantenimiento de cookies, implementación y diseño de pantallas y elementos gráficos, y redacción, maquetación y diseño de apartados de la memoria.
-    
+
     \item \textbf{Jorge} diseñó de las pantallas de inicio de sesión y registro de usuario. También realizó el diseño del mapa, tratando de aprender cuestiones básicas sobre \textit{svg}, transiciones en angular, y otros elementos de diseño que proporciona la herramienta. Además, realizó la pantalla de búsqueda de partida, en la cual fue necesario aprender nuevos aspectos de diseño y cuestiones básicas sobre conexiones a la API. En total, invirtió 32 horas.
 
     \item \textbf{Laura} realizó el diseño de las pantallas de inicio de sesión y registro de usuario, también se encargó de realizar la conexión de las pantallas de inicio de sesión y registro la API. Además, implementó el diseño diseño y conexión con la API para la pantalla de crear partida. También, realizó el diseño y la funcionalidad de las 2 \textit{top-bar} y la \textit{bottom-bar} que usarán ambos \textit{frontend}. En conjunto dedicó un estimado de 36 horas.
@@ -874,10 +880,10 @@ Los esfuerzos realizados por los integrantes del equipo han sido los siguientes:
 %\subsection{Glosario}
 %\subsection{Actas de todas las reuniones realizadas}
 
-\newpage
-\section{Referencias}
-\subsection{Bibliografía}
-\printbibliography
+%\newpage
+%\section{Referencias}
+%\subsection{Bibliografía}
+%\printbibliography
 
 %\newpage
 %\section{Anexos}
