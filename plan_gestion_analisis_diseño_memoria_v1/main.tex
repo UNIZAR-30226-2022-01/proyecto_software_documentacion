@@ -512,42 +512,40 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
          \hline
          RF-3 & El sistema proporcionará a los usuarios un juego de \textit{Risk}.\\
          \hline
-         RF-3.1 & Al comenzar la partida, se distribuirá un número de ejércitos a cada jugador y por turnos los irán colocando en el mapa.\\
+         RF-3.1 & Al comenzar la partida, se distribuirán equitativamente los territorios de manera aleatoria.\\
          \hline
-         RF-3.2 & Opcionalmente, la disposición inicial de las tropas mencionada en el \textbf{RF-3.1}  se podrá hacer de forma aleatoria.\\
+         RF-3.2 & Cada turno de juego dispondrá de las siguiente fases: Refuerzo, Ataque y Fortificación. \\
          \hline
-         RF-3.3 & Cada turno de juego dispondrá de las siguiente fases: Refuerzo, Ataque y Fortificación. \\
+         RF-3.3 & Al empezar el turno del jugador, se le otorgará un número de ejércitos en función del número de territorios y continentes que ocupe.\\
          \hline
-         RF-3.4 & Al empezar el turno del jugador, se le otorgará un número de ejércitos en función del número de territorios y continentes que ocupe.\\
+         RF-3.4 & Durante la fase de refuerzo, el jugador deberá colocar todas sus tropas distribuyéndolas como desee entre los territorios que domine.\\
          \hline
-         RF-3.5 & Durante la fase de refuerzo, el jugador deberá colocar todas sus tropas distribuyéndolas como desee entre los territorios que domine.\\
+         RF-3.5 & El jugador podrá cambiar un conjunto de 3 cartas para recibir ejércitos durante la fase de refuerzo.\\
          \hline
-         RF-3.6 & El jugador podrá cambiar un conjunto de 3 cartas para recibir ejércitos durante la fase de refuerzo.\\
+         RF-3.6 & El jugador recibirá una carta al final del turno, si durante dicho turno ha conquistado algún territorio.\\
          \hline
-         RF-3.7 & El jugador recibirá una carta al final del turno, si durante dicho turno ha conquistado algún territorio.\\
-         \hline
-         RF-3.8 & Las cartas pueden ser de 4 tipos: infantería, caballería, artillería y comodines.
+         RF-3.7 & Las cartas pueden ser de 4 tipos: infantería, caballería, artillería y comodines.
          Además, cada carta tendrá un territorio asignado (excepto los comodines).\\
          \hline
-         RF-3.9 & Para que un cambio de cartas sea válido, se deberán cambiar 3 cartas del mismo tipo, dos del mismo tipo junto a un comodín o una carta de cada tipo. \\
+         RF-3.8 & Para que un cambio de cartas sea válido, se deberán cambiar 3 cartas del mismo tipo, dos del mismo tipo junto a un comodín o una carta de cada tipo. \\
          \hline
-         RF-3.10 & El número de ejércitos recibidos por cada cambio dependerá del número de cambios realizados. El primer cambio otorgará 4 y los cambios consecutivos darán 2 más que el anterior. El sexto cambio dará un total de 15 ejércitos, y a partir de este el número de ejércitos se incrementará en 5 por cada cambio. \\
+         RF-3.9 & El número de ejércitos recibidos por cada cambio dependerá del número de cambios realizados. El primer cambio otorgará 4 y los cambios consecutivos darán 2 más que el anterior. El sexto cambio dará un total de 15 ejércitos, y a partir de este el número de ejércitos se incrementará en 5 por cada cambio. \\
          \hline
-         RF-3.11 & El jugador estará obligado a cambiar cartas siempre que tenga 5 o más cartas en su mano. \\
+         RF-3.10 & El jugador estará obligado a cambiar cartas siempre que tenga 5 o más cartas en su mano. \\
          \hline
-         RF-3.12 & El jugador recibirá 2 ejércitos extra si alguna de las cartas que cambia corresponde a un territorio que ocupe. Esos 2 ejércitos se añadirán a dicho territorio. \\
+         RF-3.11 & El jugador recibirá 2 ejércitos extra si alguna de las cartas que cambia corresponde a un territorio que ocupe. Esos 2 ejércitos se añadirán a dicho territorio. En caso de que ocupe más de uno de los territorio, se añadirán 2 ejércitos a cada uno.\\
          \hline
-         RF-3.13 & En caso de que se de la situación mencionada en el \textbf{RF-3.12} con más de una carta del cambio, se añadirán 2 ejércitos a cada territorio afectado. \\
+         RF-3.12 & En caso de que se de la situación mencionada en el \textbf{RF-3.12} con más de una carta del cambio, se añadirán 2 ejércitos a cada territorio afectado. \\
          \hline
-         RF-3.14 & Durante la fase de ataque el jugador podrá atacar territorios adyacentes los suyos, siempre y cuando tenga por lo menos dos ejércitos en la región desde la que ataca.\\
+         RF-3.13 & Durante la fase de ataque el jugador podrá atacar territorios adyacentes los suyos, siempre y cuando tenga por lo menos dos ejércitos en la región desde la que ataca.\\
          \hline
-         RF-3.15 & Al atacar, tanto atacante como defensor lanzarán los dados. El atacante podrá lanzar entre 1 y 3 dados, necesitando por lo menos un ejército más que el número de dados. Por otro lado, el defensor lanzará 2 dados si su territorio tiene 2 o más ejércitos y 1 dado en caso contrario.\\
+         RF-3.14 & Al atacar, tanto atacante como defensor lanzarán los dados. El atacante podrá lanzar entre 1 y 3 dados, necesitando por lo menos un ejército más que el número de dados. Por otro lado, el defensor lanzará 2 dados si su territorio tiene 2 o más ejércitos y 1 dado en caso contrario.\\
          \hline
-         RF-3.16 & En caso de que el dado más alto lanzado por el atacante sea de valor mayor que el del defensor, el territorio defensor perderá un ejército. Si el valor fuera igual o menor, el territorio atacante perderá un ejército. Si ambos han lanzado dos o más dados, se realizará el mismo proceso con el segundo dado más alto de cada uno.\\
+         RF-3.15 & En caso de que el dado más alto lanzado por el atacante sea de valor mayor que el del defensor, el territorio defensor perderá un ejército. Si el valor fuera igual o menor, el territorio atacante perderá un ejército. Si ambos han lanzado dos o más dados, se realizará el mismo proceso con el segundo dado más alto de cada uno.\\
          \hline
-         RF-3.17 & Si tras un ataque, el territorio defensor queda sin ejércitos, el atacante deberá mover a dicha región tantas tropas como dados haya tirado durante el último ataque, menos el número de ejércitos que haya perdido en el ataque. \\
+         RF-3.16 & Si tras un ataque, el territorio defensor queda sin ejércitos, el atacante deberá mover a dicha región tantas tropas como dados haya tirado durante el último ataque, menos el número de ejércitos que haya perdido en el ataque. \\
          \hline
-         RF-3.18 & Al final del turno, el jugador tendrá la posibilidad de fortificar un territorio, moviendo tropas de un territorio a otro. Para ello, ambos territorios deberán pertenecer al jugador y estar conectados por un camino de regiones ocupadas por él. Cabe destacar que no se podrá dejar ningún territorio sin tropas.\\
+         RF-3.17 & Al final del turno, el jugador tendrá la posibilidad de fortificar un territorio, moviendo tropas de un territorio a otro. Para ello, ambos territorios deberán pertenecer al jugador y estar conectados por un camino de regiones ocupadas por él. Cabe destacar que no se podrá dejar ningún territorio sin tropas.\\
          \hline
          RF-4 & El sistema ofrecerá a los usuarios un menú que permitirá buscar partidas públicas en curso, destacando las partidas en las que participen sus amigos.\\
          \hline
@@ -587,6 +585,12 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
          \hline
          RF-13 & El sistema ofrecerá un \textit{chat} que permitirá a los jugadores de una partida comunicarse entre ellos.\\
          \hline
+         RF-14 & El sistema permitirá al usuario cambiar su correo electrónico.\\
+         \hline
+         RF-15 & El sistema permitirá a un usuario identificado modificar su contraseña libremente.\\
+         \hline
+         RF-16 & El sistema permitirá al usuario cambiar su contraseña en caso de que la haya olvidado. Para ello, se le enviará un correo a la dirección de correo electrónico con la que se registró.\\
+         \hline
 \end{longtable}
 
 \newpage
@@ -607,6 +611,8 @@ Los requisitos funcionales de nuestra aplicación se pueden encontrar detallados
          RNF-5 & El usuario podrá continuar una partida en curso independientemente del dispositivo con el que se conecte y el cliente que utilice.\\
          \hline
          RNF-6 & La interfaz ofrecida estará adaptada a formatos de pantalla horizontales, habituales en los navegadores \textit{web}, y no ofrecerá capacidades adaptativas para su uso en dispositivos móviles.\\
+         \hline
+         RNF-7 & El servidor \textit{web} utilizará el protocolo de comuniación seguro \textit{HTTPS}. \\
          \hline
     \end{tabularx}
     \caption{Requisitos no funcionales del sistema.}
