@@ -808,9 +808,14 @@ Respecto al seguimiento de los procedimientos establecidos, se han seguido los s
 
 % discutir como se ha seguido el calendario
 
-Por otro lado, se ha conseguido seguir el calendario de tareas establecido en todo momento, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.\\
+Por otro lado, se ha conseguido seguir el calendario de tareas establecido antes de la entrega parcial, llegando a implementar una versión inicial del juego, consistente en el inicio y la gestión de las partidas y la primera fase de un turno, así como todos los aspectos fundamentales del diseño del sistema (el modelo de datos, autenticación de usuarios o una versión preliminar de toda la \textit{API}, por ejemplo) y funcionalidades adicionales como los aspectos sociales del juego.\\
 
 La única divergencia respecto a la planificación inicial ha sido el aplazamiento de la implementación de la \textit{API} de notificaciones una semana, aún dentro del límite, debido a que se ha detectado que dependía de funcionalidades de la lógica de juego. \\
+
+% Entrega final
+Después de la primera entrega, centramos nuestros esfuerzos en finalizar la lógica del juego lo antes posible, implementado posteriormente funcionalidades de menor importancia, como la tienda de cosméticos y la personalización del jugador. Durante la etapa final del proyecto la actividad del equipo de \textit{backend} fue elevada, al ser necesario corregir la \textit{API} a medida que se encontraban errores y preparar el sistema para el despliegue. \\
+
+Cabe destacar también, que atrasamos la implementación del algunas funcionalidades que consideramos de menor importancia a este período final del proyecto. Entre ellas destacamos el \textit{chat}, el uso de \textit{HTTPS} y el envío de \textit{emails} para modificar la contraseña.
 
 \newpage
 
@@ -882,9 +887,11 @@ Aún así, a la hora de realizar el proyecto hemos podido comprobar que las tare
 
 Principalmente, englobar la lógica del juego como una sola tarea ha dificultado una estimación temporal más precisa. En la práctica, dicha tarea fue dividida en distintas partes, principalmente enel diseño de la máquina de estados, la implementación del mapa y la de las diferentes fases de juego. Creemos que estas divisiones se podrían haber realizado al inicio del proyecto, analizando más exhaustivamente el funcionamiento del juego para permitir estimaciones más precisas. \\
 
-Mencionamos también que, aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado, y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. \\
+Mencionamos también que, aunque no se hubiera tenido en cuenta en la estimación inicial, el tiempo empleado en la implementación de las pruebas fue muy elevado, y habría sido conveniente haberlo tenido en cuenta durante la planificación de tareas. Además, el esfuerzo necesario para la integración de distintas tecnologías en el proyecto (\textit{emails} y \textit{HTTPS}), así como el despliegue final de la aplicación, ha sido mucho mayor del esperado. \\
 
-Destacamos que si el desarrollo del \textit{backend} sigue progresando al ritmo actual, se acabará su implementación antes de lo planeado en el calendario. De esta forma, los encargados del \textit{backend} podrán ayudar en la implementación de los \textit{frontend}, encargándose además de modificar y corregir el backend cuando sea necesario. \\
+Destacamos que a principios de mayo, ambos integrantes del equipo de \textit{backend} empezaron a centrarse en el desarrollo del \textit{frontend}, modificando el código del \textit{backend} a medida que se detectaban errores o se requerían nuevas funcionalidades. \\
+
+Debido a esto, pudimos observar que implementar por completo la \textit{API} cuando la funcionalidad de los \textit{frontends} está aún en una fase temprana, nos obligó a realizar cambios posteriores para facilitar la integración de ambos. Por lo tanto, consideramos que en un proyecto futuro sería buena idea desarrollar en paralelo el cliente de la aplicación y la \textit{API}, de manera que ambos componentes se diseñen teniendo en cuenta las características del otro. \\
 
 Una de las principales lecciones que hemos aprendido durante el desarrollo del \textit{backend}, es que debemos gestionar y modularizar el código, no solo en distintos componentes, si no en diferentes ficheros de código. Debido a esto, se han tenido que dedicar múltiples reuniones, aunque de corta duración, a la refactorización del código.\\
 
