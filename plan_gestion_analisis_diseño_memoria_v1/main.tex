@@ -299,8 +299,11 @@ Debido a que se van a utilizar diferentes lenguajes de programación y \textit{f
 \begin{itemize}
     \item Se seguirán buenas prácticas para la documentación del código. En concreto, se seguirán las publicadas por \textit{Google}\footnote{\href{https://developers.google.com/style/api-reference-comments}{\color{blue}{\textit{Guía de documentacion para desarrolladores de Google}}}} para la documentación de la \textit{API} pública.
 
-    \item El diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, por lo que ambos equipos deberán llegar a un acuerdo al respecto.
-    \item Tras añadir una nueva funcionalidad el encargado de su implementación comprobará su corrección, realizando pruebas manuales y automáticas. Para ello, seguiremos la siguiente estrategia:
+    \item Debido a que se ha acordado que el diseño de la interfaz deberá ser lo más similar posible entre ambos \textit{frontend} para mantener la consistencia, se comprobará la implementación de cada pantalla en el otro \textit{frontend}, si ya lo está. Así mismo, se comunicarán derivaciones importantes respecto al diseño de pantallas inicial.
+    
+    Las inconsistencias de diseño encontradas se deberán comunicar al otro equipo, y se acordará una solución a las mismas.
+    
+    \item Tras añadir una nueva funcionalidad, el encargado de su implementación comprobará su corrección, realizando pruebas manuales y automáticas. Para ello, seguiremos la siguiente estrategia:
     \begin{itemize}
         \item El \textit{backend} proporcionará un conjunto de pruebas automáticas sobre cada uno de los elementos de la \textit{API}, utilizando las herramientas de \textit{testing} de \textit{Go}.
 
@@ -310,16 +313,13 @@ Debido a que se van a utilizar diferentes lenguajes de programación y \textit{f
         \end{itemize}
 
 
-    \item Las entregas a los clientes serán probadas íntegramente por todos los miembros del equipo en conjunto para garantizar que no existen problemas en las funcionalidades implementadas hasta dicho momento.
+    \item Las entregas a los clientes serán probadas íntegramente, por todos los miembros del equipo, para garantizar que no existen problemas en las funcionalidades implementadas hasta dicho momento.
 
-    La estrategia de pruebas previas a la entrega será la siguiente:
-    \begin{itemize}
-        \item Se acordará, mediante una reunión (en la que participarán al menos un miembro de cada equipo) un guión de prueba exploratorias común para ambos \textit{frontend}. Este abarcará todas las funcionalidades del juego implementadas hasta el momento por ambos.
+    La estrategia de pruebas previas a la entrega será la realización, durante una reunión entre todos los miembros del equipo, de una prueba exploratoria común sobre ambos \textit{frontend} al mismo tiempo. Esta prueba buscará confirmar que todos los requisitos establecidos han sido implementados correctamente, realizando las acciones necesarias para comprobar cada uno de los requisitos de la lista. \\
 
-        \item Cada uno de los miembros de cada \textit{frontend} realizará dichas pruebas siguiendo el guión sobre su aplicación. Por otro lado, un miembro del equipo de \textit{backend} seguirá el guión sobre el \textit{frontend} \textit{React} y otro sobre \textit{Angular}, comprobando que las interacciones con la \textit{API} son correctas.
+    Esta prueba se realizará de tal forma que cada equipo de \textit{frontend} pruebe las funcionalidades sobre el que no ha desarrollado, para favorecer encontrar errores e inconsistencias inesperadas. Por otro lado, cada miembro original del equipo de \textit{backend} realizará la prueba sobre el \textit{frontend} \textit{React} y otro sobre \textit{Angular}, comprobando también que las interacciones con la \textit{API} son correctas.
 
-        Una vez realizadas las pruebas, los resultados se comunicarán al responsable de estos aspectos, que coordinará la corrección de los errores observados y repetirá el proceso de prueba si es necesario.
-    \end{itemize}
+    Una vez realizada la prueba, los resultados se comunicarán al responsable de estos aspectos, que coordinará la corrección de los errores observados. Si se considera que han aparecido un gran número de errores e inconsistencias, se repetirá el proceso de prueba una vez corregidas.
 \end{itemize}
 
 
@@ -880,7 +880,26 @@ Los esfuerzos realizados por los integrantes del equipo han sido los siguientes:
     %% Continuar aqui el resto
 \end{itemize}
 
-%\section{Conclusiones}
+\section{Conclusiones}
+Unificar todas
+
+\subsection{React}
+\subsection{Angular}
+\subsection{Backend}
+\begin{itemize}
+    \item Realizar una planificación de la organización en módulos del código a desarrollar en mayor detalle, así como del conjunto de \textit{endpoints} de API a exponer. Hemos tenido que realizar múltiples \textit{refactoring} del código para acomodar nuevas funcionalidades. Así mismo, se han tenido que establecer nuevos \textgit{endpoints} y modificar los existentes una vez los \textit{frontend} han empezado a consumirlos.
+    
+    Aunque entendemos que esto es algo que mejora con la experiencia, este aspecto nos ha afectado especialmente, puesto que se había infravalorado su importancia al empezar el desarrollo del proyecto.
+    
+    \item El despliegue en un entorno real de la aplicación se haría en una etapa más temprana. Aunque no han ocurrido problemas significativos durante el mismo en este proyecto, podría haber sido posible que fueran necesarios cambios significativos en el código y las tecnologías utilizadas para trabajar con proveedores externos para funcionalidades como, por ejemplo, el envío de correo electrónico.
+    
+    Realizar un despliegue real preliminar durante las primeras etapas del desarrollo, aunque sea incompleto, sería beneficioso para identificar posibles errores y cambios necesarios.
+\end{itemize}
+
+\subsection{Generales}
+\begin{itemize}
+    \item Se intentaría explorar herramientas que apoyen la definición y repartición de tareas entre los diferentes equipos y sus miembros. Aunque hemos hecho uso de \textit{issues} e hitos de \textit{Github} para ello, consideramos que la funcionalidad que ofrece es demasiado básica. Por ello, proyectos más complejos se podría explorar el uso de herramientas como Trello\footnote{\href{https://trello.com/es}{\color{blue}{\textit{Trello.}}}}.
+\end{itemize}
 %\clearpage
 %\section{Anexos}
 %\subsection{Glosario}
