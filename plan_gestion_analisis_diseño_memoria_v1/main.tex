@@ -822,6 +822,56 @@ Por último, durante el desarrollo del sistema se han detectado los siguientes p
 
     \item El despliegue automático ha requerido ligeros cambios para que fuera posible su ejecución en equipos con \textit{macOS}.
 \end{itemize}
+
+\subsection{Control del rendimiento}
+Para comprobar el correcto rendimiento de los miembros del equipo, así como la evolución del mismo a lo largo del desarrollo, se han recogido y evaluado diferentes métricas de \texit{Github} al final del mismo. Esto ha sido posible gracias a que se ha hecho uso de \textit{issues} e hitos para realizar el control de tareas, y a que \textit{Github} recoge métricas de \textit{commits} realizados y sus cambios.
+
+\subsubsection{Control de incidencias e hitos} % Renombrar, lo que se me ha ocurrido
+
+\subsubsection{Control de \textit{commits} realizados}
+Una medida útil para comprobar el trabajo realizado por cada uno de los miembros del equipo a lo largo del tiempo es el análisis de los \textit{commits} realizados. Estos permiten identificar los periodos de mayor actividad para cada miembro, así como una visión muy general del trabajo realizado. 
+
+Cabe mencionar que los \textit{commits} realizados por un miembro no son representativos de su carga de trabajo. Esto se puede apreciar en los equipos de ambos \textit{frontend}, donde debido a la naturaleza de las tareas (implementaciones de pantallas, ya sean complejas o simples) hay números dispares de \textit{commits} entre unos miembros y otros, y una cantidad menor respecto al equipo de \textit{backend}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.35]{metricas/commits_angular.png}
+    \caption{\textit{Commits} realizados en el repositorio de \textit{Angular}. Cabe mencionar que, por razones desconocidas, \textit{Github} no muestra los commits realizados por Laura durante las últimas semanas. Así mismo, se puede observar la incorporación de Samuel al terminar las funcionalidades principales del \textit{Backend}.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.35]{metricas/commits_react.png}
+    \caption{\textit{Commits} realizados en el repositorio de \textit{React}. Del mismo modo que en el repositorio de \textit{Angular}, se puede observar la incorporación de Guillermo al terminar las funcionalidades principales del \textit{Backend}.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.35]{metricas/commits_backend.png}
+    \caption{\textit{Commits} realizados en el repositorio de \textit{Backend}.}
+    \label{fig:my_label}
+\end{figure}
+\FloatBarrier
+En todos los casos se puede observar como los periodos de actividad de cada miembro han sido similares, y coinciden con los momentos en los que había un mayor número de tareas planificadas, así como con la cercanía de las entregas intermedia y la final.
+
+Adicionalmente, se puede observar que la mayor actividad ha ocurrido durante la fase inicial del proyecto, que corresponde a implementar los módulos, pantallas y funcionalidades principales. Así mismo, es notable la reducción de la actividad en el \textit{backend} al final del proyecto, que corresponde con la finalización de las funcionalidades principales y la incorporación de cada uno de los miembros a los \textit{frontend}.\\
+
+Por otro lado, los cambios realizados por los \textit{commits} permiten observar los cambios realizados en cada una de las partes del proyecto a lo largo del tiempo. Estos cambios están medidos en líneas añadidas y borradas como \textit{Code Churn}, donde una gran cantidad de cambios en fases finales del proyecto puede indicar un mal planteamiento o seguimiento de las tareas del mismo. 
+
+Para evaluar esto se ha utilizado como referencia el \textit{backend}, debido a que se ha tenido que refactorizar el código múltiples veces, al subestimar el tamaño y complejidad de la implementación de algunos módulos.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.35]{metricas/code_churn_backend.png}
+    \caption{\textit{Code Churn} del backend.}
+    \label{fig:my_label}
+\end{figure}
+\FloatBarrier
+
+Se puede observar como el mayor número de cambios ha ocurrido durante el inicio y la entrega intermedia del proyecto, coincidiendo con las refactorizaciones. Así mismo, es fácil observar que se han modificado y añadido funcionalidades de pequeño tamaño durante la fase final, que coincide con la recepción del \textit{feedback} de la API del juego por parte de los equipos de \textit{frontend}.
+
 \subsection{Cierre del proyecto}
 
 El proyecto, al dividirse en tres partes bien diferenciadas, cuenta con tres ritmos de trabajo distintos. Pese a eso, hemos conseguido en gran medida una gran compenetración entre todos los equipos y hemos logrado en gran medida, hasta la fecha, los objetivos iniciales establecidos. A continuación, se pondrá énfasis en el análisis de los resultados obtenidos frente a las estimaciones iniciales. \\
